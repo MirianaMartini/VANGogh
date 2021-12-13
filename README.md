@@ -1,2 +1,2 @@
-# VANGogh---VR-
+# VANGogh
 VR Application 
