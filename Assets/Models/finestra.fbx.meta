@@ -7,12 +7,12 @@ ModelImporter:
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
-      name: pomello
+      name: Pomello
     second: {fileID: 2100000, guid: 65391fab8e3bf984b9234ebc0e8244a1, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
-      name: struttura_finestra
+      name: Struttura_Finestra
     second: {fileID: 2100000, guid: 9a8a4fbfa87aa0f4592262cfb455929e, type: 2}
   - first:
       type: UnityEngine:Material
