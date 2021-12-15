@@ -12,7 +12,7 @@ ModelImporter:
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
-      name: Struttura_Finestra
+      name: Porta-Cornicione-Finestra
     second: {fileID: 2100000, guid: 9a8a4fbfa87aa0f4592262cfb455929e, type: 2}
   - first:
       type: UnityEngine:Material
