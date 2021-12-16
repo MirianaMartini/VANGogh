@@ -3,17 +3,7 @@ guid: 9bac31faa47b8524489889b32676d361
 ModelImporter:
   serializedVersion: 20200
   internalIDToNameTable: []
-  externalObjects:
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: Legno_Sedia
-    second: {fileID: 2100000, guid: 3683bd3342c0a864f912114ce3f004ee, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: Nero
-    second: {fileID: 2100000, guid: 005916d4a376cc54f94f3a899b6bc5bd, type: 2}
+  externalObjects: {}
   materials:
     materialImportMode: 2
     materialName: 0
