@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 243535b6d7cae0548acb6e21604c3f5f
+guid: bfbabe4c0ed70d047b8543fddc015241
 ModelImporter:
   serializedVersion: 20200
   internalIDToNameTable: []
@@ -7,8 +7,13 @@ ModelImporter:
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
-      name: brush_CelVinyl
-    second: {fileID: 2100000, guid: 0e8d4e3ea28643540bdd8d44ff65630b, type: 2}
+      name: brush_CoarseBristles
+    second: {fileID: 2100000, guid: da132c53819f8d341917b2393f522450, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: brush_ThickPaint
+    second: {fileID: 2100000, guid: b4b02e030be3bb44a8882a2f4b8ed480, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0
