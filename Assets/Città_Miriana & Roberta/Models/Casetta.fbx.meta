@@ -1,29 +1,9 @@
 fileFormatVersion: 2
-guid: a92627889ecd00846a1880aea30c5459
+guid: a1f99cc939ac103489bd28d3c9bce335
 ModelImporter:
   serializedVersion: 20200
   internalIDToNameTable: []
-  externalObjects:
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: Blu Scuro
-    second: {fileID: 2100000, guid: 66e96a5508780194198a3a291b69a059, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: Giallo Scuro
-    second: {fileID: 2100000, guid: a7f77fc707184e84dafd2bd1820237bc, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: Nero
-    second: {fileID: 2100000, guid: 1715a7ce49f893c439a9a7773b693ca7, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: Verdino
-    second: {fileID: 2100000, guid: 7f3d689cc0297b141afde1a4a72d7811, type: 2}
+  externalObjects: {}
   materials:
     materialImportMode: 2
     materialName: 0
