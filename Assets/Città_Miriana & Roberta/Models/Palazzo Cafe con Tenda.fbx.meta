@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 957b624d8cdb515499fcd64a1bfbf980
+guid: 4d744a8cb8b589c439443cedd59380ea
 ModelImporter:
   serializedVersion: 20200
   internalIDToNameTable: []
@@ -7,38 +7,88 @@ ModelImporter:
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
+      name: Arancione
+    second: {fileID: 2100000, guid: aa05ae127cb3d4b41a9ff8b7cf93dc3c, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Arancione Scuro
+    second: {fileID: 2100000, guid: 5f415d45e7770b64b8ae3b2fbe2119bb, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
       name: Bianco
-    second: {fileID: 2100000, guid: 4d6f244947c51304a8e5625eb52e8395, type: 2}
+    second: {fileID: 2100000, guid: 8d12e0f704c6c2942b84b1dfaed6d638, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: Blu
-    second: {fileID: 2100000, guid: d3ea7841c78d09b498b40fc86555bcb3, type: 2}
+    second: {fileID: 2100000, guid: 49a3421c3e857474bb54fe0c9e5dcf52, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Blu Scuro
+    second: {fileID: 2100000, guid: b9244b310e71a90458dfab17f3f0757b, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Blu Scuro NoSpecular
+    second: {fileID: 2100000, guid: 124adefbbbf74af44977460892aa7821, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: Giallo
-    second: {fileID: 2100000, guid: 1b168047a6f95ca42ae83c6f1780fb7a, type: 2}
+    second: {fileID: 2100000, guid: b876110308123de489ff70d092c74176, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
-      name: Grigio
-    second: {fileID: 2100000, guid: b02ca1da2ebc8414c91843c3a95a0340, type: 2}
+      name: Giallo Scuro
+    second: {fileID: 2100000, guid: 20f6ff8375d9e174ca1a5a1a4a271aea, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Giallo Scuro NoSpecular
+    second: {fileID: 2100000, guid: fe51c5be28c71de4e896a7d637a4edfc, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: Indaco
-    second: {fileID: 2100000, guid: 05facdae314b26a44885feb6000de604, type: 2}
+    second: {fileID: 2100000, guid: 744b2f0406450734983c3493fa243511, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
-      name: Indaco_Scuro
-    second: {fileID: 2100000, guid: 895ef148ef4e5c84ca1f6a79adb8d9c0, type: 2}
+      name: Indaco Molto Chiaro
+    second: {fileID: 2100000, guid: fd56b06837aa95c4c9221efc37830d29, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
-      name: Nero
-    second: {fileID: 2100000, guid: 3b619e2c3289fa04781f78cb0fc67d29, type: 2}
+      name: Indaco Scuro
+    second: {fileID: 2100000, guid: 7c04cbddb91d77145a4c8236e8f57ad3, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Marrone
+    second: {fileID: 2100000, guid: 31efc439d18672341b5622379c981901, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Marrone Scuro
+    second: {fileID: 2100000, guid: 36f796620dab0f24388dc3ae26ecdaca, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Nero NoSpecular
+    second: {fileID: 2100000, guid: aee8bcb4c761ca14fbdf31a28002329f, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Verde
+    second: {fileID: 2100000, guid: 69682d12a229f0a4094b22c70feaf007, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Verde Acqua
+    second: {fileID: 2100000, guid: f49788dc75670fb4ba0d624e145c0695, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0
