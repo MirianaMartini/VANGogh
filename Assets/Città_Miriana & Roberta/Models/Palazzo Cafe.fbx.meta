@@ -1,89 +1,9 @@
 fileFormatVersion: 2
-guid: fc1ed1e099f8cc0409b85444a2a6ddce
+guid: b00e09f78ccc3534ba346e6cf7c06122
 ModelImporter:
   serializedVersion: 20200
   internalIDToNameTable: []
-  externalObjects:
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: Arancione
-    second: {fileID: 2100000, guid: 3b02b34bcbbd9044296bb4d5c26288a1, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: Arancione Scuro
-    second: {fileID: 2100000, guid: f8075e9ef33304c41b89364f603dede7, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: Bianco
-    second: {fileID: 2100000, guid: fc9d190bfc1916a44b7ad3a175e3804c, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: Blu
-    second: {fileID: 2100000, guid: eb745b4c3ea486d459f99d5795c6b99d, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: Blu Scuro
-    second: {fileID: 2100000, guid: 27f4befea3546ce4e88281fad784c188, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: Giallo
-    second: {fileID: 2100000, guid: 3b983f476d30e984ea3973f7b70fe20a, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: Giallo Scuro
-    second: {fileID: 2100000, guid: b19b5932ac76f3048b115d1fa6b7bd38, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: Indaco
-    second: {fileID: 2100000, guid: 3a67a0162aed56241a611b901343e17b, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: Indaco Molto Chiaro
-    second: {fileID: 2100000, guid: 05be196abe9148a4ebdaa2f5584d2040, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: Indaco Molto Scuro
-    second: {fileID: 2100000, guid: 8ecd5c0cf6d4de44ab606d6239820732, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: Indaco Scuro
-    second: {fileID: 2100000, guid: ca3151b57bac94e4f833c97bf496c046, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: Marrone
-    second: {fileID: 2100000, guid: 3625eacec9ba55f479bf6e32fa6508cb, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: Marrone Chiaro
-    second: {fileID: 2100000, guid: 3d211a721082c674e9ee01b4f90e7f91, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: Marrone Scuro
-    second: {fileID: 2100000, guid: 0c917ab91f632f2469018ec1fccb810d, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: Verde
-    second: {fileID: 2100000, guid: ef84b4600ca38074491d6b4b60679eb2, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: Verde Acqua
-    second: {fileID: 2100000, guid: 0024c7aff12b23b47ac61ce68e2a47ea, type: 2}
+  externalObjects: {}
   materials:
     materialImportMode: 2
     materialName: 0
