@@ -3,42 +3,7 @@ guid: 957b624d8cdb515499fcd64a1bfbf980
 ModelImporter:
   serializedVersion: 20200
   internalIDToNameTable: []
-  externalObjects:
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: Bianco
-    second: {fileID: 2100000, guid: beaa62da151f38c469bd4cc38593ab1f, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: Blu
-    second: {fileID: 2100000, guid: 1bdfbf45c606efc40bf810c1b3e3710d, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: Giallo
-    second: {fileID: 2100000, guid: 7098b7cfa8f3a6b4eb71d718caf91e6d, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: Grigio
-    second: {fileID: 2100000, guid: f92e221d99f20b54c83b3f5d92b0243f, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: Indaco
-    second: {fileID: 2100000, guid: 642773aec853b5c4c8c6c145bbe9c9b0, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: Indaco_Scuro
-    second: {fileID: 2100000, guid: 121c998eeb3376643b41daf8e69ef170, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: Nero
-    second: {fileID: 2100000, guid: 4c23e9ac039bb6e4cbe69b8decd83b18, type: 2}
+  externalObjects: {}
   materials:
     materialImportMode: 2
     materialName: 0
