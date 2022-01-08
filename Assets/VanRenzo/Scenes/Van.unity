@@ -610,11 +610,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 4320134559862210523, guid: 8f71ad7a738b05244817a70ac73819e3, type: 3}
   m_PrefabInstance: {fileID: 1580796559}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &1224892294 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 100002, guid: 5e9e851c0e142814dac026a256ba2ac0, type: 3}
-  m_PrefabInstance: {fileID: 1720309413}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1331129789
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -972,7 +967,19 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 11400000, guid: 5e9e851c0e142814dac026a256ba2ac0, type: 3}
       propertyPath: m_WalkSpeed
-      value: 1
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: 5e9e851c0e142814dac026a256ba2ac0, type: 3}
+      propertyPath: m_RunstepLenghten
+      value: 0.22
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: 5e9e851c0e142814dac026a256ba2ac0, type: 3}
+      propertyPath: m_StickToGroundForce
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: 5e9e851c0e142814dac026a256ba2ac0, type: 3}
+      propertyPath: m_HeadBob.VerticalBobRange
+      value: 0.01
       objectReference: {fileID: 0}
     - target: {fileID: 14300000, guid: 5e9e851c0e142814dac026a256ba2ac0, type: 3}
       propertyPath: m_Height
@@ -1060,6 +1067,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1819658028}
+  - component: {fileID: 1819658029}
   m_Layer: 0
   m_Name: Van
   m_TagString: Untagged
@@ -1082,25 +1090,33 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &1955824301 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 100000, guid: 5e9e851c0e142814dac026a256ba2ac0, type: 3}
-  m_PrefabInstance: {fileID: 1720309413}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &1955824307
+--- !u!114 &1819658029
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1955824301}
+  m_GameObject: {fileID: 1819658027}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 8b75efa35c80f0147babb944a060e7e4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   VanCamera: {fileID: 2087935046}
-  FPVCamera: {fileID: 1224892294}
+  FPVCamera: {fileID: 1955824301}
+  Van: {fileID: 5236138022822449513}
+  FPV: {fileID: 1955824306}
+  GuidaVanScript: {fileID: 4891383525196942292}
+--- !u!1 &1955824301 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 100000, guid: 5e9e851c0e142814dac026a256ba2ac0, type: 3}
+  m_PrefabInstance: {fileID: 1720309413}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &1955824306 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 400000, guid: 5e9e851c0e142814dac026a256ba2ac0, type: 3}
+  m_PrefabInstance: {fileID: 1720309413}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &2058637471 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 3512776728219608417, guid: 8f71ad7a738b05244817a70ac73819e3, type: 3}
@@ -1238,8 +1254,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   objectToFollow: {fileID: 5236138022822449513}
-  offset: {x: 0, y: 4, z: -10}
-  followSpeed: 10
+  offset: {x: 0, y: 4, z: -8}
+  followSpeed: 6
   lookSpeed: 10
 --- !u!4 &1669873633291028098 stripped
 Transform:
