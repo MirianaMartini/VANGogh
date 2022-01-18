@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: b00e09f78ccc3534ba346e6cf7c06122
+guid: 5eba7c9c04406044199f676efdbfd2ff
 ModelImporter:
   serializedVersion: 20200
   internalIDToNameTable: []
@@ -14,6 +14,11 @@ ModelImporter:
       assembly: UnityEngine.CoreModule
       name: Arancione Scuro
     second: {fileID: 2100000, guid: 5f415d45e7770b64b8ae3b2fbe2119bb, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Arancione_Colore
+    second: {fileID: 2100000, guid: 09b078784a6f6284084ed7bf44b37e44, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule

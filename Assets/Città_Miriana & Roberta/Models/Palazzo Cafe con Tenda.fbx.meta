@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 4d744a8cb8b589c439443cedd59380ea
+guid: ae0297ca147b0f64ba2cab7277a0de5b
 ModelImporter:
   serializedVersion: 20200
   internalIDToNameTable: []
@@ -14,6 +14,11 @@ ModelImporter:
       assembly: UnityEngine.CoreModule
       name: Arancione Scuro
     second: {fileID: 2100000, guid: 5f415d45e7770b64b8ae3b2fbe2119bb, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Arancione_Colore
+    second: {fileID: 2100000, guid: 09b078784a6f6284084ed7bf44b37e44, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
@@ -37,11 +42,6 @@ ModelImporter:
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
-      name: Giallo
-    second: {fileID: 2100000, guid: b876110308123de489ff70d092c74176, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
       name: Giallo Scuro
     second: {fileID: 2100000, guid: 20f6ff8375d9e174ca1a5a1a4a271aea, type: 2}
   - first:
@@ -62,6 +62,11 @@ ModelImporter:
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
+      name: Indaco Molto Scuro
+    second: {fileID: 2100000, guid: 8632d1a5684f2a149bc9b837d452866a, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
       name: Indaco Scuro
     second: {fileID: 2100000, guid: 7c04cbddb91d77145a4c8236e8f57ad3, type: 2}
   - first:
@@ -78,7 +83,7 @@ ModelImporter:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: Nero NoSpecular
-    second: {fileID: 2100000, guid: aee8bcb4c761ca14fbdf31a28002329f, type: 2}
+    second: {fileID: 2100000, guid: de43a70f7b582d145a3a3f1fdc5008c7, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
