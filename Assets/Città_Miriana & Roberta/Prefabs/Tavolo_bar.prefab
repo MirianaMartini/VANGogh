@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 3235380541520213536}
   - component: {fileID: 1966308186588379525}
   - component: {fileID: 4372236203078585679}
+  - component: {fileID: 4781704838259392427}
   m_Layer: 0
   m_Name: Tavolo_bar
   m_TagString: Untagged
@@ -82,3 +83,17 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!64 &4781704838259392427
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2859136885764500634}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 8096257129573417580, guid: ec93655f7e5688b428469b75c1d68adf, type: 3}

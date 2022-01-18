@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 2662701979078167038}
   - component: {fileID: 1395001816736859739}
   - component: {fileID: 3799065059291886225}
+  - component: {fileID: 3666827165945027926}
   m_Layer: 0
   m_Name: Albero_pino
   m_TagString: Untagged
@@ -83,3 +84,17 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!136 &3666827165945027926
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3438500494104810308}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  m_Radius: 0.04985231
+  m_Height: 0.47745752
+  m_Direction: 1
+  m_Center: {x: 0.01, y: 0.22669528, z: 0}

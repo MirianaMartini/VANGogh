@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 3672596594459021230}
   - component: {fileID: 385186074886209547}
   - component: {fileID: 2503020595497006273}
+  - component: {fileID: 5581756251180516522}
   m_Layer: 0
   m_Name: Tavolo_stretto_bar
   m_TagString: Untagged
@@ -82,3 +83,17 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!64 &5581756251180516522
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4160340379532154132}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: -6952343972134674097, guid: 6a7b2a9fb6199eb4781f5a118146b986, type: 3}

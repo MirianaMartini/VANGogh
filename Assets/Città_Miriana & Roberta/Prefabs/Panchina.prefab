@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 6575443914830292280}
   - component: {fileID: 7849616867629574813}
   - component: {fileID: 5407565011929882199}
+  - component: {fileID: 3897291345535146200}
   m_Layer: 0
   m_Name: Panchina
   m_TagString: Untagged
@@ -81,3 +82,17 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!64 &3897291345535146200
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5767839856990814082}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 1234755698202536773, guid: 71fcbf5b561627f49bf7e13a65f468d0, type: 3}
