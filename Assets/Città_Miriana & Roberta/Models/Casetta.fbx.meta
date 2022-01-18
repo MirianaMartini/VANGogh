@@ -8,27 +8,27 @@ ModelImporter:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: Blu Scuro
-    second: {fileID: 2100000, guid: 66e96a5508780194198a3a291b69a059, type: 2}
+    second: {fileID: 2100000, guid: b9244b310e71a90458dfab17f3f0757b, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: Giallo Scuro
-    second: {fileID: 2100000, guid: a7f77fc707184e84dafd2bd1820237bc, type: 2}
+    second: {fileID: 2100000, guid: 20f6ff8375d9e174ca1a5a1a4a271aea, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: Indaco Scuro
-    second: {fileID: 2100000, guid: 6189031405940b341aaaa6852022c149, type: 2}
+    second: {fileID: 2100000, guid: 7c04cbddb91d77145a4c8236e8f57ad3, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: Nero
-    second: {fileID: 2100000, guid: 1715a7ce49f893c439a9a7773b693ca7, type: 2}
+    second: {fileID: 2100000, guid: 066f3eb98ac018e49bccc90f2ef66f18, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: Verdino
-    second: {fileID: 2100000, guid: 7f3d689cc0297b141afde1a4a72d7811, type: 2}
+    second: {fileID: 2100000, guid: a1b5092de47bcab40b17329b9e16dcdd, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0
