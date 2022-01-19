@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 8761048733961588914}
   - component: {fileID: 8579189891029362744}
   - component: {fileID: 560339962028875059}
+  - component: {fileID: 2101374056902184195}
   m_Layer: 0
   m_Name: Palazzo Cafe Con Tenda
   m_TagString: Untagged
@@ -98,6 +99,20 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!64 &2101374056902184195
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3476683127453570085}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: -312329928918086229, guid: ae0297ca147b0f64ba2cab7277a0de5b, type: 3}
 --- !u!1 &5222513262875748142
 GameObject:
   m_ObjectHideFlags: 0
@@ -141,6 +156,7 @@ GameObject:
   - component: {fileID: 3432017701907161802}
   - component: {fileID: 1994937192690340360}
   - component: {fileID: 2308032733229337788}
+  - component: {fileID: 3440672633404836284}
   m_Layer: 0
   m_Name: Porta Palazzo Cafe Con Tenda
   m_TagString: Untagged
@@ -212,3 +228,17 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!64 &3440672633404836284
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8494089559494849990}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: -2336663828740713764, guid: ae0297ca147b0f64ba2cab7277a0de5b, type: 3}

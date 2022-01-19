@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 204582118537735928}
   - component: {fileID: 3853121741137748317}
   - component: {fileID: 1341508119712847255}
+  - component: {fileID: 3706142385433332559}
   m_Layer: 0
   m_Name: Palazzo Lungo
   m_TagString: Untagged
@@ -87,3 +88,17 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!64 &3706142385433332559
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 692713176699434050}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 797701861547495841, guid: 957b624d8cdb515499fcd64a1bfbf980, type: 3}
