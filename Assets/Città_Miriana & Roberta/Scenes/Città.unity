@@ -283,5 +283,17 @@ PrefabInstance:
       propertyPath: m_Name
       value: Casa Van Gogh
       objectReference: {fileID: 0}
+    - target: {fileID: 5262660936344900958, guid: fe1fac7d7214fc04e889266323db5c11, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 5.9912667
+      objectReference: {fileID: 0}
+    - target: {fileID: 5262660936344900958, guid: fe1fac7d7214fc04e889266323db5c11, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -6.3735
+      objectReference: {fileID: 0}
+    - target: {fileID: 5262660936344900958, guid: fe1fac7d7214fc04e889266323db5c11, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -0.1379
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: fe1fac7d7214fc04e889266323db5c11, type: 3}

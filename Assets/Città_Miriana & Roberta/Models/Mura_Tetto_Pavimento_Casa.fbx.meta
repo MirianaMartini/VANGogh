@@ -17,6 +17,11 @@ ModelImporter:
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
+      name: Giallo Parete Interno
+    second: {fileID: 2100000, guid: 604679194b7586943a6e2eeac3d2355b, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
       name: Marrone
     second: {fileID: 2100000, guid: 1245881be2950b740a6c1a67dd013f39, type: 2}
   - first:

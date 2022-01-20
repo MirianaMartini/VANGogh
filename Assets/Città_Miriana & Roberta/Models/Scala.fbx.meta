@@ -1,19 +1,9 @@
 fileFormatVersion: 2
-guid: 474749793f6d3064ea709bce8d4da02d
+guid: 50c385537e9378f4fa8d7b55febd9c24
 ModelImporter:
   serializedVersion: 20200
   internalIDToNameTable: []
-  externalObjects:
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: Giallo Parete Interno
-    second: {fileID: 2100000, guid: 604679194b7586943a6e2eeac3d2355b, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: Pavimento
-    second: {fileID: 2100000, guid: 5e58673a743af7c4d9e29a90706f6616, type: 2}
+  externalObjects: {}
   materials:
     materialImportMode: 2
     materialName: 0
