@@ -3,7 +3,17 @@ guid: 50c385537e9378f4fa8d7b55febd9c24
 ModelImporter:
   serializedVersion: 20200
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Iron con dettagli
+    second: {fileID: 2100000, guid: b9030a4a74450ee40a35408099ee90ea, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Pavimento
+    second: {fileID: 2100000, guid: 5e58673a743af7c4d9e29a90706f6616, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0
