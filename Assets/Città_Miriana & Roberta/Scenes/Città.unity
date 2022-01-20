@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.4411305, g: 0.48989445, b: 0.5699705, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657826, g: 0.49641263, b: 0.57481676, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -282,6 +282,18 @@ PrefabInstance:
     - target: {fileID: 2648444170651420162, guid: fe1fac7d7214fc04e889266323db5c11, type: 3}
       propertyPath: m_Name
       value: Casa Van Gogh
+      objectReference: {fileID: 0}
+    - target: {fileID: 5188829451145305686, guid: fe1fac7d7214fc04e889266323db5c11, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.9999153
+      objectReference: {fileID: 0}
+    - target: {fileID: 5188829451145305686, guid: fe1fac7d7214fc04e889266323db5c11, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0.01301789
+      objectReference: {fileID: 0}
+    - target: {fileID: 5188829451145305686, guid: fe1fac7d7214fc04e889266323db5c11, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 1.492
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: fe1fac7d7214fc04e889266323db5c11, type: 3}
