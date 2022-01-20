@@ -11,6 +11,8 @@ GameObject:
   - component: {fileID: 7667152902131056469}
   - component: {fileID: 5418695701988785934}
   - component: {fileID: 4125561832442729318}
+  - component: {fileID: 6915134691997122996}
+  - component: {fileID: 8639711203799712966}
   m_Layer: 0
   m_Name: Tavolo
   m_TagString: Untagged
@@ -81,6 +83,39 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!64 &6915134691997122996
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 337618025464260077}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 8096257129573417580, guid: 9bac31faa47b8524489889b32676d361, type: 3}
+--- !u!95 &8639711203799712966
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 337618025464260077}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 115b5271c10e23140b7984086418f8a1, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &688623710901579552
 GameObject:
   m_ObjectHideFlags: 0
@@ -92,6 +127,7 @@ GameObject:
   - component: {fileID: 3534724946505448398}
   - component: {fileID: 8763757905814132629}
   - component: {fileID: 1417606172823854750}
+  - component: {fileID: 1828070933530302410}
   m_Layer: 0
   m_Name: Pomello
   m_TagString: Untagged
@@ -162,6 +198,19 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!135 &1828070933530302410
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 688623710901579552}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 0.061985888
+  m_Center: {x: -2.1291037, y: 2.5337603, z: 0.08417485}
 --- !u!1 &2722922594477073506
 GameObject:
   m_ObjectHideFlags: 0
@@ -173,6 +222,7 @@ GameObject:
   - component: {fileID: 1183051237889937600}
   - component: {fileID: 1786324009681212213}
   - component: {fileID: 4441310199094923096}
+  - component: {fileID: 6359112601344291160}
   m_Layer: 0
   m_Name: Cassetto
   m_TagString: Untagged
@@ -243,6 +293,20 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!64 &6359112601344291160
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2722922594477073506}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: -4936331608700160329, guid: 9bac31faa47b8524489889b32676d361, type: 3}
 --- !u!1 &5833673573847558865
 GameObject:
   m_ObjectHideFlags: 0
@@ -252,6 +316,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6610879192642105451}
+  - component: {fileID: 6378542112229419421}
+  - component: {fileID: 7582660163736699342}
   m_Layer: 0
   m_Name: Comodino
   m_TagString: Untagged
@@ -276,3 +342,34 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!95 &6378542112229419421
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5833673573847558865}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: e18b875ba6b398641b21e83f9194d292, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &7582660163736699342
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5833673573847558865}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f0905499ebc94664480c3fe2c0892fac, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

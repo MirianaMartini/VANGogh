@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 2436255742256364524}
   - component: {fileID: 1612440561694618697}
   - component: {fileID: 3568114708654178435}
+  - component: {fileID: 1219555130580898695}
   m_Layer: 0
   m_Name: Brocca
   m_TagString: Untagged
@@ -81,3 +82,17 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!64 &1219555130580898695
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3063715603937386838}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 8483312199239395315, guid: 9d83c52a0ca7ab043a034bbb5a10a93d, type: 3}

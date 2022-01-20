@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 165154881117922911}
   - component: {fileID: 3883621201338935802}
   - component: {fileID: 1297480491282947376}
+  - component: {fileID: 1449201243572229547}
   m_Layer: 0
   m_Name: Pavimento
   m_TagString: Untagged
@@ -81,3 +82,16 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!65 &1449201243572229547
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 648922768502750437}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 12.7561245, y: 0.011568431, z: 13.16403}
+  m_Center: {x: 0.001588583, y: 0.0000000034924597, z: 0.00009894371}

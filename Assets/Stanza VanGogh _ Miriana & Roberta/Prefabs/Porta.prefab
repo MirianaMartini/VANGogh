@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 5233889860736898410}
   - component: {fileID: 9121474026455861217}
   - component: {fileID: 3730100573846078191}
+  - component: {fileID: 2138311455605219329}
   m_Layer: 0
   m_Name: Maniglia
   m_TagString: Untagged
@@ -81,6 +82,20 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!64 &2138311455605219329
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1456259348522116466}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 1087160046453514133, guid: bc3b50e23e6875d47b18453b504997f2, type: 3}
 --- !u!1 &3516970137436894914
 GameObject:
   m_ObjectHideFlags: 0
@@ -189,6 +204,7 @@ GameObject:
   - component: {fileID: 4084480993759889548}
   - component: {fileID: 2172197972407150041}
   - component: {fileID: 7638977292583795151}
+  - component: {fileID: 5907898687114390226}
   m_Layer: 0
   m_Name: Cornicione_Porta
   m_TagString: Untagged
@@ -260,6 +276,20 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!64 &5907898687114390226
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6049685741820110911}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 8213549623915115076, guid: bc3b50e23e6875d47b18453b504997f2, type: 3}
 --- !u!1 &8714959423414525797
 GameObject:
   m_ObjectHideFlags: 0
@@ -271,6 +301,7 @@ GameObject:
   - component: {fileID: 7837183730465812847}
   - component: {fileID: 5780851103839546357}
   - component: {fileID: 4828404971449143326}
+  - component: {fileID: 4749473249194520009}
   m_Layer: 0
   m_Name: Anta
   m_TagString: Untagged
@@ -342,3 +373,17 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!64 &4749473249194520009
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8714959423414525797}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 4907348558538991281, guid: bc3b50e23e6875d47b18453b504997f2, type: 3}

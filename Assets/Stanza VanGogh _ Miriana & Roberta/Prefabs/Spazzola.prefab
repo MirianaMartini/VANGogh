@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 3624259731923195575}
   - component: {fileID: 424515475402643730}
   - component: {fileID: 2450197729949199832}
+  - component: {fileID: 1230850504431825884}
   m_Layer: 0
   m_Name: Spazzola
   m_TagString: Untagged
@@ -82,3 +83,17 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!64 &1230850504431825884
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4107324275419548685}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 6061587752767752786, guid: 22e661b55edd1e94884c6a96237cfc43, type: 3}

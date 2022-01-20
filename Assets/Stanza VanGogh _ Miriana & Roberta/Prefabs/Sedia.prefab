@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 5399993110563730341}
   - component: {fileID: 2697056016912036416}
   - component: {fileID: 3393160012379643204}
+  - component: {fileID: 7227918508635445367}
   m_Layer: 0
   m_Name: Sottosedia
   m_TagString: Untagged
@@ -81,6 +82,19 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!65 &7227918508635445367
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 897836771797384204}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 2.0805192, y: 0.15485938, z: 1.8470895}
+  m_Center: {x: 0, y: 0, z: 0.000036984682}
 --- !u!1 &2747184694385018949
 GameObject:
   m_ObjectHideFlags: 0
@@ -92,6 +106,7 @@ GameObject:
   - component: {fileID: 5861414833666553765}
   - component: {fileID: 540694131950712512}
   - component: {fileID: 976529341508301667}
+  - component: {fileID: 8442884685768229054}
   m_Layer: 0
   m_Name: Cuscino
   m_TagString: Untagged
@@ -162,6 +177,19 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!65 &8442884685768229054
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2747184694385018949}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 2.028315, y: 0.27952492, z: 1.7961422}
+  m_Center: {x: 0.00000011920929, y: 0.19392863, z: 0.000007688999}
 --- !u!1 &2932239184888312991
 GameObject:
   m_ObjectHideFlags: 0
@@ -206,6 +234,7 @@ GameObject:
   - component: {fileID: 1199870298939987074}
   - component: {fileID: 5297239171643258914}
   - component: {fileID: 2388281926520947192}
+  - component: {fileID: 6769639714840776328}
   m_Layer: 0
   m_Name: Struttura
   m_TagString: Untagged
@@ -276,3 +305,17 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!64 &6769639714840776328
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8427737513882582811}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 5082055962157835663, guid: 807b9f21ca11de84482926179529be64, type: 3}

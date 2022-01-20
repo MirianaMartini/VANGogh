@@ -254,6 +254,7 @@ GameObject:
   - component: {fileID: 4910701951559142553}
   - component: {fileID: 8103299957445538578}
   - component: {fileID: 6818467865986614578}
+  - component: {fileID: 3146984747633576012}
   m_Layer: 0
   m_Name: Muro con Finestra
   m_TagString: Untagged
@@ -324,6 +325,20 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!64 &3146984747633576012
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4598297620898367643}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: -4174383399491601883, guid: 92e97b097609c0145a6ffb33ec339d64, type: 3}
 --- !u!1 &5296302441344839499
 GameObject:
   m_ObjectHideFlags: 0
@@ -416,6 +431,7 @@ GameObject:
   - component: {fileID: 8737818260421089025}
   - component: {fileID: 4528387569323183266}
   - component: {fileID: 3337376049702366166}
+  - component: {fileID: 6121254432539165577}
   m_Layer: 0
   m_Name: Muro con Porta (alto)
   m_TagString: Untagged
@@ -487,6 +503,20 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!64 &6121254432539165577
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7671885568443564082}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 2197379685958283394, guid: 92e97b097609c0145a6ffb33ec339d64, type: 3}
 --- !u!1 &8853316947710906942
 GameObject:
   m_ObjectHideFlags: 0
@@ -579,6 +609,7 @@ GameObject:
   - component: {fileID: 7801588952243744744}
   - component: {fileID: 1983420897356161638}
   - component: {fileID: 5282016721784067749}
+  - component: {fileID: 7752448023569761088}
   m_Layer: 0
   m_Name: Muro con Porta Basso
   m_TagString: Untagged
@@ -649,6 +680,20 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!64 &7752448023569761088
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8911335713507036431}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: -3871404210907820049, guid: 92e97b097609c0145a6ffb33ec339d64, type: 3}
 --- !u!1 &8978100804428969781
 GameObject:
   m_ObjectHideFlags: 0
@@ -660,6 +705,7 @@ GameObject:
   - component: {fileID: 3018853525207818526}
   - component: {fileID: 3808450167287554173}
   - component: {fileID: 4519611458742258155}
+  - component: {fileID: 7782633213397656120}
   m_Layer: 0
   m_Name: Muro Vuoto
   m_TagString: Untagged
@@ -731,6 +777,19 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!65 &7782633213397656120
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8978100804428969781}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 2.0017703, y: 2.7364488, z: 4.3915253}
+  m_Center: {x: -0.101768486, y: 0.20430909, z: 72.444244}
 --- !u!1 &9034000703872429709
 GameObject:
   m_ObjectHideFlags: 0

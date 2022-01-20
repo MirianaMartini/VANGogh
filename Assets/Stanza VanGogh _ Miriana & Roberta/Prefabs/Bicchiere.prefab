@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 5868555994240770825}
   - component: {fileID: 7412528063813708972}
   - component: {fileID: 4700175031406827622}
+  - component: {fileID: -3544566996580895332}
   m_Layer: 0
   m_Name: Bicchiere
   m_TagString: Untagged
@@ -81,3 +82,17 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!64 &-3544566996580895332
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6501680784708319667}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 2724359205838880895, guid: 4397e423a9ed2a440b744deeaea3ce1e, type: 3}

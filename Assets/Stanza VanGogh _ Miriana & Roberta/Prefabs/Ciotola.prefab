@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 8891530497608383460}
   - component: {fileID: 5533468693661545537}
   - component: {fileID: 7723149153728987275}
+  - component: {fileID: 7357759682691539171}
   m_Layer: 0
   m_Name: Ciotola
   m_TagString: Untagged
@@ -81,3 +82,17 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!64 &7357759682691539171
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8083643899925471582}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: -1863400165529613867, guid: 86a77f48c08817243af61d2853e5d6c8, type: 3}
