@@ -318,6 +318,7 @@ GameObject:
   - component: {fileID: 6610879192642105451}
   - component: {fileID: 6378542112229419421}
   - component: {fileID: 7582660163736699342}
+  - component: {fileID: 6786732861627256655}
   m_Layer: 0
   m_Name: Comodino
   m_TagString: Untagged
@@ -373,3 +374,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f0905499ebc94664480c3fe2c0892fac, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!65 &6786732861627256655
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5833673573847558865}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1.1470672, y: 0.60680294, z: 1.6978298}
+  m_Center: {x: -1.7175201, y: 2.4858932, z: 0.121169}
