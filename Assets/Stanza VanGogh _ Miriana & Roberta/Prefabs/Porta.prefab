@@ -105,8 +105,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4288861812438690936}
-  - component: {fileID: 5668804507593956682}
-  - component: {fileID: 6715305556730897989}
+  - component: {fileID: 5075030080525213976}
+  - component: {fileID: 1318072650234944179}
+  - component: {fileID: 5384134816687204767}
   m_Layer: 0
   m_Name: Porta
   m_TagString: Untagged
@@ -122,7 +123,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3516970137436894914}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 36.46, y: 0, z: 109.15}
+  m_LocalPosition: {x: 36.46, y: 0, z: 109.65}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4084480993759889548}
@@ -130,7 +131,7 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!95 &5668804507593956682
+--- !u!95 &5075030080525213976
 Animator:
   serializedVersion: 3
   m_ObjectHideFlags: 0
@@ -149,7 +150,7 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
---- !u!114 &6715305556730897989
+--- !u!114 &1318072650234944179
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -161,6 +162,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f0905499ebc94664480c3fe2c0892fac, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!65 &5384134816687204767
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3516970137436894914}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.528759, y: 7.6966214, z: 3.5029964}
+  m_Center: {x: -5.5538807, y: 3.7896602, z: 10.771732}
 --- !u!1 &4814636150482422520
 GameObject:
   m_ObjectHideFlags: 0
