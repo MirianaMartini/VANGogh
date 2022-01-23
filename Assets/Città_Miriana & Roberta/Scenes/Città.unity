@@ -247,6 +247,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1033179241354456855, guid: fe1fac7d7214fc04e889266323db5c11, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 1557869419075128098, guid: fe1fac7d7214fc04e889266323db5c11, type: 3}
       propertyPath: m_LocalRotation.w
       value: 1
@@ -444,6 +448,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7960503657677407910, guid: fe1fac7d7214fc04e889266323db5c11, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8657177422518983306, guid: fe1fac7d7214fc04e889266323db5c11, type: 3}
       propertyPath: m_Enabled
       value: 1
       objectReference: {fileID: 0}
