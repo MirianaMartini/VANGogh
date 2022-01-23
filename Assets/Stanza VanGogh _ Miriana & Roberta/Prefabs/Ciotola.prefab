@@ -11,7 +11,9 @@ GameObject:
   - component: {fileID: 8891530497608383460}
   - component: {fileID: 5533468693661545537}
   - component: {fileID: 7723149153728987275}
-  - component: {fileID: 7357759682691539171}
+  - component: {fileID: 4435590500304426641}
+  - component: {fileID: 4065528446757364218}
+  - component: {fileID: 683270346035861118}
   m_Layer: 0
   m_Name: Ciotola
   m_TagString: Untagged
@@ -82,8 +84,36 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!64 &7357759682691539171
-MeshCollider:
+--- !u!54 &4435590500304426641
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8083643899925471582}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
+--- !u!114 &4065528446757364218
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8083643899925471582}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 07366e4a06ee18040aa3f7d8ad57f471, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!65 &683270346035861118
+BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -92,7 +122,6 @@ MeshCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  serializedVersion: 4
-  m_Convex: 0
-  m_CookingOptions: 30
-  m_Mesh: {fileID: -1863400165529613867, guid: 86a77f48c08817243af61d2853e5d6c8, type: 3}
+  serializedVersion: 2
+  m_Size: {x: 2.506415, y: 0.7988528, z: 2.506415}
+  m_Center: {x: -0.000000059604645, y: 0.4229989, z: 0.00000029802322}

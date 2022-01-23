@@ -11,7 +11,9 @@ GameObject:
   - component: {fileID: 5868555994240770825}
   - component: {fileID: 7412528063813708972}
   - component: {fileID: 4700175031406827622}
-  - component: {fileID: -3544566996580895332}
+  - component: {fileID: 3076955274334932685}
+  - component: {fileID: -8038224457765368135}
+  - component: {fileID: 7067334998000353931}
   m_Layer: 0
   m_Name: Bicchiere
   m_TagString: Untagged
@@ -82,8 +84,36 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!64 &-3544566996580895332
-MeshCollider:
+--- !u!114 &3076955274334932685
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6501680784708319667}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 07366e4a06ee18040aa3f7d8ad57f471, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!54 &-8038224457765368135
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6501680784708319667}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
+--- !u!65 &7067334998000353931
+BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -92,7 +122,6 @@ MeshCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  serializedVersion: 4
-  m_Convex: 0
-  m_CookingOptions: 30
-  m_Mesh: {fileID: 2724359205838880895, guid: 4397e423a9ed2a440b744deeaea3ce1e, type: 3}
+  serializedVersion: 2
+  m_Size: {x: 2.7815464, y: 3.4309874, z: 2.508427}
+  m_Center: {x: 0.028868547, y: 1.7296832, z: -0.023630124}

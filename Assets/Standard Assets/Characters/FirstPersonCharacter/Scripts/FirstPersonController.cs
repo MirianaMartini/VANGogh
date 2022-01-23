@@ -11,6 +11,7 @@ namespace UnityStandardAssets.Characters.FirstPerson
     [RequireComponent(typeof (AudioSource))]
     public class FirstPersonController : MonoBehaviour
     {
+        [SerializeField] private GameObject m_Character;
         [SerializeField] private bool m_IsWalking;
         [SerializeField] private float m_WalkSpeed;
         [SerializeField] private float m_RunSpeed;
@@ -62,6 +63,8 @@ namespace UnityStandardAssets.Characters.FirstPerson
         // Update is called once per frame
         private void Update()
         {
+            UpdateCharacterPosition();
+
             RotateView();
             // the jump state needs to read here to make sure it is not missed
             if (!m_Jump)
@@ -175,6 +178,21 @@ namespace UnityStandardAssets.Characters.FirstPerson
             // move picked sound to index 0 so it's not picked next time
             m_FootstepSounds[n] = m_FootstepSounds[0];
             m_FootstepSounds[0] = m_AudioSource.clip;
+        }
+
+        private void UpdateCharacterPosition()
+        {
+            Vector3 newCharacterPosition;
+            Vector3 newCameraPosition;
+
+            newCharacterPosition = m_Character.transform.localPosition;
+            newCameraPosition = m_Camera.transform.localPosition;
+
+            newCharacterPosition.x = newCameraPosition.x;
+            newCharacterPosition.z = newCameraPosition.z;
+
+            m_Character.transform.localPosition = newCharacterPosition;
+
         }
 
 

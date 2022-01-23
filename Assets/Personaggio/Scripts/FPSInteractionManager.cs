@@ -9,10 +9,12 @@ public class FPSInteractionManager : MonoBehaviour
     [SerializeField] private float _interactionDistance;
 
     private Interactable _pointingInteractable;
+    private Grabbable _pointingGrabbable;
 
     private CharacterController _fpsController;
     private Vector3 _rayOrigin;
 
+    private Grabbable _grabbedObject = null;
 
     void Start()
     {
@@ -23,8 +25,12 @@ public class FPSInteractionManager : MonoBehaviour
     {
         _rayOrigin = _fpsCameraT.position + _fpsController.radius * _fpsCameraT.forward;
 
-        CheckInteraction();
-        Debug.Log("update...");
+        if (_grabbedObject == null)
+            CheckInteraction();
+
+        else if (_grabbedObject != null && Input.GetKeyDown(KeyCode.E))
+            Drop();
+
 
         if (_debugRay)
             DebugRaycast();
@@ -32,24 +38,29 @@ public class FPSInteractionManager : MonoBehaviour
 
     private void CheckInteraction()
     {
-        Debug.Log("checkInteraction...");
         Ray ray = new Ray(_rayOrigin, _fpsCameraT.forward);
         RaycastHit hit;
 
         if (Physics.Raycast(ray, out hit, _interactionDistance))
         {
-            Debug.Log("il raggio ha colpito...");
             //Check if is interactable
             _pointingInteractable = hit.transform.GetComponent<Interactable>();
-            Debug.Log(_pointingInteractable);
             if (_pointingInteractable)
             {
-                Debug.Log("è interactable....");
+                if (Input.GetKeyDown(KeyCode.E))
+                    _pointingInteractable.Interact(gameObject);
+            }
+           
+            //Check if is grabbable
+            _pointingGrabbable = hit.transform.GetComponent<Grabbable>();
+            if (_grabbedObject == null && _pointingGrabbable)
+            {
                 if (Input.GetKeyDown(KeyCode.E))
                 {
-                    Debug.Log("ho premuto il tasto E...");
-                    _pointingInteractable.Interact(gameObject);
+                    _pointingGrabbable.Grab(gameObject);
+                    Grab(_pointingGrabbable);
                 }
+                    
             }
         }
         //If NOTHING is detected set all to null
@@ -57,6 +68,24 @@ public class FPSInteractionManager : MonoBehaviour
         {
             _pointingInteractable = null;
         }
+    }
+
+    private void Drop()
+    {
+        if (_grabbedObject == null)
+            return;
+
+        _grabbedObject.transform.parent = _grabbedObject.OriginalParent;
+        _grabbedObject.Drop();
+
+        _grabbedObject = null;
+    }
+
+    private void Grab(Grabbable grabbable)
+    {
+        _grabbedObject = grabbable;
+        grabbable.transform.SetParent(_fpsCameraT);
+
     }
 
     private void DebugRaycast()
