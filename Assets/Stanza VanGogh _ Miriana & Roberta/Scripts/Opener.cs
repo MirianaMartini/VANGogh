@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PortaOpener : Interactable
+public class Opener : Interactable
 {
     private Animator _animator;
     private bool _open = false;
