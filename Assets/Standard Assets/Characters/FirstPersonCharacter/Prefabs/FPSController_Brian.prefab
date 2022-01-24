@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 5400000}
   - component: {fileID: 8200000}
   m_Layer: 0
-  m_Name: FPSController
+  m_Name: FPSController_Brian
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -67,6 +67,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 05ec5cf00ca181d45a42ba1870e148c3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_Character: {fileID: 0}
   m_IsWalking: 0
   m_WalkSpeed: 5
   m_RunSpeed: 20
