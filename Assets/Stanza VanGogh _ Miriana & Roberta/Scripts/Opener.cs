@@ -21,8 +21,6 @@ public class Opener : Interactable
 
     public void Open()
     {
-        Debug.Log("siamo nell'Open");
-        Debug.Log(_animator);
         if (_animator == null)
             return;
 
