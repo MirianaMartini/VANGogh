@@ -63,8 +63,6 @@ namespace UnityStandardAssets.Characters.FirstPerson
         // Update is called once per frame
         private void Update()
         {
-            UpdateCharacterPosition();
-
             RotateView();
             // the jump state needs to read here to make sure it is not missed
             if (!m_Jump)
@@ -180,24 +178,9 @@ namespace UnityStandardAssets.Characters.FirstPerson
             m_FootstepSounds[0] = m_AudioSource.clip;
         }
 
-        private void UpdateCharacterPosition()
-        {
-            Vector3 newCharacterPosition;
-            Vector3 newCameraPosition;
-
-            newCharacterPosition = m_Character.transform.localPosition;
-            newCameraPosition = m_Camera.transform.localPosition;
-
-            newCharacterPosition.x = newCameraPosition.x;
-            newCharacterPosition.z = newCameraPosition.z;
-
-            m_Character.transform.localPosition = newCharacterPosition;
-
-        }
-
-
         private void UpdateCameraPosition(float speed)
         {
+            /*
             Vector3 newCameraPosition;
             if (!m_UseHeadBob)
             {
@@ -217,6 +200,7 @@ namespace UnityStandardAssets.Characters.FirstPerson
                 newCameraPosition.y = m_OriginalCameraPosition.y - m_JumpBob.Offset();
             }
             m_Camera.transform.localPosition = newCameraPosition;
+            */
         }
 
 
