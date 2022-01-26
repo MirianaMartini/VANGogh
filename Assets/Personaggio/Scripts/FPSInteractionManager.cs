@@ -7,6 +7,7 @@ public class FPSInteractionManager : MonoBehaviour
     [SerializeField] private Transform _fpsCameraT;
     [SerializeField] private bool _debugRay;
     [SerializeField] private float _interactionDistance;
+    [SerializeField] private Transform _empty;
 
     private Interactable _pointingInteractable;
     private Grabbable _pointingGrabbable;
@@ -28,7 +29,7 @@ public class FPSInteractionManager : MonoBehaviour
         if (_grabbedObject == null)
             CheckInteraction();
 
-        else if (_grabbedObject != null && Input.GetKeyDown(KeyCode.E))
+        else if (_grabbedObject != null && Input.GetMouseButtonUp(0))
             Drop();
 
 
@@ -55,7 +56,7 @@ public class FPSInteractionManager : MonoBehaviour
             _pointingGrabbable = hit.transform.GetComponent<Grabbable>();
             if (_grabbedObject == null && _pointingGrabbable)
             {
-                if (Input.GetKeyDown(KeyCode.E))
+                if (Input.GetKeyDown(KeyCode.E) && Input.GetMouseButton(0))
                 {
                     _pointingGrabbable.Grab(gameObject);
                     Grab(_pointingGrabbable);
@@ -84,8 +85,12 @@ public class FPSInteractionManager : MonoBehaviour
     private void Grab(Grabbable grabbable)
     {
         _grabbedObject = grabbable;
-        grabbable.transform.SetParent(_fpsCameraT);
 
+        Vector3 newObjectPosition;
+        newObjectPosition = _empty.position;
+        _grabbedObject.transform.position = newObjectPosition;
+
+        grabbable.transform.SetParent(_fpsCameraT);
     }
 
     private void DebugRaycast()
