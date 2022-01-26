@@ -4,10 +4,12 @@ using UnityEngine;
 
 public class AnimationManager : MonoBehaviour
 {
-    private Animator _animator;
+    [SerializeField] private Transform _fpsCameraT;
 
+    private Animator _animator;
     private Vector3 _inputVector;
     private float _inputSpeed;
+    private Grabbable _pointingGrabbable;
 
     // Start is called before the first frame update
     void Start()
@@ -30,7 +32,12 @@ public class AnimationManager : MonoBehaviour
     private void UpdateAnimations()
     {
         _animator.SetFloat("speed", _inputSpeed);
-        Debug.Log(Input.GetMouseButtonDown(0));
         _animator.SetBool("grabMode", Input.GetMouseButton(0));
+
+        if (_fpsCameraT.transform.childCount > 2) {
+            //se i figli sono piu' di due vuol dire che e' stato grabbato un oggetto
+            _animator.SetBool("grab", true);
+        }
+        if (Input.GetMouseButtonUp(0)) _animator.SetBool("grab", false);
     }
 }
