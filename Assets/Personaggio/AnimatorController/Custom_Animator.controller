@@ -284,7 +284,7 @@ AnimatorState:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: Grab
-  m_Speed: 3
+  m_Speed: 5
   m_CycleOffset: 0
   m_Transitions:
   - {fileID: -6355746470126241618}

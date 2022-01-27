@@ -32,6 +32,16 @@ public class FPSInteractionManager : MonoBehaviour
         else if (_grabbedObject != null && Input.GetMouseButtonUp(0))
             Drop();
 
+        if(Input.GetKeyUp(KeyCode.E) && _grabbedObject != null) {
+            Vector3 newObjectPosition;
+            
+            Quaternion newObjectOrientation;
+            newObjectPosition = _empty.position;
+            newObjectOrientation = _empty.rotation;
+
+            _grabbedObject.transform.position = newObjectPosition;
+            _grabbedObject.transform.rotation = newObjectOrientation;
+        }
 
         if (_debugRay)
             DebugRaycast();
@@ -85,16 +95,6 @@ public class FPSInteractionManager : MonoBehaviour
     private void Grab(Grabbable grabbable)
     {
         _grabbedObject = grabbable;
-
-        Vector3 newObjectPosition;
-        
-        Quaternion newObjectOrientation;
-        newObjectPosition = _empty.position;
-        newObjectOrientation = _empty.rotation;
-
-        _grabbedObject.transform.position = newObjectPosition;
-        _grabbedObject.transform.rotation = newObjectOrientation;
-
         grabbable.transform.SetParent(_fpsCameraT);
     }
 
