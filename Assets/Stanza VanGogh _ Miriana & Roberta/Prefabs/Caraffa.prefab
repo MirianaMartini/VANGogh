@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 8927389120115071405}
   - component: {fileID: 6456611551363723383}
   - component: {fileID: 1515434169859229219}
-  - component: {fileID: 1293215546536539317}
+  - component: {fileID: 4039149813644667359}
   m_Layer: 0
   m_Name: Caraffa
   m_TagString: Untagged
@@ -112,8 +112,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 07366e4a06ee18040aa3f7d8ad57f471, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!65 &1293215546536539317
-BoxCollider:
+--- !u!64 &4039149813644667359
+MeshCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -122,6 +122,7 @@ BoxCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 7.2573566, y: 12.7809305, z: 6.9850645}
-  m_Center: {x: 0.00000035762787, y: 6.364701, z: 0.06279838}
+  serializedVersion: 4
+  m_Convex: 1
+  m_CookingOptions: 30
+  m_Mesh: {fileID: -7671399369258712771, guid: 6cfb3c12b19ca894799947261698a7b8, type: 3}
