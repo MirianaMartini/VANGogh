@@ -275,6 +275,26 @@ PrefabInstance:
       propertyPath: m_Enabled
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 2543285352979741627, guid: fe1fac7d7214fc04e889266323db5c11, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.4747729
+      objectReference: {fileID: 0}
+    - target: {fileID: 2543285352979741627, guid: fe1fac7d7214fc04e889266323db5c11, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.47477293
+      objectReference: {fileID: 0}
+    - target: {fileID: 2543285352979741627, guid: fe1fac7d7214fc04e889266323db5c11, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 0.4747729
+      objectReference: {fileID: 0}
+    - target: {fileID: 2543285352979741627, guid: fe1fac7d7214fc04e889266323db5c11, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 16.796
+      objectReference: {fileID: 0}
+    - target: {fileID: 2543285353098746021, guid: fe1fac7d7214fc04e889266323db5c11, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 17.021
+      objectReference: {fileID: 0}
     - target: {fileID: 2648444170651420161, guid: fe1fac7d7214fc04e889266323db5c11, type: 3}
       propertyPath: m_RootOrder
       value: 0
@@ -371,6 +391,10 @@ PrefabInstance:
       propertyPath: m_Enabled
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4740833634010891902, guid: fe1fac7d7214fc04e889266323db5c11, type: 3}
+      propertyPath: m_Drag
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5139850667915726289, guid: fe1fac7d7214fc04e889266323db5c11, type: 3}
       propertyPath: m_LocalScale.z
       value: 1.6696334
@@ -419,6 +443,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5235940702456574505, guid: fe1fac7d7214fc04e889266323db5c11, type: 3}
+      propertyPath: m_Convex
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 5262660936344900958, guid: fe1fac7d7214fc04e889266323db5c11, type: 3}
       propertyPath: m_LocalScale.x
       value: 5.9912667
@@ -435,6 +463,10 @@ PrefabInstance:
       propertyPath: m_Controller
       value: 
       objectReference: {fileID: 9100000, guid: 49b00f30e2cf17944b8942ce77f804f5, type: 2}
+    - target: {fileID: 7323131592561284814, guid: fe1fac7d7214fc04e889266323db5c11, type: 3}
+      propertyPath: m_Drag
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7668093438163563123, guid: fe1fac7d7214fc04e889266323db5c11, type: 3}
       propertyPath: m_Controller
       value: 
