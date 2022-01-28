@@ -60,6 +60,7 @@ public class FPSInteractionManager : MonoBehaviour
             {
                 if (Input.GetKeyDown(KeyCode.E))
                     _pointingInteractable.Interact(gameObject);
+                
             }
            
             //Check if is grabbable
