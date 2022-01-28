@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 1147748786785346809}
   - component: {fileID: 2884951631095992371}
   - component: {fileID: 2657062617964948642}
+  - component: {fileID: -8106095454793989239}
   m_Layer: 0
   m_Name: pergamena_mesh
   m_TagString: Untagged
@@ -98,3 +99,16 @@ MonoBehaviour:
   _animationObject: {fileID: 0}
   _fpsCameraT: {fileID: 0}
   _empty: {fileID: 0}
+--- !u!65 &-8106095454793989239
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3677633612431667686}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.39672792, y: 0.7256827, z: 2.0000007}
+  m_Center: {x: 0.29874712, y: 0.4728482, z: -0.012593746}
