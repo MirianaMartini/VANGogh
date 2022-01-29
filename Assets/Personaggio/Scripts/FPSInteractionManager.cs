@@ -2,12 +2,14 @@
 using UnityEngine.UI;
 using System.Collections;
 
+
 public class FPSInteractionManager : MonoBehaviour
 {
     [SerializeField] private Transform _fpsCameraT;
     [SerializeField] private bool _debugRay;
     [SerializeField] private float _interactionDistance;
     [SerializeField] private Transform _empty;
+    [SerializeField] private GameObject _zainoInventory;
 
     private Interactable _pointingInteractable;
     private Grabbable _pointingGrabbable;
@@ -25,6 +27,10 @@ public class FPSInteractionManager : MonoBehaviour
     void Update()
     {
         _rayOrigin = _fpsCameraT.position + _fpsController.radius * _fpsCameraT.forward;
+
+        if ((_grabbedObject == null) && Input.GetKeyUp(KeyCode.Tab)){
+            _zainoInventory.SetActive(!_zainoInventory.activeSelf);
+        }
 
         if (_grabbedObject == null)
             CheckInteraction();
@@ -68,7 +74,7 @@ public class FPSInteractionManager : MonoBehaviour
             if (_grabbedObject == null && _pointingGrabbable)
             {
                 if (Input.GetKeyDown(KeyCode.E) && Input.GetMouseButton(0))
-                {
+                {   
                     _pointingGrabbable.Grab(gameObject);
                     Grab(_pointingGrabbable);
                 }
@@ -94,7 +100,7 @@ public class FPSInteractionManager : MonoBehaviour
     }
 
     private void Grab(Grabbable grabbable)
-    {
+    {   
         _grabbedObject = grabbable;
         grabbable.transform.SetParent(_fpsCameraT);
     }
