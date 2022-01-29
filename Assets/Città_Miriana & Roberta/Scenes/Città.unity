@@ -841,10 +841,10 @@ RectTransform:
   m_Father: {fileID: 1005519071}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 500, y: 300}
+  m_AnchorMin: {x: 1, y: 0.5}
+  m_AnchorMax: {x: 1, y: 0.5}
+  m_AnchoredPosition: {x: -250, y: 0}
+  m_SizeDelta: {x: 450, y: 300}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &101057760
 MonoBehaviour:
@@ -7735,6 +7735,11 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 6594019199176737367, guid: 91876de37bdcaa94492effc4b70a0cac, type: 3}
   m_PrefabInstance: {fileID: 879563158}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &883331589 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 641334402889247084, guid: 451f6e7e0b29d2948a258d5d3a7bcb14, type: 3}
+  m_PrefabInstance: {fileID: 235957841796510025}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &888899258
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -8560,7 +8565,7 @@ GameObject:
   - component: {fileID: 1005519068}
   - component: {fileID: 1005519072}
   m_Layer: 5
-  m_Name: Canvas
+  m_Name: Canvas_Zaino
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -9133,7 +9138,7 @@ GameObject:
   - component: {fileID: 1107077970}
   - component: {fileID: 1107077969}
   m_Layer: 0
-  m_Name: EventSystem
+  m_Name: EventSystem_Zaino
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -9448,7 +9453,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -0.000020668309, y: 17.000025}
+  m_AnchoredPosition: {x: 0.0003859861, y: 17.000025}
   m_SizeDelta: {x: 0, y: 300}
   m_Pivot: {x: 0, y: 1}
 --- !u!1001 &1130062382
@@ -18859,6 +18864,10 @@ PrefabInstance:
       propertyPath: m_Controller
       value: 
       objectReference: {fileID: 9100000, guid: 6fb5cf19ff949644db8fc76b4c117ed8, type: 2}
+    - target: {fileID: 641334402889247084, guid: 451f6e7e0b29d2948a258d5d3a7bcb14, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4264459537129880376, guid: 451f6e7e0b29d2948a258d5d3a7bcb14, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0.015
@@ -18871,6 +18880,10 @@ PrefabInstance:
       propertyPath: m_LocalPosition.z
       value: 1.032
       objectReference: {fileID: 0}
+    - target: {fileID: 5167611678338886854, guid: 451f6e7e0b29d2948a258d5d3a7bcb14, type: 3}
+      propertyPath: _zainoObj
+      value: 
+      objectReference: {fileID: 883331589}
     - target: {fileID: 5167611678338886854, guid: 451f6e7e0b29d2948a258d5d3a7bcb14, type: 3}
       propertyPath: _zainoInventory
       value: 

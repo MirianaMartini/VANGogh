@@ -10,6 +10,7 @@ public class FPSInteractionManager : MonoBehaviour
     [SerializeField] private float _interactionDistance;
     [SerializeField] private Transform _empty;
     [SerializeField] private GameObject _zainoInventory;
+    [SerializeField] private GameObject _zainoObj;
 
     private Interactable _pointingInteractable;
     private Grabbable _pointingGrabbable;
@@ -30,6 +31,7 @@ public class FPSInteractionManager : MonoBehaviour
 
         if ((_grabbedObject == null) && Input.GetKeyUp(KeyCode.Tab)){
             _zainoInventory.SetActive(!_zainoInventory.activeSelf);
+            _zainoObj.SetActive(!_zainoObj.activeSelf);
         }
 
         if (_grabbedObject == null)
