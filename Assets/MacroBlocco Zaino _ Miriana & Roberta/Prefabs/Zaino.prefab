@@ -1062,6 +1062,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8805418168795513054}
+  - component: {fileID: 1122085135890192972}
+  - component: {fileID: -3080188799961491540}
   m_Layer: 0
   m_Name: Zaino
   m_TagString: Untagged
@@ -1099,6 +1101,37 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!95 &1122085135890192972
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8176550687684139620}
+  m_Enabled: 1
+  m_Avatar: {fileID: 9000000, guid: 8d3026d174596714683f419c64b67f6d, type: 3}
+  m_Controller: {fileID: 9100000, guid: f7a2d4008c71e66458c0743be1786d10, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &-3080188799961491540
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8176550687684139620}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f0905499ebc94664480c3fe2c0892fac, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &8701988178850271827
 GameObject:
   m_ObjectHideFlags: 0
