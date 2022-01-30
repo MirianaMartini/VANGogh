@@ -196,7 +196,8 @@ MonoBehaviour:
   _interactionDistance: 3
   _empty: {fileID: 4264459537129880376}
   _zainoInventory: {fileID: 0}
-  _zainoObj: {fileID: 0}
+  _zainoObj: {fileID: 641334402889247084}
+  _crossHair: {fileID: 0}
 --- !u!54 &6455855179638515825
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -811,6 +812,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 97caa04c9bb80f14abcb6601918992d2, type: 3}
+--- !u!1 &641334402889247084 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8176550687684139620, guid: 97caa04c9bb80f14abcb6601918992d2, type: 3}
+  m_PrefabInstance: {fileID: 8763595558726202120}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &265055494052459478 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 8805418168795513054, guid: 97caa04c9bb80f14abcb6601918992d2, type: 3}
