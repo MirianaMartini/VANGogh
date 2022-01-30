@@ -13,9 +13,9 @@ GameObject:
   - component: {fileID: 4700175031406827622}
   - component: {fileID: 3076955274334932685}
   - component: {fileID: -8038224457765368135}
-  - component: {fileID: 7067334998000353931}
   - component: {fileID: 6128105822988202624}
   - component: {fileID: 3277091191323933359}
+  - component: {fileID: 701947236165808425}
   m_Layer: 0
   m_Name: Bicchiere
   m_TagString: Untagged
@@ -114,19 +114,6 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!65 &7067334998000353931
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6501680784708319667}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 2.7815464, y: 3.4309874, z: 2.508427}
-  m_Center: {x: 0.028868547, y: 1.7296832, z: -0.023630124}
 --- !u!114 &6128105822988202624
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -153,3 +140,17 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Item: {fileID: 11400000, guid: a573a162a12741d43b5bf9e3f6eb4ee5, type: 2}
+--- !u!64 &701947236165808425
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6501680784708319667}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 1
+  m_CookingOptions: 30
+  m_Mesh: {fileID: -1504870144773683555, guid: 752ac628dc23b76498334efb3b1841fc, type: 3}
