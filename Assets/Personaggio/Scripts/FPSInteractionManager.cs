@@ -54,10 +54,14 @@ public class FPSInteractionManager : MonoBehaviour
             _grabbedObject.transform.rotation = newObjectOrientation;
         }
 
+<<<<<<< Updated upstream
         //Apparizione disapparizione CrossHair
         if(_grabbedObject != null)_crossHair.SetActive(false);
         else _crossHair.SetActive(true);
 
+=======
+       
+>>>>>>> Stashed changes
         if (_debugRay)
             DebugRaycast();
     }

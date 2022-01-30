@@ -38,7 +38,7 @@ public class AnimationManager : MonoBehaviour
         _animator.SetBool("grabMode", Input.GetMouseButton(0));
 
         //grabMode <-> Grab
-        if (_fpsCameraT.transform.childCount > 3) {
+        if (_fpsCameraT.transform.childCount > 4) {
             //se i figli sono piu' di due vuol dire che e' stato grabbato un oggetto
             _animator.SetBool("grab", true);
         }
