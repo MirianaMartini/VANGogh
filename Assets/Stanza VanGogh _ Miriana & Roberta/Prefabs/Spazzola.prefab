@@ -14,6 +14,8 @@ GameObject:
   - component: {fileID: 6372377327966648967}
   - component: {fileID: 2023960444532624104}
   - component: {fileID: 6081696482797693627}
+  - component: {fileID: 7360822670623484588}
+  - component: {fileID: -601428663178883472}
   m_Layer: 0
   m_Name: Spazzola
   m_TagString: Untagged
@@ -126,3 +128,29 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 7.6190186, y: 2.6001575, z: 5.3437977}
   m_Center: {x: -0.10207844, y: 1.3459052, z: -0.32715964}
+--- !u!114 &7360822670623484588
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4107324275419548685}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b4d19d78ee6a9e24e9f69851f8e965fa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Item: {fileID: 11400000, guid: 43795b76d82831e4195c6ddd2fdd5caf, type: 2}
+--- !u!114 &-601428663178883472
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4107324275419548685}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 61510c33a987dfe479142441d94a7754, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Item: {fileID: 11400000, guid: 43795b76d82831e4195c6ddd2fdd5caf, type: 2}

@@ -14,11 +14,12 @@ public class FPSInteractionManager : MonoBehaviour
 
     private Interactable _pointingInteractable;
     private Grabbable _pointingGrabbable;
-
+    private ItemPickUp _pointingPickUp;
     private CharacterController _fpsController;
     private Vector3 _rayOrigin;
-
     private Grabbable _grabbedObject = null;
+
+    //private InventoryManager Inventory = new InventoryManager();
 
     void Start()
     {
@@ -32,6 +33,7 @@ public class FPSInteractionManager : MonoBehaviour
         if ((_grabbedObject == null) && Input.GetKeyUp(KeyCode.Tab)){
             _zainoInventory.SetActive(!_zainoInventory.activeSelf);
             _zainoObj.SetActive(!_zainoObj.activeSelf);
+            InventoryManager.Instance.ListItems();
         }
 
         if (_grabbedObject == null)
@@ -81,6 +83,12 @@ public class FPSInteractionManager : MonoBehaviour
                     Grab(_pointingGrabbable);
                 }
                     
+            }
+
+            //PickUp Objects
+            _pointingPickUp = hit.transform.GetComponent<ItemPickUp>();
+            if(_pointingPickUp && Input.GetKeyDown(KeyCode.I)){
+                _pointingPickUp.PickUp();
             }
         }
         //If NOTHING is detected set all to null
