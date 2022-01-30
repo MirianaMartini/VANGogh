@@ -16,6 +16,7 @@ GameObject:
   - component: {fileID: 5626574153483668982}
   - component: {fileID: 8422685328253054443}
   - component: {fileID: 7859249926225503648}
+  - component: {fileID: 1815656654638445968}
   m_Layer: 0
   m_Name: Bottoglia
   m_TagString: Untagged
@@ -125,8 +126,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 6.8585997, y: 30.3501, z: 6.8585997}
-  m_Center: {x: 0, y: 15.18275, z: 0.0000022649765}
+  m_Size: {x: 6.8585997, y: 22.679747, z: 6.9773645}
+  m_Center: {x: 6.898365e-10, y: 11.347574, z: 0.05938496}
 --- !u!114 &8422685328253054443
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -153,3 +154,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Item: {fileID: 11400000, guid: 6f10ea6cdbd487940b943449034fc998, type: 2}
+--- !u!65 &1815656654638445968
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3137750142954265544}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 2.3842454, y: 8.720384, z: 2.2881823}
+  m_Center: {x: 0.012380113, y: 25.997614, z: 0.08919892}
