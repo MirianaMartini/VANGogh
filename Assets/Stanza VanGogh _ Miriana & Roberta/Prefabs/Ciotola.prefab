@@ -16,6 +16,7 @@ GameObject:
   - component: {fileID: 1191012154554102390}
   - component: {fileID: 2272518230124151498}
   - component: {fileID: 7223866108895635965}
+  - component: {fileID: 382856307367374378}
   m_Layer: 0
   m_Name: Ciotola
   m_TagString: Untagged
@@ -154,3 +155,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Item: {fileID: 11400000, guid: 078e4a126e94a364ab38c76a880cdd2b, type: 2}
+--- !u!65 &382856307367374378
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8083643899925471582}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.88303167, y: 0.1579333, z: 0.82184726}
+  m_Center: {x: -0.0025819417, y: 0.07962753, z: -0.005821695}
