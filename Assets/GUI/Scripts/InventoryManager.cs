@@ -10,6 +10,8 @@ public class InventoryManager : MonoBehaviour
     public Transform ItemContent;
     public GameObject InventoryItem;
 
+    public InventoryItemController[] InventoryItems;
+
     private void Awake(){
         Instance = this;
     }
@@ -31,9 +33,20 @@ public class InventoryManager : MonoBehaviour
             GameObject obj = Instantiate(InventoryItem, ItemContent);
             var itemName = obj.transform.Find("ItemName").GetComponent<Text>();
             var itemIcon = obj.transform.Find("ItemIcon").GetComponent<Image>();
-
+            
             itemName.text = item.itemName;
             itemIcon.sprite = item.icon;
+        }
+
+        SetInventoryItems();
+    }
+
+    public void SetInventoryItems() {
+        InventoryItems = ItemContent.GetComponentsInChildren<InventoryItemController>();
+
+        for (int i = 0; i < Items.Count; i++) {
+            InventoryItems[i].AddItem(Items[i]);
+        
         }
     }
     

@@ -6472,6 +6472,7 @@ MonoBehaviour:
   Items: []
   ItemContent: {fileID: 1123402152}
   InventoryItem: {fileID: 4233961901221655873, guid: 95f61385b4cc2534788664e6fc185469, type: 3}
+  InventoryItems: []
 --- !u!4 &781752004
 Transform:
   m_ObjectHideFlags: 0
@@ -18946,6 +18947,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 265055494052459478, guid: 451f6e7e0b29d2948a258d5d3a7bcb14, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0.81
+      objectReference: {fileID: 0}
+    - target: {fileID: 265055494052459478, guid: 451f6e7e0b29d2948a258d5d3a7bcb14, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 1.25
+      objectReference: {fileID: 0}
     - target: {fileID: 539882979699437895, guid: 451f6e7e0b29d2948a258d5d3a7bcb14, type: 3}
       propertyPath: m_Controller
       value: 
