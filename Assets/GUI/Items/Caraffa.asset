@@ -10,9 +10,9 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 5706f03763b4f9d41903051f2fbfa0fa, type: 3}
-  m_Name: Spazzola
+  m_Name: Caraffa
   m_EditorClassIdentifier: 
-  id: 1
-  itemName: spazzola
+  id: 6
+  itemName: Caraffa
   value: 1
-  icon: {fileID: 21300000, guid: 33549513746684d02bd98986763f6ae3, type: 3}
+  icon: {fileID: 21300000, guid: 3fd36e940da953743b7164a5d8298a60, type: 3}

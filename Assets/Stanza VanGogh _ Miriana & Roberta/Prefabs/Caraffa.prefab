@@ -14,6 +14,8 @@ GameObject:
   - component: {fileID: 6456611551363723383}
   - component: {fileID: 1515434169859229219}
   - component: {fileID: 4039149813644667359}
+  - component: {fileID: 3852808948868945119}
+  - component: {fileID: 322943377465332125}
   m_Layer: 0
   m_Name: Caraffa
   m_TagString: Untagged
@@ -126,3 +128,29 @@ MeshCollider:
   m_Convex: 1
   m_CookingOptions: 30
   m_Mesh: {fileID: -7671399369258712771, guid: 6cfb3c12b19ca894799947261698a7b8, type: 3}
+--- !u!114 &3852808948868945119
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6981856414088755320}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 61510c33a987dfe479142441d94a7754, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Item: {fileID: 11400000, guid: 463a62742099c8e468d2a5c82369ffd7, type: 2}
+--- !u!114 &322943377465332125
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6981856414088755320}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b4d19d78ee6a9e24e9f69851f8e965fa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Item: {fileID: 11400000, guid: 463a62742099c8e468d2a5c82369ffd7, type: 2}

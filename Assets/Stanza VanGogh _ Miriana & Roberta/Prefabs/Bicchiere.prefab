@@ -14,6 +14,8 @@ GameObject:
   - component: {fileID: 3076955274334932685}
   - component: {fileID: -8038224457765368135}
   - component: {fileID: 7067334998000353931}
+  - component: {fileID: 6128105822988202624}
+  - component: {fileID: 3277091191323933359}
   m_Layer: 0
   m_Name: Bicchiere
   m_TagString: Untagged
@@ -125,3 +127,29 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 2.7815464, y: 3.4309874, z: 2.508427}
   m_Center: {x: 0.028868547, y: 1.7296832, z: -0.023630124}
+--- !u!114 &6128105822988202624
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6501680784708319667}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 61510c33a987dfe479142441d94a7754, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Item: {fileID: 11400000, guid: a573a162a12741d43b5bf9e3f6eb4ee5, type: 2}
+--- !u!114 &3277091191323933359
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6501680784708319667}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b4d19d78ee6a9e24e9f69851f8e965fa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Item: {fileID: 11400000, guid: a573a162a12741d43b5bf9e3f6eb4ee5, type: 2}
