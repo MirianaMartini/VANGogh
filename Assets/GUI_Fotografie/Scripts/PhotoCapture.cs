@@ -10,7 +10,6 @@ public class PhotoCapture : MonoBehaviour
     [SerializeField] private GameObject photoFrame;
     [SerializeField] private GameObject cameraUI;
 
-
     [Header("Flash Effect")]
     [SerializeField] private GameObject cameraFlash;
     [SerializeField] private float flashTime;
@@ -21,6 +20,8 @@ public class PhotoCapture : MonoBehaviour
     [Header("Audio")]
     [SerializeField] private AudioSource cameraAudio;
 
+    [Header("Zaino Inventory Check")]
+    [SerializeField] private GameObject ZainoInventory;
 
     private Texture2D screenCapture;
     private bool viewingPhoto;
@@ -34,26 +35,32 @@ public class PhotoCapture : MonoBehaviour
     private void Update()
     {
 
-        if (Input.GetMouseButton(0)) {
-            cameraUI.SetActive(true);
-        }
+        cameraUI.SetActive(false);
 
-        if (Input.GetMouseButton(0) && Input.GetKeyDown(KeyCode.Return))
-        {
-            //takeScreenshot
-            if (!viewingPhoto)
-            {
-                StartCoroutine(CapturePhoto());
+        if (!ZainoInventory.activeSelf) { 
+
+            if (Input.GetMouseButton(0)) {
+                cameraUI.SetActive(true);
             }
-            else 
+
+            if (Input.GetMouseButton(0) && Input.GetKeyDown(KeyCode.Return))
             {
+                //takeScreenshot
+                if (!viewingPhoto)
+                {
+                    StartCoroutine(CapturePhoto());
+                }
+                else 
+                {
+                    RemovePhoto();
+                }
+            }
+
+            if (Input.GetMouseButtonUp(0)) {
                 RemovePhoto();
+                cameraUI.SetActive(false);
             }
-        }
 
-        if (Input.GetMouseButtonUp(0)) {
-            RemovePhoto();
-            cameraUI.SetActive(false);
         }
     }
 

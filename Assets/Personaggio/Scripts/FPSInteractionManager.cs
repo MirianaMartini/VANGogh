@@ -32,6 +32,7 @@ public class FPSInteractionManager : MonoBehaviour
     {
         _rayOrigin = _fpsCameraT.position + _fpsController.radius * _fpsCameraT.forward;
 
+        //Apertura Zaino Inventory
         if ((_grabbedObject == null) && Input.GetKeyUp(KeyCode.Tab)){
             _zainoInventory.SetActive(!_zainoInventory.activeSelf);
             _zainoObj.SetActive(!_zainoObj.activeSelf);
@@ -85,7 +86,7 @@ public class FPSInteractionManager : MonoBehaviour
             _pointingGrabbable = hit.transform.GetComponent<Grabbable>();
             if (_grabbedObject == null && _pointingGrabbable)
             {
-                if (Input.GetKeyDown(KeyCode.E) && Input.GetMouseButton(0))
+                if (Input.GetKeyDown(KeyCode.E) && Input.GetMouseButton(1))
                 {   
                     _pointingGrabbable.Grab(gameObject);
                     Grab(_pointingGrabbable);

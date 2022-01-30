@@ -42,21 +42,25 @@ public class AnimationManager : MonoBehaviour
             //se i figli sono piu' di due vuol dire che e' stato grabbato un oggetto
             _animator.SetBool("grab", true);
         }
-        if (Input.GetMouseButtonUp(0)) _animator.SetBool("grab", false);
+        if (Input.GetMouseButtonUp(1)) _animator.SetBool("grab", false);
 
-        //Idle <-> NoArms
+        //Idle <-> NoArms-Zaino
         if (Input.GetKeyUp(KeyCode.Tab) && !_animator.GetBool("grab"))
         {
-            if(_animator.GetBool("noArms")) _animator.SetBool("noArms", false);
-            else _animator.SetBool("noArms", true);
+            if(_animator.GetBool("noArms-Zaino")) _animator.SetBool("noArms-Zaino", false);
+            else _animator.SetBool("noArms-Zaino", true);
         }
 
+        //Idle <-> NoArms-Foto
         if (Input.GetMouseButton(0) && !_animator.GetBool("grab"))
         {
-            _animator.SetBool("noArms", Input.GetMouseButton(0));
+            _animator.SetBool("noArms-Foto", Input.GetMouseButton(0));
         }
 
-        if (Input.GetMouseButtonUp(0))
-            _animator.SetBool("noArms", false);
+        //se NON sono in modalità foto e il NON grabbo <-> torna in Idle
+        if (Input.GetMouseButtonUp(0) && !_animator.GetBool("grab"))
+            _animator.SetBool("noArms-Foto", false);
+
+
     }
 }
