@@ -35,7 +35,7 @@ public class AnimationManager : MonoBehaviour
         _animator.SetFloat("speed", _inputSpeed);
 
         //Idle <-> GrabMode
-        _animator.SetBool("grabMode", Input.GetMouseButton(0));
+        _animator.SetBool("grabMode", Input.GetMouseButton(1));
 
         //grabMode <-> Grab
         if (_fpsCameraT.transform.childCount > 4) {
@@ -45,9 +45,18 @@ public class AnimationManager : MonoBehaviour
         if (Input.GetMouseButtonUp(0)) _animator.SetBool("grab", false);
 
         //Idle <-> NoArms
-        if (Input.GetKeyUp(KeyCode.Tab) && !_animator.GetBool("grab")){
+        if (Input.GetKeyUp(KeyCode.Tab) && !_animator.GetBool("grab"))
+        {
             if(_animator.GetBool("noArms")) _animator.SetBool("noArms", false);
             else _animator.SetBool("noArms", true);
-        } 
+        }
+
+        if (Input.GetMouseButton(0) && !_animator.GetBool("grab"))
+        {
+            _animator.SetBool("noArms", Input.GetMouseButton(0));
+        }
+
+        if (Input.GetMouseButtonUp(0))
+            _animator.SetBool("noArms", false);
     }
 }

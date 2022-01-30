@@ -12,6 +12,7 @@ public class FPSInteractionManager : MonoBehaviour
     [SerializeField] private GameObject _zainoInventory;
     [SerializeField] private GameObject _zainoObj;
     [SerializeField] private GameObject _crossHair;
+    [SerializeField] private GameObject _fotocamera;
 
     private Interactable _pointingInteractable;
     private Grabbable _pointingGrabbable;
@@ -40,7 +41,7 @@ public class FPSInteractionManager : MonoBehaviour
         if (_grabbedObject == null)
             CheckInteraction();
 
-        else if (_grabbedObject != null && Input.GetMouseButtonUp(0))
+        else if (_grabbedObject != null && Input.GetMouseButtonUp(1))
             Drop();
 
         if(Input.GetKeyUp(KeyCode.E) && _grabbedObject != null) {
@@ -54,14 +55,12 @@ public class FPSInteractionManager : MonoBehaviour
             _grabbedObject.transform.rotation = newObjectOrientation;
         }
 
-<<<<<<< Updated upstream
         //Apparizione disapparizione CrossHair
-        if(_grabbedObject != null)_crossHair.SetActive(false);
+        if(_grabbedObject != null || Input.GetMouseButton(0)) _crossHair.SetActive(false);
         else _crossHair.SetActive(true);
 
-=======
-       
->>>>>>> Stashed changes
+     
+
         if (_debugRay)
             DebugRaycast();
     }

@@ -291,6 +291,7 @@ MonoBehaviour:
   _zainoInventory: {fileID: 0}
   _zainoObj: {fileID: 641334402889247084}
   _crossHair: {fileID: 0}
+  _fotocamera: {fileID: 0}
 --- !u!54 &6455855179638515825
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -415,6 +416,7 @@ GameObject:
   - component: {fileID: 6455855179642489137}
   - component: {fileID: 6455855179636004113}
   - component: {fileID: 6455855179631958871}
+  - component: {fileID: 349683547186233470}
   m_Layer: 0
   m_Name: FirstPersonCharacter
   m_TagString: MainCamera
@@ -499,6 +501,26 @@ Behaviour:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6455855179641899795}
   m_Enabled: 1
+--- !u!114 &349683547186233470
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6455855179641899795}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4abf017b590ef714db2f85366e0f63d2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  photoDisplayArea: {fileID: 0}
+  photoFrame: {fileID: 0}
+  cameraUI: {fileID: 0}
+  _crossHair: {fileID: 0}
+  cameraFlash: {fileID: 6104581508283454270}
+  flashTime: 0.2
+  fadingAnimation: {fileID: 0}
+  cameraAudio: {fileID: 0}
 --- !u!114 &4555230138158238023
 MonoBehaviour:
   m_ObjectHideFlags: 0

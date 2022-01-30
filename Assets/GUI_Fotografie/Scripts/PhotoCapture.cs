@@ -33,7 +33,12 @@ public class PhotoCapture : MonoBehaviour
 
     private void Update()
     {
-        if (Input.GetMouseButtonDown(0))
+
+        if (Input.GetMouseButton(0)) {
+            cameraUI.SetActive(true);
+        }
+
+        if (Input.GetMouseButton(0) && Input.GetKeyDown(KeyCode.Return))
         {
             //takeScreenshot
             if (!viewingPhoto)
@@ -44,6 +49,11 @@ public class PhotoCapture : MonoBehaviour
             {
                 RemovePhoto();
             }
+        }
+
+        if (Input.GetMouseButtonUp(0)) {
+            RemovePhoto();
+            cameraUI.SetActive(false);
         }
     }
 
