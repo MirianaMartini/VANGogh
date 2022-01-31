@@ -25,6 +25,7 @@ public class PhotoCapture : MonoBehaviour
 
     private Texture2D screenCapture;
     private bool viewingPhoto;
+    private Item polaroid;
 
     private void Start() 
     {
@@ -82,6 +83,11 @@ public class PhotoCapture : MonoBehaviour
     {
         Sprite photoSprite = Sprite.Create(screenCapture, new Rect(0.0f, 0.0f, screenCapture.width, screenCapture.height), new Vector2(0.5f, 0.5f), 100.0f);
         photoDisplayArea.sprite = photoSprite;
+
+        polaroid = new Item();
+        polaroid.itemName = "Polaroid";
+        polaroid.icon = photoSprite;
+        InventoryManager.Instance.Add(polaroid);
 
         photoFrame.SetActive(true);
         
