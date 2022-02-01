@@ -26,6 +26,7 @@ public class PhotoCapture : MonoBehaviour
     private Texture2D screenCapture;
     private bool viewingPhoto;
     private Item polaroid;
+    private int index = 0;
 
     private void Start() 
     {
@@ -76,6 +77,13 @@ public class PhotoCapture : MonoBehaviour
 
         screenCapture.ReadPixels(regionToRead, 0, 0, false);
         screenCapture.Apply();
+
+        //
+        byte[] bytes = screenCapture.EncodeToPNG();
+        System.IO.File.WriteAllBytes($"Polaroids/polaroid{index}.png", bytes);
+        //
+        ++index;
+
         ShowPhoto();
     }
 
