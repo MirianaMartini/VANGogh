@@ -81,8 +81,8 @@ public class PhotoCapture : MonoBehaviour
         //
         byte[] bytes = screenCapture.EncodeToPNG();
         System.IO.File.WriteAllBytes($"Polaroids/polaroid{index}.png", bytes);
-        //
         ++index;
+        //
 
         ShowPhoto();
     }
