@@ -291,7 +291,7 @@ MonoBehaviour:
   _zainoInventory: {fileID: 0}
   _zainoObj: {fileID: 641334402889247084}
   _crossHair: {fileID: 0}
-  _fotocamera: {fileID: 0}
+  _showAlbum: {fileID: 0}
 --- !u!54 &6455855179638515825
 Rigidbody:
   m_ObjectHideFlags: 0

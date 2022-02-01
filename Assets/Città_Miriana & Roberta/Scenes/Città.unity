@@ -18571,6 +18571,7 @@ MonoBehaviour:
   ItemContent: {fileID: 1123402151}
   PolaroidContent: {fileID: 1938091234}
   text_Button: {fileID: 2068408645}
+  prefab: {fileID: 1499874646674100971, guid: 1fa8b3f72d0a52f4f918a7db06da8b22, type: 3}
 --- !u!1001 &1850231633
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -21371,12 +21372,20 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 701318699}
     - target: {fileID: 5167611678338886854, guid: 451f6e7e0b29d2948a258d5d3a7bcb14, type: 3}
+      propertyPath: _showAlbum
+      value: 
+      objectReference: {fileID: 1849896675}
+    - target: {fileID: 5167611678338886854, guid: 451f6e7e0b29d2948a258d5d3a7bcb14, type: 3}
       propertyPath: _zainoInventory
       value: 
       objectReference: {fileID: 101057758}
     - target: {fileID: 6455855179641899793, guid: 451f6e7e0b29d2948a258d5d3a7bcb14, type: 3}
       propertyPath: m_Name
       value: Custom_FPS
+      objectReference: {fileID: 0}
+    - target: {fileID: 6455855179641899793, guid: 451f6e7e0b29d2948a258d5d3a7bcb14, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6455855179641935665, guid: 451f6e7e0b29d2948a258d5d3a7bcb14, type: 3}
       propertyPath: m_RootOrder

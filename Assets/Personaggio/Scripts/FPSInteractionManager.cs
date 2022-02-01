@@ -12,7 +12,7 @@ public class FPSInteractionManager : MonoBehaviour
     [SerializeField] private GameObject _zainoInventory;
     [SerializeField] private GameObject _zainoObj;
     [SerializeField] private GameObject _crossHair;
-    [SerializeField] private GameObject _fotocamera;
+    [SerializeField] private ShowAlbum _showAlbum;
 
     private Interactable _pointingInteractable;
     private Grabbable _pointingGrabbable;
@@ -20,6 +20,7 @@ public class FPSInteractionManager : MonoBehaviour
     private CharacterController _fpsController;
     private Vector3 _rayOrigin;
     private Grabbable _grabbedObject = null;
+
 
     //private InventoryManager Inventory = new InventoryManager();
 
@@ -37,6 +38,7 @@ public class FPSInteractionManager : MonoBehaviour
             _zainoInventory.SetActive(!_zainoInventory.activeSelf);
             _zainoObj.SetActive(!_zainoObj.activeSelf);
             InventoryManager.Instance.ListItems();
+            _showAlbum.ListPolaroids();
         }
 
         if (_grabbedObject == null)

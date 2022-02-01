@@ -13,6 +13,6 @@ MonoBehaviour:
   m_Name: Spazzola
   m_EditorClassIdentifier: 
   id: 1
-  itemName: spazzola
+  itemName: Spazzola
   value: 1
   icon: {fileID: 21300000, guid: 33549513746684d02bd98986763f6ae3, type: 3}
