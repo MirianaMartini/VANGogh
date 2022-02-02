@@ -38,7 +38,7 @@ public class AnimationManager : MonoBehaviour
         _animator.SetBool("grabMode", Input.GetMouseButton(1));
 
         //grabMode <-> Grab
-        if (_fpsCameraT.transform.childCount > 4) {
+        if (_fpsCameraT.transform.childCount > 5) {
             //se i figli sono piu' di due vuol dire che e' stato grabbato un oggetto
             _animator.SetBool("grab", true);
         }
@@ -57,7 +57,7 @@ public class AnimationManager : MonoBehaviour
             _animator.SetBool("noArms-Foto", Input.GetMouseButton(0));
         }
 
-        //se NON sono in modalità foto e il NON grabbo <-> torna in Idle
+        //se NON sono in modalitï¿½ foto e il NON grabbo <-> torna in Idle
         if (Input.GetMouseButtonUp(0) && !_animator.GetBool("grab"))
             _animator.SetBool("noArms-Foto", false);
 
