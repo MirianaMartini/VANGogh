@@ -80,7 +80,7 @@ public class PhotoCapture : MonoBehaviour
 
         //
         byte[] bytes = screenCapture.EncodeToPNG();
-        System.IO.File.WriteAllBytes($"Polaroids/polaroid{index}.png", bytes);
+        System.IO.File.WriteAllBytes($"Polaroids/Polaroid{index}.png", bytes);
         ++index;
         //
 

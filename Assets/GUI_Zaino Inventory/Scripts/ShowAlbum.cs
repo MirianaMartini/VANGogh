@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using System.IO;
+using System;
 
 public class ShowAlbum : MonoBehaviour
 {
@@ -20,18 +21,6 @@ public class ShowAlbum : MonoBehaviour
 	void Start () {
 		Button btn = GetComponent<Button>();
 		btn.onClick.AddListener(SwitchView);
-        
-        if(flag){
-            index = 0;
-            //Cancello le foto della cartella
-
-            fileEntries = Directory.GetFiles("Polaroids/");
-            foreach(string file in fileEntries){
-                File.Delete(file);
-                ++index;
-            }
-            flag = false;
-        }
 	}
 
     public void SwitchView() {
@@ -48,7 +37,19 @@ public class ShowAlbum : MonoBehaviour
         }
     }
 
-    public void ListPolaroids(){       
+    public void ListPolaroids(){      
+        if(flag){
+            index = 0;
+            //Cancello le foto della cartella
+
+            fileEntries = Directory.GetFiles("Polaroids/");
+            foreach(string file in fileEntries){
+                File.Delete(file);
+                ++index;
+            }
+            flag = false;
+        }
+         
         foreach(Transform polaroid in PolaroidContent.transform){
             Destroy(polaroid.gameObject);
         } 
@@ -68,13 +69,23 @@ public class ShowAlbum : MonoBehaviour
             var itemName = obj.transform.Find("ItemName").GetComponent<Text>();
             var itemIcon = obj.transform.Find("ItemIcon").GetComponent<Image>();
 
+            string name = getName(file);
+
             //Inserisco le info
             //itemName.text = $"Polaroid{index}";
-            itemName.text = $"Polaroid";
+            itemName.text = name;
             itemIcon.sprite = photoSprite;
 
             ++index;
         }
+    }
+
+    private string getName(string s){
+        int index1 = s.IndexOf("/") + 1;
+        int index2 = s.IndexOf(".png");
+        s = s.Substring(index1, index2-index1);
+        
+        return s;
     }
 
 }
