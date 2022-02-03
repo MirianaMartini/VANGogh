@@ -319,10 +319,12 @@ MonoBehaviour:
   _interactionDistance: 3
   _empty: {fileID: 4264459537129880376}
   _emptyPergamena: {fileID: 334673107308101783}
+  _pergamenaOpenAudio: {fileID: 8300000, guid: 15f10016778fb104c94c04ad5556c81e, type: 3}
+  _pergamenaCloseAudio: {fileID: 8300000, guid: 3e3c4130fad63aa40b25f60691d97579, type: 3}
   _zainoInventory: {fileID: 0}
   _zainoObj: {fileID: 641334402889247084}
-  _crossHair: {fileID: 0}
   _showAlbum: {fileID: 0}
+  _crossHair: {fileID: 0}
 --- !u!54 &6455855179638515825
 Rigidbody:
   m_ObjectHideFlags: 0

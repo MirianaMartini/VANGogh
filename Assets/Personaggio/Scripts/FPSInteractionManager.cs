@@ -2,18 +2,27 @@
 using UnityEngine.UI;
 using System.Collections;
 
-
 public class FPSInteractionManager : MonoBehaviour
 {
+    [Header("General")]
     [SerializeField] private Transform _fpsCameraT;
     [SerializeField] private bool _debugRay;
     [SerializeField] private float _interactionDistance;
     [SerializeField] private Transform _empty;
+
+    [Header("Pergamena")]
     [SerializeField] private Transform _emptyPergamena;
+    [SerializeField] private AudioClip _pergamenaOpenAudio;
+    [SerializeField] private AudioClip _pergamenaCloseAudio;
+
+    [Header("Zaino")]
     [SerializeField] private GameObject _zainoInventory;
     [SerializeField] private GameObject _zainoObj;
-    [SerializeField] private GameObject _crossHair;
     [SerializeField] private ShowAlbum _showAlbum;
+
+    [Header("CrossHair")]
+    [SerializeField] private GameObject _crossHair;
+    
 
     private Interactable _pointingInteractable;
     private Grabbable _pointingGrabbable;
@@ -21,10 +30,9 @@ public class FPSInteractionManager : MonoBehaviour
     private CharacterController _fpsController;
     private Vector3 _rayOrigin;
     private Grabbable _grabbedObject = null;
-
     private Interactable _pergamenaShow = null;
-    //private Transform _originalPosPergamena;
     private Transform _originalParentPergamena;
+    private AudioSource _audioSource;
 
 
     //private InventoryManager Inventory = new InventoryManager();
@@ -32,6 +40,7 @@ public class FPSInteractionManager : MonoBehaviour
     void Start()
     {
         _fpsController = GetComponent<CharacterController>();
+        _audioSource = GetComponent<AudioSource>();
     }
 
     void Update()
@@ -43,6 +52,8 @@ public class FPSInteractionManager : MonoBehaviour
             if(Input.GetKeyDown(KeyCode.E)){
                 //Faccio ritornare la pergamena nella posizione originale;
                 _pointingInteractable.Interact(gameObject);
+                _audioSource.clip = _pergamenaCloseAudio;
+                _audioSource.Play();
                 RestorePergamena();
                 _pergamenaShow = null;
             }
@@ -77,9 +88,7 @@ public class FPSInteractionManager : MonoBehaviour
         //Apparizione disapparizione CrossHair
         if(_grabbedObject != null || Input.GetMouseButton(0)) _crossHair.SetActive(false);
         else _crossHair.SetActive(true);
-
-     
-
+  
         if (_debugRay)
             DebugRaycast();
     }
@@ -100,6 +109,8 @@ public class FPSInteractionManager : MonoBehaviour
                         _pergamenaShow = _pointingInteractable;
                         ShowPergamena();
                         _pergamenaShow.Interact(gameObject);
+                        _audioSource.clip = _pergamenaOpenAudio;
+                        _audioSource.Play();
                     } else _pointingInteractable.Interact(gameObject);
                 }
             }
