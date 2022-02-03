@@ -9,6 +9,7 @@ public class FPSInteractionManager : MonoBehaviour
     [SerializeField] private bool _debugRay;
     [SerializeField] private float _interactionDistance;
     [SerializeField] private Transform _empty;
+    [SerializeField] private Transform _emptyPergamena;
     [SerializeField] private GameObject _zainoInventory;
     [SerializeField] private GameObject _zainoObj;
     [SerializeField] private GameObject _crossHair;
@@ -21,6 +22,10 @@ public class FPSInteractionManager : MonoBehaviour
     private Vector3 _rayOrigin;
     private Grabbable _grabbedObject = null;
 
+    private Interactable _pergamenaShow = null;
+    //private Transform _originalPosPergamena;
+    private Transform _originalParentPergamena;
+
 
     //private InventoryManager Inventory = new InventoryManager();
 
@@ -32,6 +37,16 @@ public class FPSInteractionManager : MonoBehaviour
     void Update()
     {
         _rayOrigin = _fpsCameraT.position + _fpsController.radius * _fpsCameraT.forward;
+
+        //Pergamena
+        if(_pergamenaShow != null){
+            if(Input.GetKeyDown(KeyCode.E)){
+                //Faccio ritornare la pergamena nella posizione originale;
+                RestorePergamena();
+                _pergamenaShow = null;
+            }
+            else return;
+        }
 
         //Apertura Zaino Inventory
         if ((_grabbedObject == null) && Input.GetKeyUp(KeyCode.Tab)){
@@ -79,9 +94,12 @@ public class FPSInteractionManager : MonoBehaviour
             _pointingInteractable = hit.transform.GetComponent<Interactable>();
             if (_pointingInteractable)
             {   
-                if (Input.GetKeyDown(KeyCode.E))
-                    _pointingInteractable.Interact(gameObject);
-                
+                if (Input.GetKeyDown(KeyCode.E)){
+                    if(_pointingInteractable.tag == "Pergamena"){
+                        _pergamenaShow = _pointingInteractable;
+                        ShowPergamena();
+                    } else _pointingInteractable.Interact(gameObject);
+                }
             }
            
             //Check if is grabbable
@@ -129,5 +147,39 @@ public class FPSInteractionManager : MonoBehaviour
     private void DebugRaycast()
     {
         Debug.DrawRay(_rayOrigin, _fpsCameraT.forward * _interactionDistance, Color.red);
+    }
+
+    private void ShowPergamena(){
+        Vector3 newObjectPosition;
+        Quaternion newObjectOrientation;
+        Vector3 newObjectScale;
+        Vector3 scaleChange = new Vector3(1.2f, 1.2f, 1.2f);
+
+        //_originalPosPergamena = _pergamenaShow.transform; //salvo la vecchia posizione
+        _originalParentPergamena = _pergamenaShow.transform.parent; //salvo l'original Parent
+        _pergamenaShow.transform.SetParent(_emptyPergamena); //setto il parent
+        
+        newObjectPosition = _emptyPergamena.position;
+        newObjectOrientation = _emptyPergamena.rotation;
+        newObjectScale = _emptyPergamena.lossyScale + scaleChange;
+
+        _pergamenaShow.transform.position = newObjectPosition;
+        _pergamenaShow.transform.rotation = newObjectOrientation;
+        _pergamenaShow.transform.localScale = newObjectScale;                      
+    }
+
+    private void RestorePergamena(){
+        Vector3 newObjectPosition;
+        Quaternion newObjectOrientation;
+        Vector3 newObjectScale;
+
+        newObjectPosition = _originalParentPergamena.position;
+        newObjectOrientation = _originalParentPergamena.rotation;
+
+        _pergamenaShow.transform.position = newObjectPosition;
+        _pergamenaShow.transform.rotation = newObjectOrientation;
+        
+        _pergamenaShow.transform.parent = _originalParentPergamena; //riporto il parent
+        _pergamenaShow.transform.localScale = new Vector3(1, 1, 1);
     }
 }
