@@ -42,6 +42,7 @@ public class FPSInteractionManager : MonoBehaviour
         if(_pergamenaShow != null){
             if(Input.GetKeyDown(KeyCode.E)){
                 //Faccio ritornare la pergamena nella posizione originale;
+                _pointingInteractable.Interact(gameObject);
                 RestorePergamena();
                 _pergamenaShow = null;
             }
@@ -98,6 +99,7 @@ public class FPSInteractionManager : MonoBehaviour
                     if(_pointingInteractable.tag == "Pergamena"){
                         _pergamenaShow = _pointingInteractable;
                         ShowPergamena();
+                        _pergamenaShow.Interact(gameObject);
                     } else _pointingInteractable.Interact(gameObject);
                 }
             }
