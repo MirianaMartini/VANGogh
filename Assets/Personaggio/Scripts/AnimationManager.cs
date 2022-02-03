@@ -63,6 +63,7 @@ public class AnimationManager : MonoBehaviour
         if (Input.GetMouseButtonUp(0) && !_animator.GetBool("grab"))
             _animator.SetBool("noArms-Foto", false);
 
+        //Idle <-> NoArms-Pergamena
         if (_emptyPergamena.transform.childCount > 0) {
             _animator.SetBool("noArms-Pergamena", true);
         } else _animator.SetBool("noArms-Pergamena", false);

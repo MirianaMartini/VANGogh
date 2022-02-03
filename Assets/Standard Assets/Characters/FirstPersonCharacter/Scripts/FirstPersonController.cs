@@ -30,6 +30,10 @@ namespace UnityStandardAssets.Characters.FirstPerson
         [SerializeField] private AudioClip m_JumpSound;           // the sound played when character leaves the ground.
         [SerializeField] private AudioClip m_LandSound;           // the sound played when character touches back on ground.
 
+        [Header("Custom")]
+        [SerializeField] private Transform _emptyPergamena;
+        [SerializeField] private GameObject _zainoInventory;
+
         private Camera m_Camera;
         private bool m_Jump;
         private float m_YRotation;
@@ -63,7 +67,9 @@ namespace UnityStandardAssets.Characters.FirstPerson
         // Update is called once per frame
         private void Update()
         {
-            RotateView();
+            if (!(_emptyPergamena.transform.childCount > 0 || _zainoInventory.activeSelf))
+                RotateView();
+
             // the jump state needs to read here to make sure it is not missed
             if (!m_Jump)
             {
@@ -239,7 +245,7 @@ namespace UnityStandardAssets.Characters.FirstPerson
 
         private void RotateView()
         {
-            m_MouseLook.LookRotation (transform, m_Camera.transform);
+            m_MouseLook.LookRotation(transform, m_Camera.transform);
         }
 
 
