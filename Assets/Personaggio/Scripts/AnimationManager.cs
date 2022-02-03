@@ -5,11 +5,13 @@ using UnityEngine;
 public class AnimationManager : MonoBehaviour
 {
     [SerializeField] private Transform _fpsCameraT;
+    [SerializeField] private Transform _emptyPergamena;
 
     private Animator _animator;
     private Vector3 _inputVector;
     private float _inputSpeed;
     private Grabbable _pointingGrabbable;
+   
 
     // Start is called before the first frame update
     void Start()
@@ -57,10 +59,13 @@ public class AnimationManager : MonoBehaviour
             _animator.SetBool("noArms-Foto", Input.GetMouseButton(0));
         }
 
-        //se NON sono in modalit� foto e il NON grabbo <-> torna in Idle
+        //se NON sono in modalita' foto e il NON grabbo <-> torna in Idle
         if (Input.GetMouseButtonUp(0) && !_animator.GetBool("grab"))
             _animator.SetBool("noArms-Foto", false);
 
+        if (_emptyPergamena.transform.childCount > 0) {
+            _animator.SetBool("noArms-Pergamena", true);
+        } else _animator.SetBool("noArms-Pergamena", false);
 
     }
 }

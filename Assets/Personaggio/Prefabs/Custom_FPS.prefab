@@ -566,6 +566,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _fpsCameraT: {fileID: 6455855179641935667}
+  _emptyPergamena: {fileID: 334673107308101783}
 --- !u!1 &9031286258512898215
 GameObject:
   m_ObjectHideFlags: 0
