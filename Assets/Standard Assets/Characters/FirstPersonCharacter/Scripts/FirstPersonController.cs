@@ -68,7 +68,16 @@ namespace UnityStandardAssets.Characters.FirstPerson
         private void Update()
         {
             if (!(_emptyPergamena.transform.childCount > 0 || _zainoInventory.activeSelf))
+            {
                 RotateView();
+                Cursor.lockState = CursorLockMode.Locked;
+                Cursor.visible = false;
+            }
+            else
+            {
+                Cursor.lockState = CursorLockMode.None;
+                Cursor.visible = true;
+            }
 
             // the jump state needs to read here to make sure it is not missed
             if (!m_Jump)
