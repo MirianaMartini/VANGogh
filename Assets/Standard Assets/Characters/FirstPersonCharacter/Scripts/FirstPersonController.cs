@@ -138,7 +138,8 @@ namespace UnityStandardAssets.Characters.FirstPerson
             ProgressStepCycle(speed);
             UpdateCameraPosition(speed);
 
-            m_MouseLook.UpdateCursorLock();
+            if (!(_emptyPergamena.transform.childCount > 0 || _zainoInventory.activeSelf))
+                m_MouseLook.UpdateCursorLock();
         }
 
 
