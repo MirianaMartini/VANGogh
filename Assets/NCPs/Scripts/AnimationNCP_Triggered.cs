@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class AnimationNCP_Triggered : MonoBehaviour
 {
+    [SerializeField] private GameObject DialogueBoxUI;
     private Animator _animator;
 
     // Start is called before the first frame update
@@ -19,9 +20,14 @@ public class AnimationNCP_Triggered : MonoBehaviour
 
     }
 
+    private void OnTriggerStay(Collider other)
+    {
+        DialogueBoxUI.SetActive(true);
+    }
 
     private void OnTriggerExit(Collider other)
     {
+        DialogueBoxUI.SetActive(false);
         _animator.SetBool("isEnter", false);
     }
 }
