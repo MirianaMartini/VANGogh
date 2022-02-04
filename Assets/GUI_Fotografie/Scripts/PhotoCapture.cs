@@ -2,6 +2,8 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using System.IO;
+using System;
 
 public class PhotoCapture : MonoBehaviour
 {
@@ -27,6 +29,9 @@ public class PhotoCapture : MonoBehaviour
     private bool viewingPhoto;
     private Item polaroid;
     private int index = 0;
+    private bool flag = true;
+    private string[] fileEntries;
+    private bool init = false;
 
     private void Start() 
     {
@@ -36,33 +41,38 @@ public class PhotoCapture : MonoBehaviour
 
     private void Update()
     {
+        GameObject obj = GameObject.FindGameObjectWithTag("Init");
+        if (obj == null) init = true;
 
-        cameraUI.SetActive(false);
+        if(init){
 
-        if (!ZainoInventory.activeSelf) { 
+            cameraUI.SetActive(false);
 
-            if (Input.GetMouseButton(0)) {
-                cameraUI.SetActive(true);
-            }
+            if (!ZainoInventory.activeSelf) { 
 
-            if (Input.GetMouseButton(0) && Input.GetKeyDown(KeyCode.Return))
-            {
-                //takeScreenshot
-                if (!viewingPhoto)
-                {
-                    StartCoroutine(CapturePhoto());
+                if (Input.GetMouseButton(0)) {
+                    cameraUI.SetActive(true);
                 }
-                else 
+
+                if (Input.GetMouseButton(0) && Input.GetKeyDown(KeyCode.Return))
                 {
+                    //takeScreenshot
+                    if (!viewingPhoto)
+                    {
+                        StartCoroutine(CapturePhoto());
+                    }
+                    else 
+                    {
+                        RemovePhoto();
+                    }
+                }
+
+                if (Input.GetMouseButtonUp(0)) {
                     RemovePhoto();
+                    cameraUI.SetActive(false);
                 }
-            }
 
-            if (Input.GetMouseButtonUp(0)) {
-                RemovePhoto();
-                cameraUI.SetActive(false);
             }
-
         }
     }
 
@@ -77,6 +87,18 @@ public class PhotoCapture : MonoBehaviour
 
         screenCapture.ReadPixels(regionToRead, 0, 0, false);
         screenCapture.Apply();
+
+        if(flag){
+            index = 0;
+            //Cancello le foto della cartella
+
+            fileEntries = Directory.GetFiles("Polaroids/");
+            foreach(string file in fileEntries){
+                File.Delete(file);
+                ++index;
+            }
+            flag = false;
+        }
 
         //
         byte[] bytes = screenCapture.EncodeToPNG();

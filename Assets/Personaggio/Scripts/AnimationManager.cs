@@ -11,6 +11,7 @@ public class AnimationManager : MonoBehaviour
     private Vector3 _inputVector;
     private float _inputSpeed;
     private Grabbable _pointingGrabbable;
+    private bool init = false;
    
 
     // Start is called before the first frame update
@@ -22,6 +23,9 @@ public class AnimationManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        GameObject obj = GameObject.FindGameObjectWithTag("Init");
+        if (obj == null) init = true;
+
         //Handle the Input
         float h = Input.GetAxis("Horizontal");
         float v = Input.GetAxis("Vertical");
@@ -47,14 +51,14 @@ public class AnimationManager : MonoBehaviour
         if (Input.GetMouseButtonUp(1)) _animator.SetBool("grab", false);
 
         //Idle <-> NoArms-Zaino
-        if (Input.GetKeyUp(KeyCode.Tab) && !_animator.GetBool("grab"))
+        if (Input.GetKeyUp(KeyCode.Tab) && !_animator.GetBool("grab") && init)
         {
             if(_animator.GetBool("noArms-Zaino")) _animator.SetBool("noArms-Zaino", false);
             else _animator.SetBool("noArms-Zaino", true);
         }
 
         //Idle <-> NoArms-Foto
-        if (Input.GetMouseButton(0) && !_animator.GetBool("grab"))
+        if (Input.GetMouseButton(0) && !_animator.GetBool("grab") && init)
         {
             _animator.SetBool("noArms-Foto", Input.GetMouseButton(0));
         }

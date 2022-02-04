@@ -33,6 +33,7 @@ public class FPSInteractionManager : MonoBehaviour
     private Interactable _pergamenaShow = null;
     private Transform _originalParentPergamena;
     private AudioSource _audioSource;
+    private bool init = false;
 
 
     //private InventoryManager Inventory = new InventoryManager();
@@ -61,7 +62,7 @@ public class FPSInteractionManager : MonoBehaviour
         }
 
         //Apertura Zaino Inventory
-        if ((_grabbedObject == null) && Input.GetKeyUp(KeyCode.Tab)){
+        if ((_grabbedObject == null) && Input.GetKeyUp(KeyCode.Tab) && init){
             _zainoInventory.SetActive(!_zainoInventory.activeSelf);
             _zainoObj.SetActive(!_zainoObj.activeSelf);
             InventoryManager.Instance.ListItems();
@@ -112,6 +113,9 @@ public class FPSInteractionManager : MonoBehaviour
                         _pergamenaShow.Interact(gameObject);
                         _audioSource.clip = _pergamenaOpenAudio;
                         _audioSource.Play();
+                    } else if(_pointingInteractable.tag == "Init"){
+                        _pointingInteractable.Interact(gameObject);
+                        init = true;
                     } else _pointingInteractable.Interact(gameObject);
                 }
             }

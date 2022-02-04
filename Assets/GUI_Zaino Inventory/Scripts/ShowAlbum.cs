@@ -16,9 +16,8 @@ public class ShowAlbum : MonoBehaviour
     private byte[] fileData;
     private string[] fileEntries;
     private int index = 0;
-    private bool flag = true;
 
-	void Start () {
+    void Start() {
 		Button btn = GetComponent<Button>();
 		btn.onClick.AddListener(SwitchView);
 	}
@@ -37,19 +36,7 @@ public class ShowAlbum : MonoBehaviour
         }
     }
 
-    public void ListPolaroids(){      
-        if(flag){
-            index = 0;
-            //Cancello le foto della cartella
-
-            fileEntries = Directory.GetFiles("Polaroids/");
-            foreach(string file in fileEntries){
-                File.Delete(file);
-                ++index;
-            }
-            flag = false;
-        }
-         
+    public void ListPolaroids(){              
         foreach(Transform polaroid in PolaroidContent.transform){
             Destroy(polaroid.gameObject);
         } 
