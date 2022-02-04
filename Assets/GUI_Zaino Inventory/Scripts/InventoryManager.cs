@@ -9,6 +9,7 @@ public class InventoryManager : MonoBehaviour
     public List<Item> Items = new List<Item>();
     public Transform ItemContent;
     public GameObject InventoryItem;
+    public Transform _fpsCameraT;
 
     public InventoryItemController[] InventoryItems;
 
@@ -25,17 +26,25 @@ public class InventoryManager : MonoBehaviour
     }
 
     public void ListItems(){
-        foreach(Transform item in ItemContent){
-            Destroy(item.gameObject);
-        }
-
+        bool flag = false;
+        
         foreach(var item in Items){
-            GameObject obj = Instantiate(InventoryItem, ItemContent);
-            var itemName = obj.transform.Find("ItemName").GetComponent<Text>();
-            var itemIcon = obj.transform.Find("ItemIcon").GetComponent<Image>();
-            
-            itemName.text = item.itemName;
-            itemIcon.sprite = item.icon;
+            foreach(Transform itemC in ItemContent){
+                var tmp = itemC.transform.Find("ItemName").GetComponent<Text>();
+                if(item.itemName == tmp.text){
+                    flag = true;
+                    continue;
+                }
+            }
+            if(!flag){
+                GameObject obj = Instantiate(InventoryItem, ItemContent);
+                var itemName = obj.transform.Find("ItemName").GetComponent<Text>();
+                var itemIcon = obj.transform.Find("ItemIcon").GetComponent<Image>();
+                
+                itemName.text = item.itemName;
+                itemIcon.sprite = item.icon;
+            }
+            flag = false;
         }
 
         SetInventoryItems();
@@ -46,8 +55,11 @@ public class InventoryManager : MonoBehaviour
 
         for (int i = 0; i < Items.Count; i++) {
             InventoryItems[i].AddItem(Items[i]);
-        
         }
+    }
+
+    public Transform GetCamera(){
+        return _fpsCameraT;
     }
     
 }

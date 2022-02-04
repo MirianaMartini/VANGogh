@@ -16,3 +16,4 @@ MonoBehaviour:
   itemName: Bottiglietta
   value: 1
   icon: {fileID: 21300000, guid: 42b26c17b13ca504a8bd521c151e3b67, type: 3}
+  prefab: {fileID: 7050646149710150842, guid: d553b955c2d94054d8bc87a518aa6664, type: 3}

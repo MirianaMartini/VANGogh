@@ -7481,6 +7481,7 @@ MonoBehaviour:
   Items: []
   ItemContent: {fileID: 1123402152}
   InventoryItem: {fileID: 4233961901221655873, guid: 95f61385b4cc2534788664e6fc185469, type: 3}
+  _fpsCameraT: {fileID: 1153486342}
   InventoryItems: []
 --- !u!4 &781752004
 Transform:
@@ -11283,6 +11284,11 @@ PrefabInstance:
 Transform:
   m_CorrespondingSourceObject: {fileID: 6594019199176737367, guid: 91876de37bdcaa94492effc4b70a0cac, type: 3}
   m_PrefabInstance: {fileID: 1148657096}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &1153486342 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 5881173765118651197, guid: 451f6e7e0b29d2948a258d5d3a7bcb14, type: 3}
+  m_PrefabInstance: {fileID: 235957841796510025}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1161216040
 PrefabInstance:

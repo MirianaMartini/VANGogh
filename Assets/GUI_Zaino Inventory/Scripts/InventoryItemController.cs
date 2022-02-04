@@ -9,10 +9,16 @@ public class InventoryItemController : MonoBehaviour
     public void RemoveItem() {
         InventoryManager.Instance.Remove(item);
         Destroy(gameObject);
+        Drop();
     }
 
     public void AddItem(Item newItem) {
         item = newItem;
+    }
+
+    private void Drop(){
+        GameObject obj = Instantiate(item.prefab);
+        obj.transform.position = InventoryManager.Instance.GetCamera().position;
     }
 
 }
