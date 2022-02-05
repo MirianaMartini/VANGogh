@@ -9,7 +9,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2758185369431603667}
-  - component: {fileID: 1290511570726123126}
   - component: {fileID: 3894529723723252412}
   m_Layer: 0
   m_Name: VANPorta
@@ -32,14 +31,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!33 &1290511570726123126
-MeshFilter:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3246209496394376041}
-  m_Mesh: {fileID: 7202019439985978107, guid: 73345cd86b98ad247a3ce8c17ab0ef29, type: 3}
 --- !u!23 &3894529723723252412
 MeshRenderer:
   m_ObjectHideFlags: 0
