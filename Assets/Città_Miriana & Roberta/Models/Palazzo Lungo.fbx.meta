@@ -8,37 +8,37 @@ ModelImporter:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: Bianco
-    second: {fileID: 2100000, guid: 4d6f244947c51304a8e5625eb52e8395, type: 2}
+    second: {fileID: 2100000, guid: 8d12e0f704c6c2942b84b1dfaed6d638, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
-      name: Blu
-    second: {fileID: 2100000, guid: d3ea7841c78d09b498b40fc86555bcb3, type: 2}
+      name: Blu_Colore
+    second: {fileID: 2100000, guid: 2358f79e0ec889a47a323fdab2a59899, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: Giallo
-    second: {fileID: 2100000, guid: 1b168047a6f95ca42ae83c6f1780fb7a, type: 2}
+    second: {fileID: 2100000, guid: b876110308123de489ff70d092c74176, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: Grigio
-    second: {fileID: 2100000, guid: b02ca1da2ebc8414c91843c3a95a0340, type: 2}
+    second: {fileID: 2100000, guid: 3be084d260d174c43affcae2c87243ab, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: Indaco
-    second: {fileID: 2100000, guid: 05facdae314b26a44885feb6000de604, type: 2}
+    second: {fileID: 2100000, guid: 744b2f0406450734983c3493fa243511, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: Indaco_Scuro
-    second: {fileID: 2100000, guid: 895ef148ef4e5c84ca1f6a79adb8d9c0, type: 2}
+    second: {fileID: 2100000, guid: e246127d5d19c0143b1aef0e9920e10f, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: Nero
-    second: {fileID: 2100000, guid: 3b619e2c3289fa04781f78cb0fc67d29, type: 2}
+    second: {fileID: 2100000, guid: 066f3eb98ac018e49bccc90f2ef66f18, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0

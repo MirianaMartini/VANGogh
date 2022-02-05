@@ -11,6 +11,7 @@ namespace UnityStandardAssets.Characters.FirstPerson
     [RequireComponent(typeof (AudioSource))]
     public class FirstPersonController : MonoBehaviour
     {
+        [SerializeField] private GameObject m_Character;
         [SerializeField] private bool m_IsWalking;
         [SerializeField] private float m_WalkSpeed;
         [SerializeField] private float m_RunSpeed;
@@ -28,6 +29,10 @@ namespace UnityStandardAssets.Characters.FirstPerson
         [SerializeField] private AudioClip[] m_FootstepSounds;    // an array of footstep sounds that will be randomly selected from.
         [SerializeField] private AudioClip m_JumpSound;           // the sound played when character leaves the ground.
         [SerializeField] private AudioClip m_LandSound;           // the sound played when character touches back on ground.
+
+        [Header("Custom")]
+        [SerializeField] private Transform _emptyPergamena;
+        [SerializeField] private GameObject _zainoInventory;
 
         private Camera m_Camera;
         private bool m_Jump;
@@ -62,7 +67,18 @@ namespace UnityStandardAssets.Characters.FirstPerson
         // Update is called once per frame
         private void Update()
         {
-            RotateView();
+            if (!(_emptyPergamena.transform.childCount > 0 || _zainoInventory.activeSelf))
+            {
+                RotateView();
+                Cursor.lockState = CursorLockMode.Locked;
+                Cursor.visible = false;
+            }
+            else
+            {
+                Cursor.lockState = CursorLockMode.None;
+                Cursor.visible = true;
+            }
+
             // the jump state needs to read here to make sure it is not missed
             if (!m_Jump)
             {
@@ -131,7 +147,8 @@ namespace UnityStandardAssets.Characters.FirstPerson
             ProgressStepCycle(speed);
             UpdateCameraPosition(speed);
 
-            m_MouseLook.UpdateCursorLock();
+            if (!(_emptyPergamena.transform.childCount > 0 || _zainoInventory.activeSelf))
+                m_MouseLook.UpdateCursorLock();
         }
 
 
@@ -177,9 +194,9 @@ namespace UnityStandardAssets.Characters.FirstPerson
             m_FootstepSounds[0] = m_AudioSource.clip;
         }
 
-
         private void UpdateCameraPosition(float speed)
         {
+            /*
             Vector3 newCameraPosition;
             if (!m_UseHeadBob)
             {
@@ -199,6 +216,7 @@ namespace UnityStandardAssets.Characters.FirstPerson
                 newCameraPosition.y = m_OriginalCameraPosition.y - m_JumpBob.Offset();
             }
             m_Camera.transform.localPosition = newCameraPosition;
+            */
         }
 
 
@@ -237,7 +255,7 @@ namespace UnityStandardAssets.Characters.FirstPerson
 
         private void RotateView()
         {
-            m_MouseLook.LookRotation (transform, m_Camera.transform);
+            m_MouseLook.LookRotation(transform, m_Camera.transform);
         }
 
 

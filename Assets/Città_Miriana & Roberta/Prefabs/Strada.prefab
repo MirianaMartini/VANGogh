@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 6594019199176737367}
   - component: {fileID: 7795011956767067634}
   - component: {fileID: 5461042648063605048}
+  - component: {fileID: 4184683414078378604}
   m_Layer: 0
   m_Name: Strada
   m_TagString: Untagged
@@ -81,3 +82,17 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!64 &4184683414078378604
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5821317218737674477}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: -462981019419857548, guid: 644373cae459ff1489a8c9363ff2c32c, type: 3}
