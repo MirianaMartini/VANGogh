@@ -6,9 +6,9 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: "Assets/Men\xF9_transizioni scene/Scena0_Men\xF9.unity"
+    path: Assets/Menu_transizioni scene/Scena0_Menu.unity
     guid: 15ed1930f00748e4988d60ad71baf9dd
   - enabled: 1
-    path: "Assets/Men\xF9_transizioni scene/Scena1_Museo.unity"
+    path: Assets/Menu_transizioni scene/Scena1_Museo.unity
     guid: b8354a86eafead64791fc3295408aefa
   m_configObjects: {}
