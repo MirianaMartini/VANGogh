@@ -1589,6 +1589,25 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 1026597833020263711, guid: 6c922d603ee977841b42bb342ac4d33d, type: 3}
   m_PrefabInstance: {fileID: 154430290}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &155724344 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5214030624666883362, guid: fe1fac7d7214fc04e889266323db5c11, type: 3}
+  m_PrefabInstance: {fileID: 2648444170639015567}
+  m_PrefabAsset: {fileID: 0}
+--- !u!64 &155724348
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 155724344}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: -4174383399491601883, guid: 8969b35b35d9e64439b0a37f0618fefa, type: 3}
 --- !u!1001 &169787717
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -6775,6 +6794,25 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 746757985}
   m_CullTransparentMesh: 1
+--- !u!1 &754879871 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 873969861644652726, guid: fe1fac7d7214fc04e889266323db5c11, type: 3}
+  m_PrefabInstance: {fileID: 2648444170639015567}
+  m_PrefabAsset: {fileID: 0}
+--- !u!64 &754879875
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 754879871}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: -3871404210907820049, guid: 8969b35b35d9e64439b0a37f0618fefa, type: 3}
 --- !u!1001 &756969447
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -10331,6 +10369,25 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 6594019199176737367, guid: 91876de37bdcaa94492effc4b70a0cac, type: 3}
   m_PrefabInstance: {fileID: 1080240037}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1082228098 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2158237071014796683, guid: fe1fac7d7214fc04e889266323db5c11, type: 3}
+  m_PrefabInstance: {fileID: 2648444170639015567}
+  m_PrefabAsset: {fileID: 0}
+--- !u!64 &1082228102
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1082228098}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 2197379685958283394, guid: 8969b35b35d9e64439b0a37f0618fefa, type: 3}
 --- !u!1001 &1093416648
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -18417,6 +18474,24 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 1364825065217242279, guid: 8ba9d0a588917994bb8597ccb275d590, type: 3}
   m_PrefabInstance: {fileID: 1795880944}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1795987230 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 797987561255463564, guid: fe1fac7d7214fc04e889266323db5c11, type: 3}
+  m_PrefabInstance: {fileID: 2648444170639015567}
+  m_PrefabAsset: {fileID: 0}
+--- !u!65 &1795987234
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1795987230}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 2.001771, y: 2.736449, z: 4.3915267}
+  m_Center: {x: -0.10176853, y: 0.20430923, z: 72.444145}
 --- !u!1 &1798043643
 GameObject:
   m_ObjectHideFlags: 0
@@ -22059,6 +22134,10 @@ PrefabInstance:
       propertyPath: _zainoInventory
       value: 
       objectReference: {fileID: 101057758}
+    - target: {fileID: 5167611678338886854, guid: 451f6e7e0b29d2948a258d5d3a7bcb14, type: 3}
+      propertyPath: _interactionDistance
+      value: 4.2
+      objectReference: {fileID: 0}
     - target: {fileID: 6060384086241196573, guid: 451f6e7e0b29d2948a258d5d3a7bcb14, type: 3}
       propertyPath: m_LocalScale.x
       value: 0.032268345
