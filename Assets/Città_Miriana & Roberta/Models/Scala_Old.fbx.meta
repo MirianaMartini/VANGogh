@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 8969b35b35d9e64439b0a37f0618fefa
+guid: 50c385537e9378f4fa8d7b55febd9c24
 ModelImporter:
   serializedVersion: 20200
   internalIDToNameTable: []
@@ -7,18 +7,13 @@ ModelImporter:
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
-      name: Mura interne
-    second: {fileID: 2100000, guid: 05be543daa5d66544857f71f783fa67c, type: 2}
+      name: Iron con dettagli
+    second: {fileID: 2100000, guid: b9030a4a74450ee40a35408099ee90ea, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
-      name: Parete
-    second: {fileID: 2100000, guid: 3fbe5c113912c4b45ab899787f88a8a5, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: Zoccoletto
-    second: {fileID: 2100000, guid: a22759dde35c016428faf3cdbfa4ff16, type: 2}
+      name: Pavimento
+    second: {fileID: 2100000, guid: 5e58673a743af7c4d9e29a90706f6616, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0
