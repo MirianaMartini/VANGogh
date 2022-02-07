@@ -22059,6 +22059,10 @@ PrefabInstance:
       propertyPath: _zainoInventory
       value: 
       objectReference: {fileID: 101057758}
+    - target: {fileID: 5167611678338886854, guid: 451f6e7e0b29d2948a258d5d3a7bcb14, type: 3}
+      propertyPath: _interactionDistance
+      value: 4.2
+      objectReference: {fileID: 0}
     - target: {fileID: 6060384086241196573, guid: 451f6e7e0b29d2948a258d5d3a7bcb14, type: 3}
       propertyPath: m_LocalScale.x
       value: 0.032268345
