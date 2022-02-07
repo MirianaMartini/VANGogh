@@ -39,6 +39,11 @@ ModelImporter:
       assembly: UnityEngine.CoreModule
       name: iron
     second: {fileID: 2100000, guid: 97cf7861ca3492743b968bfd3a590708, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: iron con dettagli
+    second: {fileID: 2100000, guid: c0da8131ef26e5e4886b189b9cc29e3c, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0
