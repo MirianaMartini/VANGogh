@@ -22309,6 +22309,10 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 6455855179641899793, guid: 451f6e7e0b29d2948a258d5d3a7bcb14, type: 3}
+      propertyPath: m_TagString
+      value: Personaggio
+      objectReference: {fileID: 0}
     - target: {fileID: 6455855179641935665, guid: 451f6e7e0b29d2948a258d5d3a7bcb14, type: 3}
       propertyPath: m_RootOrder
       value: 14
@@ -22735,29 +22739,25 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 692432796682513160, guid: fe1fac7d7214fc04e889266323db5c11, type: 3}
+      propertyPath: audioOpen
+      value: 
+      objectReference: {fileID: 8300000, guid: 61cabeca7dadeef4dafc84b23f84c717, type: 3}
+    - target: {fileID: 692432796682513160, guid: fe1fac7d7214fc04e889266323db5c11, type: 3}
+      propertyPath: audioClose
+      value: 
+      objectReference: {fileID: 8300000, guid: cb0614753644af44ebabebdf73a008c6, type: 3}
+    - target: {fileID: 757789471507554325, guid: fe1fac7d7214fc04e889266323db5c11, type: 3}
+      propertyPath: audioOpen
+      value: 
+      objectReference: {fileID: 8300000, guid: b1ea8b67d2881a14595cf14dcb56663c, type: 3}
+    - target: {fileID: 757789471507554325, guid: fe1fac7d7214fc04e889266323db5c11, type: 3}
+      propertyPath: audioClose
+      value: 
+      objectReference: {fileID: 8300000, guid: 66909030c0a3e2f4abd1ed4ddb73e41c, type: 3}
     - target: {fileID: 1033179241354456855, guid: fe1fac7d7214fc04e889266323db5c11, type: 3}
       propertyPath: m_Enabled
       value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1268346372952365990, guid: fe1fac7d7214fc04e889266323db5c11, type: 3}
-      propertyPath: Priority
-      value: 144
-      objectReference: {fileID: 0}
-    - target: {fileID: 1268346372952365990, guid: fe1fac7d7214fc04e889266323db5c11, type: 3}
-      propertyPath: m_Volume
-      value: 0.08
-      objectReference: {fileID: 0}
-    - target: {fileID: 1268346372952365990, guid: fe1fac7d7214fc04e889266323db5c11, type: 3}
-      propertyPath: rolloffCustomCurve.m_Curve.Array.size
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1268346372952365990, guid: fe1fac7d7214fc04e889266323db5c11, type: 3}
-      propertyPath: rolloffCustomCurve.m_Curve.Array.data[1].time
-      value: 0.012794495
-      objectReference: {fileID: 0}
-    - target: {fileID: 1268346372952365990, guid: fe1fac7d7214fc04e889266323db5c11, type: 3}
-      propertyPath: rolloffCustomCurve.m_Curve.Array.data[0].value
-      value: 0.0026550293
       objectReference: {fileID: 0}
     - target: {fileID: 1557869419075128098, guid: fe1fac7d7214fc04e889266323db5c11, type: 3}
       propertyPath: m_LocalRotation.w
@@ -22895,6 +22895,14 @@ PrefabInstance:
       propertyPath: m_LocalPosition.z
       value: -0.2504
       objectReference: {fileID: 0}
+    - target: {fileID: 3895402495076653645, guid: fe1fac7d7214fc04e889266323db5c11, type: 3}
+      propertyPath: audioOpen
+      value: 
+      objectReference: {fileID: 8300000, guid: bbfd5b845207377459c16027ec0dce1a, type: 3}
+    - target: {fileID: 3895402495076653645, guid: fe1fac7d7214fc04e889266323db5c11, type: 3}
+      propertyPath: audioClose
+      value: 
+      objectReference: {fileID: 8300000, guid: fcbed447cd24a1646b61dd69d701a86e, type: 3}
     - target: {fileID: 4637627243410094025, guid: fe1fac7d7214fc04e889266323db5c11, type: 3}
       propertyPath: m_Enabled
       value: 0
@@ -22979,6 +22987,14 @@ PrefabInstance:
       propertyPath: m_Drag
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7546699749059981707, guid: fe1fac7d7214fc04e889266323db5c11, type: 3}
+      propertyPath: audioOpen
+      value: 
+      objectReference: {fileID: 8300000, guid: b1ea8b67d2881a14595cf14dcb56663c, type: 3}
+    - target: {fileID: 7546699749059981707, guid: fe1fac7d7214fc04e889266323db5c11, type: 3}
+      propertyPath: audioClose
+      value: 
+      objectReference: {fileID: 8300000, guid: 66909030c0a3e2f4abd1ed4ddb73e41c, type: 3}
     - target: {fileID: 7668093438163563123, guid: fe1fac7d7214fc04e889266323db5c11, type: 3}
       propertyPath: m_Controller
       value: 

@@ -4,19 +4,28 @@ using UnityEngine;
 
 public class Opener : Interactable
 {
+    public AudioClip audioOpen;
+    public AudioClip audioClose;
+    
     private Animator _animator;
     private bool _open = false;
+    private AudioSource _audioSource;
 
     void Start()
     {
         _animator = GetComponent<Animator>();
+        _audioSource = GetComponent<AudioSource>();
     }
 
     public override void Interact(GameObject caller) {
-        if (_open == false)
+        if (_open == false){
             Open();
-        else
+            PlayOpen();
+        }
+        else{
             Close();
+            PlayClose();
+        }
     }
 
     public void Open()
@@ -35,6 +44,16 @@ public class Opener : Interactable
 
         _open = false;
         _animator.SetBool("open", _open);
+    }
+
+    private void PlayOpen(){
+        _audioSource.clip = audioOpen;
+        _audioSource.Play();
+    }
+
+    private void PlayClose(){
+        _audioSource.clip = audioClose;
+        _audioSource.Play();
     }
 
 

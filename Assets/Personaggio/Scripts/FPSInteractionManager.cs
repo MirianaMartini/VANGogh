@@ -189,7 +189,6 @@ public class FPSInteractionManager : MonoBehaviour
     private void RestorePergamena(){
         Vector3 newObjectPosition;
         Quaternion newObjectOrientation;
-        Vector3 newObjectScale;
 
         newObjectPosition = _originalParentPergamena.position;
         newObjectOrientation = _originalParentPergamena.rotation;
