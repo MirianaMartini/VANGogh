@@ -189,7 +189,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 05ec5cf00ca181d45a42ba1870e148c3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_Character: {fileID: 6545402399774617991}
   m_IsWalking: 0
   m_WalkSpeed: 5
   m_RunSpeed: 20
@@ -302,8 +301,6 @@ MonoBehaviour:
   - {fileID: 8300000, guid: 8bc94ec6ed537e743b481638bdcd503d, type: 3}
   m_JumpSound: {fileID: 8300000, guid: 5897aeed9b676024fbb8c694b421a861, type: 3}
   m_LandSound: {fileID: 8300000, guid: 3b09d59f4499d45428baa7a21e954296, type: 3}
-  _emptyPergamena: {fileID: 334673107308101783}
-  _zainoInventory: {fileID: 0}
 --- !u!114 &5167611678338886854
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -909,7 +906,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8176550687684139620, guid: 97caa04c9bb80f14abcb6601918992d2, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8805418168795513054, guid: 97caa04c9bb80f14abcb6601918992d2, type: 3}
       propertyPath: m_RootOrder
