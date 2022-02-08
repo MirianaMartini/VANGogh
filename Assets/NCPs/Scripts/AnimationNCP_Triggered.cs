@@ -17,13 +17,10 @@ public class AnimationNCP_Triggered : MonoBehaviour
     {
         //Sitting idle <-> StandUp
         _animator.SetBool("isEnter", true);
-
-    }
-
-    private void OnTriggerStay(Collider other)
-    {
         DialogueBoxUI.SetActive(true);
+
     }
+
 
     private void OnTriggerExit(Collider other)
     {
