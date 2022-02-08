@@ -16,15 +16,21 @@ public class AnimationNCP_Triggered : MonoBehaviour
     private void OnTriggerEnter(Collider other)
     {
         //Sitting idle <-> StandUp
-        _animator.SetBool("isEnter", true);
-        DialogueBoxUI.SetActive(true);
+        if (other.gameObject.tag == "Personaggio")
+        {
+            _animator.SetBool("isEnter", true);
+            DialogueBoxUI.SetActive(true);
+        }
 
     }
 
 
     private void OnTriggerExit(Collider other)
     {
-        DialogueBoxUI.SetActive(false);
-        _animator.SetBool("isEnter", false);
+        if (other.gameObject.tag == "Personaggio")
+        {
+            DialogueBoxUI.SetActive(false);
+            _animator.SetBool("isEnter", false);
+        }
     }
 }
