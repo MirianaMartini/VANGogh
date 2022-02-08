@@ -133,8 +133,8 @@ GameObject:
   m_Component:
   - component: {fileID: 6455855179641935665}
   - component: {fileID: 6455855179629625041}
-  - component: {fileID: 6455855179631148785}
   - component: {fileID: 5167611678338886854}
+  - component: {fileID: 7657879415587263030}
   - component: {fileID: 6455855179638515825}
   - component: {fileID: 6455855179636364017}
   m_Layer: 0
@@ -177,7 +177,7 @@ CharacterController:
   m_SkinWidth: 0.08
   m_MinMoveDistance: 0
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &6455855179631148785
+--- !u!114 &5167611678338886854
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -186,7 +186,30 @@ MonoBehaviour:
   m_GameObject: {fileID: 6455855179641899793}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 05ec5cf00ca181d45a42ba1870e148c3, type: 3}
+  m_Script: {fileID: 11500000, guid: 128e478b8079f324b8dfb26bc5386d84, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _fpsCameraT: {fileID: 6455855179641935667}
+  _debugRay: 1
+  _interactionDistance: 3
+  _empty: {fileID: 4264459537129880376}
+  _emptyPergamena: {fileID: 334673107308101783}
+  _pergamenaOpenAudio: {fileID: 8300000, guid: 15f10016778fb104c94c04ad5556c81e, type: 3}
+  _pergamenaCloseAudio: {fileID: 8300000, guid: 3e3c4130fad63aa40b25f60691d97579, type: 3}
+  _zainoInventory: {fileID: 0}
+  _zainoObj: {fileID: 641334402889247084}
+  _showAlbum: {fileID: 0}
+  _crossHair: {fileID: 0}
+--- !u!114 &7657879415587263030
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6455855179641899793}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 809c0eab02e99f44d92b778f175d63af, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   m_IsWalking: 0
@@ -214,32 +237,14 @@ MonoBehaviour:
     TimeToDecrease: 1
     IncreaseCurve:
       serializedVersion: 2
-      m_Curve:
-      - serializedVersion: 3
-        time: 0
-        value: 0
-        inSlope: 0
-        outSlope: 0
-        tangentMode: 0
-        weightedMode: 0
-        inWeight: 0.33333334
-        outWeight: 0.33333334
-      - serializedVersion: 3
-        time: 1
-        value: 1
-        inSlope: 2
-        outSlope: 2
-        tangentMode: 0
-        weightedMode: 0
-        inWeight: 0.33333334
-        outWeight: 0.33333334
+      m_Curve: []
       m_PreInfinity: 2
       m_PostInfinity: 2
       m_RotationOrder: 4
   m_UseHeadBob: 1
   m_HeadBob:
-    HorizontalBobRange: 0.1
-    VerticalBobRange: 0.1
+    HorizontalBobRange: 0.33
+    VerticalBobRange: 0.33
     Bobcurve:
       serializedVersion: 2
       m_Curve:
@@ -250,8 +255,8 @@ MonoBehaviour:
         outSlope: 0
         tangentMode: 0
         weightedMode: 0
-        inWeight: 0.33333334
-        outWeight: 0.33333334
+        inWeight: 0
+        outWeight: 0
       - serializedVersion: 3
         time: 0.5
         value: 1
@@ -259,8 +264,8 @@ MonoBehaviour:
         outSlope: 0
         tangentMode: 0
         weightedMode: 0
-        inWeight: 0.33333334
-        outWeight: 0.33333334
+        inWeight: 0
+        outWeight: 0
       - serializedVersion: 3
         time: 1
         value: 0
@@ -268,8 +273,8 @@ MonoBehaviour:
         outSlope: 0
         tangentMode: 0
         weightedMode: 0
-        inWeight: 0.33333334
-        outWeight: 0.33333334
+        inWeight: 0
+        outWeight: 0
       - serializedVersion: 3
         time: 1.5
         value: -1
@@ -277,8 +282,8 @@ MonoBehaviour:
         outSlope: 0
         tangentMode: 0
         weightedMode: 0
-        inWeight: 0.33333334
-        outWeight: 0.33333334
+        inWeight: 0
+        outWeight: 0
       - serializedVersion: 3
         time: 2
         value: 0
@@ -286,44 +291,23 @@ MonoBehaviour:
         outSlope: 0
         tangentMode: 0
         weightedMode: 0
-        inWeight: 0.33333334
-        outWeight: 0.33333334
+        inWeight: 0
+        outWeight: 0
       m_PreInfinity: 2
       m_PostInfinity: 2
       m_RotationOrder: 4
-    VerticaltoHorizontalRatio: 2
+    VerticaltoHorizontalRatio: 1
   m_JumpBob:
-    BobDuration: 0.2
-    BobAmount: 0.1
+    BobDuration: 0
+    BobAmount: 0
   m_StepInterval: 5
   m_FootstepSounds:
   - {fileID: 8300000, guid: 42e65e088b3f4374e851b8dbd38f3df9, type: 3}
   - {fileID: 8300000, guid: 8bc94ec6ed537e743b481638bdcd503d, type: 3}
   m_JumpSound: {fileID: 8300000, guid: 5897aeed9b676024fbb8c694b421a861, type: 3}
   m_LandSound: {fileID: 8300000, guid: 3b09d59f4499d45428baa7a21e954296, type: 3}
---- !u!114 &5167611678338886854
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6455855179641899793}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 128e478b8079f324b8dfb26bc5386d84, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _fpsCameraT: {fileID: 6455855179641935667}
-  _debugRay: 1
-  _interactionDistance: 3
-  _empty: {fileID: 4264459537129880376}
   _emptyPergamena: {fileID: 334673107308101783}
-  _pergamenaOpenAudio: {fileID: 8300000, guid: 15f10016778fb104c94c04ad5556c81e, type: 3}
-  _pergamenaCloseAudio: {fileID: 8300000, guid: 3e3c4130fad63aa40b25f60691d97579, type: 3}
   _zainoInventory: {fileID: 0}
-  _zainoObj: {fileID: 641334402889247084}
-  _showAlbum: {fileID: 0}
-  _crossHair: {fileID: 0}
 --- !u!54 &6455855179638515825
 Rigidbody:
   m_ObjectHideFlags: 0
