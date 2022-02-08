@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Pergamena
   - Init
+  - Personaggio
   layers:
   - Default
   - TransparentFX

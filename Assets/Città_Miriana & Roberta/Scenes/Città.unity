@@ -22309,6 +22309,10 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 6455855179641899793, guid: 451f6e7e0b29d2948a258d5d3a7bcb14, type: 3}
+      propertyPath: m_TagString
+      value: Personaggio
+      objectReference: {fileID: 0}
     - target: {fileID: 6455855179641935665, guid: 451f6e7e0b29d2948a258d5d3a7bcb14, type: 3}
       propertyPath: m_RootOrder
       value: 14
@@ -22738,26 +22742,6 @@ PrefabInstance:
     - target: {fileID: 1033179241354456855, guid: fe1fac7d7214fc04e889266323db5c11, type: 3}
       propertyPath: m_Enabled
       value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1268346372952365990, guid: fe1fac7d7214fc04e889266323db5c11, type: 3}
-      propertyPath: Priority
-      value: 144
-      objectReference: {fileID: 0}
-    - target: {fileID: 1268346372952365990, guid: fe1fac7d7214fc04e889266323db5c11, type: 3}
-      propertyPath: m_Volume
-      value: 0.08
-      objectReference: {fileID: 0}
-    - target: {fileID: 1268346372952365990, guid: fe1fac7d7214fc04e889266323db5c11, type: 3}
-      propertyPath: rolloffCustomCurve.m_Curve.Array.size
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1268346372952365990, guid: fe1fac7d7214fc04e889266323db5c11, type: 3}
-      propertyPath: rolloffCustomCurve.m_Curve.Array.data[1].time
-      value: 0.012794495
-      objectReference: {fileID: 0}
-    - target: {fileID: 1268346372952365990, guid: fe1fac7d7214fc04e889266323db5c11, type: 3}
-      propertyPath: rolloffCustomCurve.m_Curve.Array.data[0].value
-      value: 0.0026550293
       objectReference: {fileID: 0}
     - target: {fileID: 1557869419075128098, guid: fe1fac7d7214fc04e889266323db5c11, type: 3}
       propertyPath: m_LocalRotation.w
