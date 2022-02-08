@@ -43,7 +43,6 @@ public class PhotoCapture : MonoBehaviour
             File.Delete(file);
             ++index;
         }
-        flag = false;
         index = 0;
     }
 
