@@ -29,7 +29,6 @@ public class PhotoCapture : MonoBehaviour
     private bool viewingPhoto;
     private Item polaroid;
     private int index = 0;
-    private bool flag = true;
     private string[] fileEntries;
     private bool init = false;
 
@@ -37,6 +36,15 @@ public class PhotoCapture : MonoBehaviour
     {
         screenCapture = new Texture2D(Screen.width, Screen.height, TextureFormat.RGB24, false);
 
+        //Cancello le foto della cartella
+        index = 0;
+        fileEntries = Directory.GetFiles("Polaroids/");
+        foreach(string file in fileEntries){
+            File.Delete(file);
+            ++index;
+        }
+        flag = false;
+        index = 0;
     }
 
     private void Update()
@@ -87,18 +95,6 @@ public class PhotoCapture : MonoBehaviour
 
         screenCapture.ReadPixels(regionToRead, 0, 0, false);
         screenCapture.Apply();
-
-        if(flag){
-            index = 0;
-            //Cancello le foto della cartella
-
-            fileEntries = Directory.GetFiles("Polaroids/");
-            foreach(string file in fileEntries){
-                File.Delete(file);
-                ++index;
-            }
-            flag = false;
-        }
 
         //
         byte[] bytes = screenCapture.EncodeToPNG();
