@@ -225,7 +225,7 @@ AudioListener:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 995246464}
-  m_Enabled: 1
+  m_Enabled: 0
 --- !u!20 &995246466
 Camera:
   m_ObjectHideFlags: 0
@@ -418,6 +418,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1326789990}
   - component: {fileID: 1326789991}
+  - component: {fileID: 1326789992}
   m_Layer: 0
   m_Name: Water4AdvancedReflectionSceneCamera
   m_TagString: Untagged
@@ -432,8 +433,8 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1326789989}
-  m_LocalRotation: {x: -0.7071068, y: -0, z: -0, w: 0.7071068}
-  m_LocalPosition: {x: 89.021515, y: -206.96533, z: 92.037735}
+  m_LocalRotation: {x: -0, y: 0.0708657, z: -0, w: -0.9974859}
+  m_LocalPosition: {x: 135.65001, y: 44.56079, z: 89.47}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1120073838}
@@ -482,6 +483,15 @@ Camera:
   m_OcclusionCulling: 1
   m_StereoConvergence: 10
   m_StereoSeparation: 0.022
+--- !u!45 &1326789992
+Skybox:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1326789989}
+  m_Enabled: 1
+  m_CustomSkybox: {fileID: 0}
 --- !u!1001 &1371195699
 PrefabInstance:
   m_ObjectHideFlags: 0
