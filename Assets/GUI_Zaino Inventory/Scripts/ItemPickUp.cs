@@ -18,6 +18,7 @@ public class ItemPickUp : MonoBehaviour
     }
 
     private void Play(){
+        Debug.Log("Sonooooooooooooooo");
         _audioSource.clip = audioClip;
         _audioSource.Play();
     }
