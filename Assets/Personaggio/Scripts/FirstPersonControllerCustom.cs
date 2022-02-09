@@ -46,6 +46,7 @@ namespace UnityStandardAssets.Characters.FirstPerson
         private float m_NextStep;
         private bool m_Jumping;
         private AudioSource m_AudioSource;
+        private Vector3 m_LastPosition;
 
         // Use this for initialization
         private void Start()
@@ -60,6 +61,7 @@ namespace UnityStandardAssets.Characters.FirstPerson
             m_Jumping = false;
             m_AudioSource = GetComponent<AudioSource>();
 			m_MouseLook.Init(transform , m_Camera.transform);
+            m_LastPosition = new Vector3(0, transform.position.y, 0);
         }
 
 
@@ -124,6 +126,12 @@ namespace UnityStandardAssets.Characters.FirstPerson
             m_MoveDir.x = desiredMove.x*speed;
             m_MoveDir.z = desiredMove.z*speed;
 
+            ////////////////////////////////////////
+            if((transform.position.y > m_LastPosition.y + 0.12f) && !m_Jump){
+                PlayJumpSound();
+            }
+            m_LastPosition = new Vector3(0, transform.position.y, 0);
+            ///////////////////////////////////////
 
             if (m_CharacterController.isGrounded)
             {
