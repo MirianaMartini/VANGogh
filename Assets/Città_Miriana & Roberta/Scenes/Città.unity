@@ -6115,6 +6115,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1849896675}
     - target: {fileID: 5167611678338886854, guid: 451f6e7e0b29d2948a258d5d3a7bcb14, type: 3}
+      propertyPath: _audioPickUp
+      value: 
+      objectReference: {fileID: 8300000, guid: 5554e1b6ff0735444b939e8291fcff91, type: 3}
+    - target: {fileID: 5167611678338886854, guid: 451f6e7e0b29d2948a258d5d3a7bcb14, type: 3}
       propertyPath: _zainoInventory
       value: 
       objectReference: {fileID: 101057758}

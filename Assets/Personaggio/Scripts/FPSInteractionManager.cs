@@ -19,6 +19,7 @@ public class FPSInteractionManager : MonoBehaviour
     [SerializeField] private GameObject _zainoInventory;
     [SerializeField] private GameObject _zainoObj;
     [SerializeField] private ShowAlbum _showAlbum;
+    [SerializeField] private AudioClip _audioPickUp;
 
     [Header("CrossHair")]
     [SerializeField] private GameObject _crossHair;
@@ -115,6 +116,8 @@ public class FPSInteractionManager : MonoBehaviour
                         _audioSource.clip = _pergamenaOpenAudio;
                         _audioSource.Play();
                     } else if(_pointingInteractable.tag == "Init"){
+                        _audioSource.clip = _audioPickUp;
+                        _audioSource.Play();
                         _pointingInteractable.Interact(gameObject);
                         init = true;
                         //Inserire suono TODO 
@@ -138,6 +141,8 @@ public class FPSInteractionManager : MonoBehaviour
             _pointingPickUp = hit.transform.GetComponent<ItemPickUp>();
             if(_pointingPickUp && Input.GetKeyDown(KeyCode.I)){
                 _pointingPickUp.PickUp();
+                _audioSource.clip = _audioPickUp;
+                _audioSource.Play();
             }
         }
         //If NOTHING is detected set all to null
