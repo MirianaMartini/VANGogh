@@ -15,7 +15,7 @@ public class AudioManagerRigidBodyObj : MonoBehaviour
 
     void OnCollisionEnter(Collision collision)
     {
-        if (collision.relativeVelocity.magnitude > 2 && collision.gameObject.tag != "Personaggio")
+        if (collision.relativeVelocity.magnitude > 1 && collision.gameObject.tag != "Personaggio")
             Play();
     }
     

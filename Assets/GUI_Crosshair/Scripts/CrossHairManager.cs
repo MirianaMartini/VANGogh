@@ -27,7 +27,7 @@ public class CrossHairManager : MonoBehaviour
                     i.color = Color.white;
         }
         
-        _rayOrigin = _fpsCameraT.position + _fpsController.radius * _fpsCameraT.forward;
+        _rayOrigin = _fpsCameraT.position + _fpsController.radius/4 * _fpsCameraT.forward;
 
         Ray ray = new Ray(_rayOrigin, _fpsCameraT.forward);
         RaycastHit hit;

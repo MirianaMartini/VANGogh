@@ -570,7 +570,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _fpsCameraT: {fileID: 0}
   _fpsController: {fileID: 0}
-  _interactionDistance: 4.2
+  _interactionDistance: 1
   Images:
   - {fileID: 1607185377130120408}
   - {fileID: 1607185375767642020}

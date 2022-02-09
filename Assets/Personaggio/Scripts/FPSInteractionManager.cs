@@ -46,7 +46,8 @@ public class FPSInteractionManager : MonoBehaviour
 
     void Update()
     {
-        _rayOrigin = _fpsCameraT.position + _fpsController.radius * _fpsCameraT.forward;
+        _rayOrigin = _fpsCameraT.position + _fpsController.radius/4 * _fpsCameraT.forward;
+        //_rayOrigin = _fpsCameraT.position;
 
         //Pergamena
         if(_pergamenaShow != null){
@@ -165,7 +166,7 @@ public class FPSInteractionManager : MonoBehaviour
 
     private void DebugRaycast()
     {
-        Debug.DrawRay(_rayOrigin, _fpsCameraT.forward * _interactionDistance, Color.red);
+        Debug.DrawRay(_rayOrigin, _fpsCameraT.forward*_interactionDistance, Color.red);
     }
 
     private void ShowPergamena(){
