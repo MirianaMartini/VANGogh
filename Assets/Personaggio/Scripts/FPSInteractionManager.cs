@@ -19,6 +19,7 @@ public class FPSInteractionManager : MonoBehaviour
     [SerializeField] private GameObject _zainoInventory;
     [SerializeField] private GameObject _zainoObj;
     [SerializeField] private ShowAlbum _showAlbum;
+    [SerializeField] private AudioClip _audioPickUp;
 
     [Header("CrossHair")]
     [SerializeField] private GameObject _crossHair;
@@ -46,7 +47,8 @@ public class FPSInteractionManager : MonoBehaviour
 
     void Update()
     {
-        _rayOrigin = _fpsCameraT.position + _fpsController.radius * _fpsCameraT.forward;
+        _rayOrigin = _fpsCameraT.position + _fpsController.radius/4 * _fpsCameraT.forward;
+        //_rayOrigin = _fpsCameraT.position;
 
         //Pergamena
         if(_pergamenaShow != null){
@@ -114,6 +116,8 @@ public class FPSInteractionManager : MonoBehaviour
                         _audioSource.clip = _pergamenaOpenAudio;
                         _audioSource.Play();
                     } else if(_pointingInteractable.tag == "Init"){
+                        _audioSource.clip = _audioPickUp;
+                        _audioSource.Play();
                         _pointingInteractable.Interact(gameObject);
                         init = true;
                         //Inserire suono TODO 
@@ -137,6 +141,8 @@ public class FPSInteractionManager : MonoBehaviour
             _pointingPickUp = hit.transform.GetComponent<ItemPickUp>();
             if(_pointingPickUp && Input.GetKeyDown(KeyCode.I)){
                 _pointingPickUp.PickUp();
+                _audioSource.clip = _audioPickUp;
+                _audioSource.Play();
             }
         }
         //If NOTHING is detected set all to null
@@ -165,7 +171,7 @@ public class FPSInteractionManager : MonoBehaviour
 
     private void DebugRaycast()
     {
-        Debug.DrawRay(_rayOrigin, _fpsCameraT.forward * _interactionDistance, Color.red);
+        Debug.DrawRay(_rayOrigin, _fpsCameraT.forward*_interactionDistance, Color.red);
     }
 
     private void ShowPergamena(){

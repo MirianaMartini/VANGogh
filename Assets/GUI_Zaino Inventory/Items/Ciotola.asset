@@ -16,4 +16,4 @@ MonoBehaviour:
   itemName: Ciotola
   value: 1
   icon: {fileID: 21300000, guid: 2eb719674d916ef419341ac79bb75203, type: 3}
-  prefab: {fileID: 3028059801979344208, guid: 6254cdd687007c2499a54259a81b2b46, type: 3}
+  prefab: {fileID: 2004575643194931323, guid: 18c96b3b46d51da4e97c9e4aa90937e5, type: 3}
