@@ -18,7 +18,7 @@ public class aboutOpener : MonoBehaviour
     public void CloseDialog()
     {
         background.LeanAlpha(0, 0.5f);
-        box.LeanMoveLocalY(-1080, 0.5f).setEaseInExpo().setOnComplete(onComplete);
+        box.LeanMoveLocalY(-Screen.height, 0.5f).setEaseInExpo().setOnComplete(onComplete);
     }
 
     void onComplete()
