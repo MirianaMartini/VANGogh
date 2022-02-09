@@ -16,4 +16,4 @@ MonoBehaviour:
   itemName: Orecchio
   value: 1
   icon: {fileID: 0}
-  prefab: {fileID: 0}
+  prefab: {fileID: 4330285117247876868, guid: 7bcbe57a8d52f6c43a1ecb2f33988687, type: 3}
