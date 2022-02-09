@@ -116,6 +116,7 @@ public class FPSInteractionManager : MonoBehaviour
                     } else if(_pointingInteractable.tag == "Init"){
                         _pointingInteractable.Interact(gameObject);
                         init = true;
+                        //Inserire suono TODO 
                     } else _pointingInteractable.Interact(gameObject);
                 }
             }
