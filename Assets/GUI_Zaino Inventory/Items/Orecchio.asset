@@ -10,10 +10,10 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 5706f03763b4f9d41903051f2fbfa0fa, type: 3}
-  m_Name: Brocca
+  m_Name: Orecchio
   m_EditorClassIdentifier: 
-  id: 2
-  itemName: Brocca
+  id: 8
+  itemName: Orecchio
   value: 1
-  icon: {fileID: 21300000, guid: d63212f1093642346a2ea52ba984ab70, type: 3}
-  prefab: {fileID: 4747262538369529106, guid: a0e84ab327288e644a4808361a87fa81, type: 3}
+  icon: {fileID: 0}
+  prefab: {fileID: 4330285117247876868, guid: 7bcbe57a8d52f6c43a1ecb2f33988687, type: 3}

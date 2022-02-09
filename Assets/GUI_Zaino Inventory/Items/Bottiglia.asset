@@ -16,4 +16,4 @@ MonoBehaviour:
   itemName: Bottiglia Grande
   value: 1
   icon: {fileID: 21300000, guid: 42b26c17b13ca504a8bd521c151e3b67, type: 3}
-  prefab: {fileID: 4453083243494251639, guid: 21a43ab0edf309d42981cc89dfa55328, type: 3}
+  prefab: {fileID: 629655558354209943, guid: d0b26f8bf7909794fbd63f50a6b5f1de, type: 3}
