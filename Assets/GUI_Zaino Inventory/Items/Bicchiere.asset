@@ -16,4 +16,4 @@ MonoBehaviour:
   itemName: Bicchiere
   value: 1
   icon: {fileID: 21300000, guid: 2e1c315fc04034144818929fd5b82586, type: 3}
-  prefab: {fileID: 7900862290736874103, guid: ffdf5e771f8883747b6e22df5ca86aab, type: 3}
+  prefab: {fileID: 13675298040135755, guid: bcc8797dae446c242a5bc9ce71432709, type: 3}

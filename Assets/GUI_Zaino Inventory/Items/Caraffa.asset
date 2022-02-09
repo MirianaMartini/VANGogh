@@ -16,4 +16,4 @@ MonoBehaviour:
   itemName: Caraffa
   value: 1
   icon: {fileID: 21300000, guid: 35ec5278ffa43334ea49c46a47704453, type: 3}
-  prefab: {fileID: 2091321167815550045, guid: 0591116447fc97d4283cba71abc13a18, type: 3}
+  prefab: {fileID: 5945062029072201770, guid: 3c0e7ce69d339324682fc7d16a96e8c5, type: 3}
