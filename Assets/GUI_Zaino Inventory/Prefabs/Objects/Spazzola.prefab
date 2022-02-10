@@ -143,7 +143,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Item: {fileID: 11400000, guid: 43795b76d82831e4195c6ddd2fdd5caf, type: 2}
-  audioClip: {fileID: 8300000, guid: 5554e1b6ff0735444b939e8291fcff91, type: 3}
 --- !u!64 &4582183704621911304
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -170,7 +169,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1ef0cdf49325a404cb5273a3ee487bc3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  audioClip: {fileID: 8300000, guid: 98ab55dde713adb4da7bcd6076d0b7c7, type: 3}
+  audioClip: {fileID: 8300000, guid: 3e185951d4435684f81751d44892c7e5, type: 3}
 --- !u!82 &4263075911408966740
 AudioSource:
   m_ObjectHideFlags: 0
