@@ -615,6 +615,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: CanvasPausa
       objectReference: {fileID: 0}
+    - target: {fileID: 6468701475852432456, guid: 86676905de07eb84384486063af174df, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 86676905de07eb84384486063af174df, type: 3}
 --- !u!1 &271832297
