@@ -9,6 +9,9 @@ EditorBuildSettings:
     path: Assets/Menu_transizioni scene/Scena0_Menu.unity
     guid: 15ed1930f00748e4988d60ad71baf9dd
   - enabled: 1
-    path: Assets/Menu_transizioni scene/Scena1_Museo.unity
-    guid: b8354a86eafead64791fc3295408aefa
+    path: Assets/Museo_Virginia/Scenes/Museo.unity
+    guid: 0459e75412b4e4ca5b82ddf9ebea2ddf
+  - enabled: 1
+    path: Assets/Mondo/Scenes/Mondo.unity
+    guid: ca2262393560d4c58a800fa951d93e7f
   m_configObjects: {}

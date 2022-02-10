@@ -11,7 +11,7 @@ public class Pausa : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Space))
+        if (Input.GetKeyDown(KeyCode.H))
         {
             if (GiocoInPausa)
             {
@@ -46,5 +46,10 @@ public class Pausa : MonoBehaviour
     public void Comandi()
     {
         Debug.Log("Comm");
+    }
+
+    private void Awake()
+    {
+        DontDestroyOnLoad(pausaMenuUI);
     }
 }

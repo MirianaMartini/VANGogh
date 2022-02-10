@@ -1,6 +1,8 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
+using System.Threading.Tasks;
 
 public class VanTowardsPortal : MonoBehaviour
 {
@@ -26,7 +28,7 @@ public class VanTowardsPortal : MonoBehaviour
         {
             cambioCamera();
             MoveVan();
-            
+            delayAsync();
         }
     }
 
@@ -48,5 +50,12 @@ public class VanTowardsPortal : MonoBehaviour
 
       _animatorVan.SetBool("move", true);
 
+    }
+
+    public async Task delayAsync() //Ritardo la scomparsa dell'orecchio così l'utente può vedere cosa prende
+                                   //poi scompare così non deve tenerlo in mano, "come se se lo mettesse"
+    {
+        await Task.Delay(3000);
+        SceneManager.LoadScene("Mondo");
     }
 }
