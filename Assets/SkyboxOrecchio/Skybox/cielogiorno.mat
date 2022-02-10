@@ -20,7 +20,7 @@ Material:
     serializedVersion: 3
     m_TexEnvs:
     - _Tex:
-        m_Texture: {fileID: 8900000, guid: 356f52a5318213e40a11ccb717ab5ad3, type: 3}
+        m_Texture: {fileID: 8900000, guid: 8eaac58ae854ed341b1580d327b0fec7, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     m_Floats:
@@ -29,7 +29,7 @@ Material:
     - _ShiftHue: 0
     - _ShiftSaturation: 1
     - _ShiftValue: 1
-    - _VOffset: 0
+    - _VOffset: 0.434
     - _VScale: 1
     m_Colors:
     - _Tint: {r: 0.5, g: 0.5, b: 0.5, a: 0.5}
