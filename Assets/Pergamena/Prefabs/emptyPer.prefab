@@ -96,7 +96,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 747348706781509785, guid: 7a9fc7da3cdca96408cf82e67ef1912b, type: 3}
       propertyPath: m_Name
-      value: Pergamena_Stanza
+      value: Pergamena_Oggetto
       objectReference: {fileID: 0}
     - target: {fileID: 747348706781509785, guid: 7a9fc7da3cdca96408cf82e67ef1912b, type: 3}
       propertyPath: m_TagString

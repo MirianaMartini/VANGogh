@@ -13,11 +13,6 @@ ModelImporter:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: Blu_Colore
-    second: {fileID: 2100000, guid: a1b5092de47bcab40b17329b9e16dcdd, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: Giallo
     second: {fileID: 2100000, guid: b876110308123de489ff70d092c74176, type: 2}
   - first:
       type: UnityEngine:Material
