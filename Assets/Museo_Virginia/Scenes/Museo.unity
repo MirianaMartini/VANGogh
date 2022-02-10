@@ -1367,7 +1367,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!81 &396077156
 AudioListener:
   m_ObjectHideFlags: 0
@@ -1465,6 +1465,16 @@ Transform:
   m_Father: {fileID: 694566340}
   m_RootOrder: 12
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &417384654 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4901833137658835698, guid: 6801a5d40935cff43afac42211a1ee2b, type: 3}
+  m_PrefabInstance: {fileID: 1510681417}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &417384655 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 4901833137658736338, guid: 6801a5d40935cff43afac42211a1ee2b, type: 3}
+  m_PrefabInstance: {fileID: 1510681417}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &454493490
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2222,6 +2232,7 @@ Transform:
   - {fileID: 91408520}
   - {fileID: 572773758}
   - {fileID: 1958431294}
+  - {fileID: 417384655}
   m_Father: {fileID: 0}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -3837,6 +3848,63 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 3819961179044562181, guid: 84890c7941ac84b5097ba77a61486037, type: 3}
   m_PrefabInstance: {fileID: 1482531256}
   m_PrefabAsset: {fileID: 0}
+--- !u!1001 &1510681417
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 694566340}
+    m_Modifications:
+    - target: {fileID: 4901833137658736338, guid: 6801a5d40935cff43afac42211a1ee2b, type: 3}
+      propertyPath: m_RootOrder
+      value: 16
+      objectReference: {fileID: 0}
+    - target: {fileID: 4901833137658736338, guid: 6801a5d40935cff43afac42211a1ee2b, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -33.84
+      objectReference: {fileID: 0}
+    - target: {fileID: 4901833137658736338, guid: 6801a5d40935cff43afac42211a1ee2b, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.02
+      objectReference: {fileID: 0}
+    - target: {fileID: 4901833137658736338, guid: 6801a5d40935cff43afac42211a1ee2b, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -1.42
+      objectReference: {fileID: 0}
+    - target: {fileID: 4901833137658736338, guid: 6801a5d40935cff43afac42211a1ee2b, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: -0.82903165
+      objectReference: {fileID: 0}
+    - target: {fileID: 4901833137658736338, guid: 6801a5d40935cff43afac42211a1ee2b, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4901833137658736338, guid: 6801a5d40935cff43afac42211a1ee2b, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0.5592018
+      objectReference: {fileID: 0}
+    - target: {fileID: 4901833137658736338, guid: 6801a5d40935cff43afac42211a1ee2b, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4901833137658736338, guid: 6801a5d40935cff43afac42211a1ee2b, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4901833137658736338, guid: 6801a5d40935cff43afac42211a1ee2b, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: -291.999
+      objectReference: {fileID: 0}
+    - target: {fileID: 4901833137658736338, guid: 6801a5d40935cff43afac42211a1ee2b, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4901833137658835698, guid: 6801a5d40935cff43afac42211a1ee2b, type: 3}
+      propertyPath: m_Name
+      value: Simple_Custom_FPS
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 6801a5d40935cff43afac42211a1ee2b, type: 3}
 --- !u!4 &1531792854 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 8603962011440606055, guid: 56da94b71da2c48d8af129bc7e9ea626, type: 3}
@@ -4603,7 +4671,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _vanCamera: {fileID: 1972280316}
-  _mainCamera: {fileID: 396077155}
+  _mainCamera: {fileID: 417384654}
   _animatorVan: {fileID: 1929936248}
 --- !u!95 &1929936248
 Animator:
