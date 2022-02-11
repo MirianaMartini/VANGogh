@@ -842,6 +842,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 3787900999227098705, guid: 9287e59834e073b4598cd528d9594469, type: 3}
+      propertyPath: m_Mass
+      value: 2000
+      objectReference: {fileID: 0}
     - target: {fileID: 8606656537487559338, guid: 9287e59834e073b4598cd528d9594469, type: 3}
       propertyPath: FPV
       value: 
