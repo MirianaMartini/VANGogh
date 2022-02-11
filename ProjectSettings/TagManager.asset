@@ -8,6 +8,7 @@ TagManager:
   - Init
   - Personaggio
   - Scala
+  - Orecchio
   layers:
   - Default
   - TransparentFX
