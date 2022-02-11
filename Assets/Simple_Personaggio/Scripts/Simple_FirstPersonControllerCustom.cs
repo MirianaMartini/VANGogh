@@ -157,7 +157,7 @@ namespace UnityStandardAssets.Characters.FirstPerson
             ProgressStepCycle(speed);
             UpdateCameraPosition(speed);
 
-            if (!(_emptyPergamena.transform.childCount > 0))
+            if (!(_emptyPergamena.transform.childCount > 0) || (!_pauseMenu.active))
             {
                 m_MouseLook.UpdateCursorLock();
                 Cursor.lockState = CursorLockMode.Locked;
