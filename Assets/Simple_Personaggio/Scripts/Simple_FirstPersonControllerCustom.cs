@@ -32,6 +32,9 @@ namespace UnityStandardAssets.Characters.FirstPerson
         [Header("Custom Variables")]
         [SerializeField] private Transform _emptyPergamena;
 
+        [Header("Pause menu")]
+        [SerializeField] private bool _pauseMenu;
+
         private Camera m_Camera;
         private bool m_Jump;
         private float m_YRotation;

@@ -33,6 +33,7 @@ namespace UnityStandardAssets.Characters.FirstPerson
         [SerializeField] private Transform _emptyPergamena;
         [SerializeField] private GameObject _zainoInventory;
 
+
         private Camera m_Camera;
         private bool m_Jump;
         private float m_YRotation;
@@ -68,7 +69,7 @@ namespace UnityStandardAssets.Characters.FirstPerson
         // Update is called once per frame
         private void Update()
         {
-            if (!(_emptyPergamena.transform.childCount > 0 || _zainoInventory.activeSelf))
+            if (!(_emptyPergamena.transform.childCount > 0 || _zainoInventory.activeSelf ))
             {
                 RotateView();
                 Cursor.lockState = CursorLockMode.Locked;

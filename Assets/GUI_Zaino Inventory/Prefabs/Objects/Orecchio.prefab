@@ -118,6 +118,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 07366e4a06ee18040aa3f7d8ad57f471, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  cieloGiorno: {fileID: 2100000, guid: 29d6522383056aa4994f850a99ecd169, type: 2}
+  cieloNotte: {fileID: 2100000, guid: 3267f92463981874f8f65c9aca3ce70c, type: 2}
 --- !u!114 &6721200627377896365
 MonoBehaviour:
   m_ObjectHideFlags: 0
