@@ -185,11 +185,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_IsWalking: 0
-  m_WalkSpeed: 2
+  m_WalkSpeed: 4
   m_RunSpeed: 20
   m_RunstepLenghten: 1
-  m_JumpSpeed: 5
-  m_StickToGroundForce: 0.5
+  m_JumpSpeed: 7
+  m_StickToGroundForce: 2
   m_GravityMultiplier: 2
   m_MouseLook:
     XSensitivity: 2
@@ -272,13 +272,14 @@ MonoBehaviour:
   m_JumpBob:
     BobDuration: 0
     BobAmount: 0
-  m_StepInterval: 2.5
+  m_StepInterval: 4
   m_FootstepSounds:
   - {fileID: 8300000, guid: 42e65e088b3f4374e851b8dbd38f3df9, type: 3}
   - {fileID: 8300000, guid: 8bc94ec6ed537e743b481638bdcd503d, type: 3}
   m_JumpSound: {fileID: 8300000, guid: 5897aeed9b676024fbb8c694b421a861, type: 3}
   m_LandSound: {fileID: 8300000, guid: 3b09d59f4499d45428baa7a21e954296, type: 3}
   _emptyPergamena: {fileID: 1816637552819878260}
+  _pauseMenu: {fileID: 0}
 --- !u!114 &-5733575744905056409
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -299,6 +300,7 @@ MonoBehaviour:
   _pergamenaOpenAudio: {fileID: 8300000, guid: 15f10016778fb104c94c04ad5556c81e, type: 3}
   _pergamenaCloseAudio: {fileID: 8300000, guid: 3e3c4130fad63aa40b25f60691d97579, type: 3}
   _crossHair: {fileID: 0}
+  _pauseMenu: {fileID: 0}
 --- !u!54 &4901833137655861650
 Rigidbody:
   m_ObjectHideFlags: 0
