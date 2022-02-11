@@ -58,6 +58,6 @@ public class VanTowardsPortal : MonoBehaviour
     {
         await Task.Delay(3000);
         SceneManager.LoadScene("Mondo");
-        SceneManager.LoadScene("Città");
+        //SceneManager.LoadScene("Città");
     }
 }
