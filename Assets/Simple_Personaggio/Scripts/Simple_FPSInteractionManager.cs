@@ -17,6 +17,9 @@ public class Simple_FPSInteractionManager : MonoBehaviour
 
     [Header("CrossHair")]
     [SerializeField] private GameObject _crossHair;
+
+    [Header("Pause menu")]
+    [SerializeField] private GameObject _pauseMenu;
     
 
     private Interactable _pointingInteractable;
@@ -73,7 +76,7 @@ public class Simple_FPSInteractionManager : MonoBehaviour
         }
 
         //Apparizione disapparizione CrossHair
-        if(_grabbedObject != null || _pergamenaShow != null) 
+        if(_grabbedObject != null || _pergamenaShow != null || (_pauseMenu.activeSelf)) 
             _crossHair.SetActive(false);
         else _crossHair.SetActive(true);
   

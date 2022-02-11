@@ -33,6 +33,9 @@ namespace UnityStandardAssets.Characters.FirstPerson
         [SerializeField] private Transform _emptyPergamena;
         [SerializeField] private GameObject _zainoInventory;
 
+        [Header("Pause menu")]
+        [SerializeField] private GameObject _pauseMenu;
+
 
         private Camera m_Camera;
         private bool m_Jump;
@@ -69,7 +72,7 @@ namespace UnityStandardAssets.Characters.FirstPerson
         // Update is called once per frame
         private void Update()
         {
-            if (!(_emptyPergamena.transform.childCount > 0 || _zainoInventory.activeSelf ))
+            if (!(_emptyPergamena.transform.childCount > 0 || _zainoInventory.activeSelf || (_pauseMenu.active)))
             {
                 RotateView();
                 Cursor.lockState = CursorLockMode.Locked;
@@ -155,7 +158,7 @@ namespace UnityStandardAssets.Characters.FirstPerson
             ProgressStepCycle(speed);
             UpdateCameraPosition(speed);
 
-            if (!(_emptyPergamena.transform.childCount > 0 || _zainoInventory.activeSelf))
+            if (!(_emptyPergamena.transform.childCount > 0 || _zainoInventory.activeSelf || (_pauseMenu.active)))
             {
                 m_MouseLook.UpdateCursorLock();
                 Cursor.lockState = CursorLockMode.Locked;

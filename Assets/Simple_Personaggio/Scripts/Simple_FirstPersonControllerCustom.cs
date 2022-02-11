@@ -71,7 +71,7 @@ namespace UnityStandardAssets.Characters.FirstPerson
         // Update is called once per frame
         private void Update()
         {
-            if (!(_emptyPergamena.transform.childCount > 0) || (!_pauseMenu.active))
+            if (!(_emptyPergamena.transform.childCount > 0) || (!_pauseMenu.activeSelf))
             {
                 RotateView();
                 Cursor.lockState = CursorLockMode.Locked;
@@ -157,7 +157,7 @@ namespace UnityStandardAssets.Characters.FirstPerson
             ProgressStepCycle(speed);
             UpdateCameraPosition(speed);
 
-            if (!(_emptyPergamena.transform.childCount > 0) || (!_pauseMenu.active))
+            if (!(_emptyPergamena.transform.childCount > 0) || (!_pauseMenu.activeSelf))
             {
                 m_MouseLook.UpdateCursorLock();
                 Cursor.lockState = CursorLockMode.Locked;
