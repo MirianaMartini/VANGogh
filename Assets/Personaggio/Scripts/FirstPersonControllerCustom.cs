@@ -12,10 +12,10 @@ namespace UnityStandardAssets.Characters.FirstPerson
     public class FirstPersonControllerCustom : MonoBehaviour
     {
         [SerializeField] private bool m_IsWalking;
-        [SerializeField] private float m_WalkSpeed;
+        public float m_WalkSpeed;
         [SerializeField] private float m_RunSpeed;
         [SerializeField] [Range(0f, 1f)] private float m_RunstepLenghten;
-        [SerializeField] private float m_JumpSpeed;
+        public float m_JumpSpeed;
         [SerializeField] private float m_StickToGroundForce;
         [SerializeField] private float m_GravityMultiplier;
         [SerializeField] private MouseLook m_MouseLook;
@@ -24,7 +24,7 @@ namespace UnityStandardAssets.Characters.FirstPerson
         [SerializeField] private bool m_UseHeadBob;
         [SerializeField] private CurveControlledBob m_HeadBob = new CurveControlledBob();
         [SerializeField] private LerpControlledBob m_JumpBob = new LerpControlledBob();
-        [SerializeField] private float m_StepInterval;
+        public float m_StepInterval;
         [SerializeField] private AudioClip[] m_FootstepSounds;    // an array of footstep sounds that will be randomly selected from.
         [SerializeField] private AudioClip m_JumpSound;           // the sound played when character leaves the ground.
         [SerializeField] private AudioClip m_LandSound;           // the sound played when character touches back on ground.
@@ -32,6 +32,7 @@ namespace UnityStandardAssets.Characters.FirstPerson
         [Header("Custom Variables")]
         [SerializeField] private Transform _emptyPergamena;
         [SerializeField] private GameObject _zainoInventory;
+        [SerializeField] private TriggerScala _Scala;
 
         [Header("Pause menu")]
         [SerializeField] private GameObject _pauseMenu;
@@ -51,6 +52,7 @@ namespace UnityStandardAssets.Characters.FirstPerson
         private bool m_Jumping;
         private AudioSource m_AudioSource;
         private Vector3 m_LastPosition;
+        private float speed;
 
         // Use this for initialization
         private void Start()
@@ -116,7 +118,6 @@ namespace UnityStandardAssets.Characters.FirstPerson
 
         private void FixedUpdate()
         {
-            float speed;
             GetInput(out speed);
             // always move along the camera forward as it is the direction that it being aimed at
             Vector3 desiredMove = transform.forward*m_Input.y + transform.right*m_Input.x;
@@ -130,12 +131,14 @@ namespace UnityStandardAssets.Characters.FirstPerson
             m_MoveDir.x = desiredMove.x*speed;
             m_MoveDir.z = desiredMove.z*speed;
 
-            ////////////////////////////////////////
-            if((transform.position.y > m_LastPosition.y + 0.12f) && !m_Jump){
-                PlayJumpSound();
+            ///////////////////////////////////////////////////////////////////////////////////////////////Salire le Scale
+            if((transform.position.y - m_LastPosition.y > 0.12f) && !m_Jumping && !m_Jump){
+                if(_Scala._ScalaEnter == true) 
+                    PlayJumpSound();
+                m_LastPosition = new Vector3(0, transform.position.y, 0);
             }
-            m_LastPosition = new Vector3(0, transform.position.y, 0);
-            ///////////////////////////////////////
+            else if(transform.position.y < m_LastPosition.y) m_LastPosition = new Vector3(0, transform.position.y, 0);
+            //////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
             if (m_CharacterController.isGrounded)
             {
@@ -239,7 +242,6 @@ namespace UnityStandardAssets.Characters.FirstPerson
             m_Camera.transform.localPosition = newCameraPosition;
             */
         }
-
 
         private void GetInput(out float speed)
         {

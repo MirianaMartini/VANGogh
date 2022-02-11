@@ -14,8 +14,8 @@ public class VanEnterExitSystem : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        FPVCamera.gameObject.active = true;
-        VanCamera.gameObject.active = false;
+        FPVCamera.gameObject.SetActive(true);
+        VanCamera.gameObject.SetActive(false);
         GuidaVanScript.enabled = false;
     }
 
@@ -32,22 +32,22 @@ public class VanEnterExitSystem : MonoBehaviour
     //Funzione che cambia camera
     public void cambioCamera()
     {
-        if (FPVCamera.gameObject.active) //Guida VAN
+        if (FPVCamera.gameObject.activeSelf) //Guida VAN
         {
             
             //imporre condizione che sia vicino a van o fare tramite raycasting 
-            FPVCamera.gameObject.active = false;
-            VanCamera.gameObject.active = true;
+            FPVCamera.gameObject.SetActive(false);
+            VanCamera.gameObject.SetActive(true);
             GuidaVanScript.enabled = true;
             //Metto controller sul Van
             FPV.transform.SetParent(Van);
             
 
         }
-        else if (VanCamera.gameObject.active) //Muove personaggio
+        else if (VanCamera.gameObject.activeSelf) //Muove personaggio
         {
-            FPVCamera.gameObject.active = true;
-            VanCamera.gameObject.active = false;
+            FPVCamera.gameObject.SetActive(true);
+            VanCamera.gameObject.SetActive(false);
             //Disattivo script che permette di guidare il van
             GuidaVanScript.enabled = false;
             //Spawnare a sx del VAN

@@ -92,7 +92,7 @@ public class FPSInteractionManager : MonoBehaviour
         }
 
         //Apparizione disapparizione CrossHair
-        if(_grabbedObject != null || Input.GetMouseButton(0) || _pergamenaShow != null || _zainoInventory.activeSelf || (_pauseMenu.activeSelf)) 
+        if(_grabbedObject != null || Input.GetMouseButton(0) || _pergamenaShow != null || _zainoInventory.activeSelf || _pauseMenu.activeSelf) 
             _crossHair.SetActive(false);
         else _crossHair.SetActive(true);
   
