@@ -4,8 +4,11 @@ using UnityEngine;
 
 public class PergamenaAnimator : Interactable
 {
+    [SerializeField] private GameObject DialogueBoxUI;
+
     private Animator _animator;
     private bool _open = false;
+    private bool _canvas;
 
     void Start()
     {
@@ -21,6 +24,13 @@ public class PergamenaAnimator : Interactable
 
     public void Open()
     {
+        if (DialogueBoxUI.activeSelf)
+        {
+            DialogueBoxUI.SetActive(false);
+            _canvas = true;
+        }
+
+        
         if (_animator == null)
             return;
 
@@ -30,6 +40,11 @@ public class PergamenaAnimator : Interactable
 
     public void Close()
     {
+        if (_canvas) {
+            DialogueBoxUI.SetActive(true);
+            _canvas = false;
+        }
+
         if (_animator == null)
             return;
 
