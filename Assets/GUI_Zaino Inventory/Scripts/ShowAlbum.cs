@@ -18,6 +18,10 @@ public class ShowAlbum : MonoBehaviour
     private int index = 0;
 
     void Start() {
+        if (!Directory.Exists("Polaroids/")) {
+            Directory.CreateDirectory("Polaroids/");
+        }
+        
 		Button btn = GetComponent<Button>();
 		btn.onClick.AddListener(SwitchView);
 	}

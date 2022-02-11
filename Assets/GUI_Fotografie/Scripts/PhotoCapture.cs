@@ -36,12 +36,17 @@ public class PhotoCapture : MonoBehaviour
     {
         screenCapture = new Texture2D(Screen.width, Screen.height, TextureFormat.RGB24, false);
 
-        //Cancello le foto della cartella
-        index = 0;
-        fileEntries = Directory.GetFiles("Polaroids/");
-        foreach(string file in fileEntries){
-            File.Delete(file);
-            ++index;
+        if (!Directory.Exists("Polaroids/")) {
+            Directory.CreateDirectory("Polaroids/");
+        }
+        else {
+            //Cancello le foto della cartella
+            index = 0;
+            fileEntries = Directory.GetFiles("Polaroids/");
+            foreach(string file in fileEntries){
+                File.Delete(file);
+                ++index;
+            }
         }
         index = 0;
     }
