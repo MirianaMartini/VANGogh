@@ -9,6 +9,7 @@ public class VanEnterExitSystem : MonoBehaviour
     public Transform Van;
     public Transform FPV;
     public MonoBehaviour GuidaVanScript;
+    public float Distanza;
 
     // Start is called before the first frame update
     void Start()
@@ -21,7 +22,8 @@ public class VanEnterExitSystem : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.E))
+        Distanza = Vector3.Distance(Van.transform.position, FPV.transform.position);
+        if (Input.GetKeyDown(KeyCode.E) && Distanza < 3)
         {
             cambioCamera();
         }
