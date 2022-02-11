@@ -10,12 +10,13 @@ public class VanEnterExitSystem : MonoBehaviour
     public Transform FPV;
     public MonoBehaviour GuidaVanScript;
     public float Distanza;
+    public GameObject _crossHair;
 
     // Start is called before the first frame update
     void Start()
     {
-        FPVCamera.gameObject.SetActive(true);
-        VanCamera.gameObject.SetActive(false);
+        FPVCamera.SetActive(true);
+        VanCamera.SetActive(false);
         GuidaVanScript.enabled = false;
     }
 
@@ -34,20 +35,19 @@ public class VanEnterExitSystem : MonoBehaviour
     {
         if (FPVCamera.gameObject.activeSelf) //Guida VAN
         {
-            
             //imporre condizione che sia vicino a van o fare tramite raycasting 
-            FPVCamera.gameObject.SetActive(false);
-            VanCamera.gameObject.SetActive(true);
+            FPVCamera.SetActive(false);
+            VanCamera.SetActive(true);
+            _crossHair.SetActive(false);
             GuidaVanScript.enabled = true;
             //Metto controller sul Van
             FPV.transform.SetParent(Van);
-            
-
         }
         else if (VanCamera.gameObject.activeSelf) //Muove personaggio
         {
-            FPVCamera.gameObject.SetActive(true);
-            VanCamera.gameObject.SetActive(false);
+            FPVCamera.SetActive(true);
+            VanCamera.SetActive(false);
+            _crossHair.SetActive(true);
             //Disattivo script che permette di guidare il van
             GuidaVanScript.enabled = false;
             //Spawnare a sx del VAN

@@ -6,7 +6,6 @@ using UnityEngine.UI;
 public class CrossHairManager : MonoBehaviour
 {
     [SerializeField] private Transform _fpsCameraT;
-    [SerializeField] private GameObject _VANCameraT;
     [SerializeField] CharacterController _fpsController;
     [SerializeField] private float _interactionDistance;
     [SerializeField] Image[] Images;
@@ -18,40 +17,37 @@ public class CrossHairManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        //if(!_VANCameraT.activeSelf){
-            //gameObject.SetActive(true);
-            foreach(Image i in Images){
-                i.color = Color.white;
-            }
-            
-            _rayOrigin = _fpsCameraT.position + _fpsController.radius/4 * _fpsCameraT.forward;
+        gameObject.SetActive(true);
+        foreach(Image i in Images){
+            i.color = Color.white;
+        }
+        
+        _rayOrigin = _fpsCameraT.position + _fpsController.radius/4 * _fpsCameraT.forward;
 
-            Ray ray = new Ray(_rayOrigin, _fpsCameraT.forward);
-            RaycastHit hit;
+        Ray ray = new Ray(_rayOrigin, _fpsCameraT.forward);
+        RaycastHit hit;
 
-            if (Physics.Raycast(ray, out hit, _interactionDistance))
-            {
-                _pointingInteractable = hit.transform.GetComponent<Interactable>();
-                _pointingGrabbable = hit.transform.GetComponent<Grabbable>();
+        if (Physics.Raycast(ray, out hit, _interactionDistance))
+        {
+            _pointingInteractable = hit.transform.GetComponent<Interactable>();
+            _pointingGrabbable = hit.transform.GetComponent<Grabbable>();
 
-                //Check if is interactable
-                if (_pointingInteractable) {
-                    foreach(Image i in Images){
-                        i.color = Color.red;
-                    }
-                }           
-                else if (_pointingGrabbable){
-                    foreach(Image i in Images){
-                        i.color = Color.blue;
-                    }
+            //Check if is interactable
+            if (_pointingInteractable) {
+                foreach(Image i in Images){
+                    i.color = Color.red;
                 }
-                else {
-                    foreach(Image i in Images){
-                        i.color = Color.white;
-                    }
+            }           
+            else if (_pointingGrabbable){
+                foreach(Image i in Images){
+                    i.color = Color.blue;
                 }
             }
-        //}
-        //else gameObject.SetActive(false);
+            else {
+                foreach(Image i in Images){
+                    i.color = Color.white;
+                }
+            }
+        }
     }
 }
