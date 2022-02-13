@@ -1692,10 +1692,18 @@ PrefabInstance:
       propertyPath: m_Constraints
       value: 64
       objectReference: {fileID: 0}
+    - target: {fileID: 4168437764627579401, guid: 9287e59834e073b4598cd528d9594469, type: 3}
+      propertyPath: m_audioClip
+      value: 
+      objectReference: {fileID: 8300000, guid: de0068516bc6f1a46accbf2ec9fb7cf3, type: 3}
     - target: {fileID: 8606656537487559338, guid: 9287e59834e073b4598cd528d9594469, type: 3}
       propertyPath: FPV
       value: 
       objectReference: {fileID: 235957841796510026}
+    - target: {fileID: 8606656537487559338, guid: 9287e59834e073b4598cd528d9594469, type: 3}
+      propertyPath: minPitch
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8606656537487559338, guid: 9287e59834e073b4598cd528d9594469, type: 3}
       propertyPath: FPVCamera
       value: 

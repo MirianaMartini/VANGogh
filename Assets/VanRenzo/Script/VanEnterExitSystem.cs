@@ -11,6 +11,11 @@ public class VanEnterExitSystem : MonoBehaviour
     public MonoBehaviour GuidaVanScript;
     public float Distanza;
     public GameObject _crossHair;
+    //Audio
+    AudioSource audioSource;
+    public float minPitch = 0.05f;
+    public float pitchFromCar;
+
 
     // Start is called before the first frame update
     void Start()
@@ -18,12 +23,16 @@ public class VanEnterExitSystem : MonoBehaviour
         FPVCamera.SetActive(true);
         VanCamera.SetActive(false);
         GuidaVanScript.enabled = false;
+
+        audioSource = GetComponent<AudioSource>();
+        audioSource.pitch = 0;
     }
 
     // Update is called once per frame
     void Update()
     {
         Distanza = Vector3.Distance(Van.transform.position, FPV.transform.position);
+        pitchFromCar = GuidaVan.cc.carSpeed * 1.0f ;
         if (Input.GetKeyDown(KeyCode.E) && Distanza < 3)
         {
             cambioCamera();
@@ -42,6 +51,12 @@ public class VanEnterExitSystem : MonoBehaviour
             GuidaVanScript.enabled = true;
             //Metto controller sul Van
             FPV.transform.SetParent(Van);
+
+            /*if (pitchFromCar < minPitch)
+                audioSource.pitch = minPitch;
+            else
+                audioSource.pitch = pitchFromCar;*/
+            audioSource.pitch = pitchFromCar/10 + 1.0f;
         }
         else if (VanCamera.gameObject.activeSelf) //Muove personaggio
         {
@@ -51,7 +66,9 @@ public class VanEnterExitSystem : MonoBehaviour
             //Disattivo script che permette di guidare il van
             GuidaVanScript.enabled = false;
             //Spawnare a sx del VAN
-            FPV.transform.SetParent(null);            
+            FPV.transform.SetParent(null);
+
+            audioSource.pitch = 0;
         }
     }
 }
