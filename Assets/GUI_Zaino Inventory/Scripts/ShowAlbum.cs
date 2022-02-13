@@ -7,6 +7,7 @@ using System;
 
 public class ShowAlbum : MonoBehaviour
 {
+    public GameObject ZainoInventory;
     public GameObject ItemContent;
     public GameObject PolaroidContent;
     public Text text_Button;
@@ -28,11 +29,13 @@ public class ShowAlbum : MonoBehaviour
 
     public void SwitchView() {
         if(ItemContent.activeSelf){
+            ZainoInventory.GetComponent<ScrollRect>().content = PolaroidContent.GetComponent<RectTransform>();
             ItemContent.SetActive(false);
             PolaroidContent.SetActive(true);
             text_Button.text = "Zaino";
         }
         else if(PolaroidContent.activeSelf){
+            ZainoInventory.GetComponent<ScrollRect>().content = ItemContent.GetComponent<RectTransform>();
             PolaroidContent.SetActive(false);
             ItemContent.SetActive(true);
             text_Button.text = "Album";
