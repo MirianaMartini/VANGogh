@@ -119,7 +119,7 @@ namespace UnityStandardAssets.Characters.FirstPerson
                 if(jumpPressed) jumpPressed = false;
             }
             else{
-                ProgressStepCycle(speed);
+                ProgressStepCycle(speed*10);
             }
         }
 
@@ -190,11 +190,11 @@ namespace UnityStandardAssets.Characters.FirstPerson
         }
 
 
-        private void ProgressStepCycle(float speed)
+        private void ProgressStepCycle(float _speed)
         {
             if (m_CharacterController.velocity.sqrMagnitude > 0 && (m_Input.x != 0 || m_Input.y != 0))
             {
-                m_StepCycle += (m_CharacterController.velocity.magnitude + (speed*(m_IsWalking ? 1f : m_RunstepLenghten)))*
+                m_StepCycle += (m_CharacterController.velocity.magnitude + (_speed*(m_IsWalking ? 1f : m_RunstepLenghten)))*
                              Time.fixedDeltaTime;
             }
 
