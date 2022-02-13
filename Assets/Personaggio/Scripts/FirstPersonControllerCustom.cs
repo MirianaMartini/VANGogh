@@ -53,6 +53,7 @@ namespace UnityStandardAssets.Characters.FirstPerson
         private AudioSource m_AudioSource;
         private Vector3 m_LastPosition;
         private float speed;
+        private bool jumpPressed = false;
 
         // Use this for initialization
         private void Start()
@@ -90,6 +91,7 @@ namespace UnityStandardAssets.Characters.FirstPerson
             if (!m_Jump)
             {
                 m_Jump = CrossPlatformInputManager.GetButtonDown("Jump");
+                if(m_Jump) jumpPressed = true;
             }
 
             if (!m_PreviouslyGrounded && m_CharacterController.isGrounded)
@@ -110,9 +112,15 @@ namespace UnityStandardAssets.Characters.FirstPerson
 
         private void PlayLandingSound()
         {
-            m_AudioSource.clip = m_LandSound;
-            m_AudioSource.Play();
-            m_NextStep = m_StepCycle + .5f;
+            if(_Scala._ScalaEnter == true || jumpPressed) {
+                m_AudioSource.clip = m_LandSound;
+                m_AudioSource.Play();
+                m_NextStep = m_StepCycle + .5f;
+                if(jumpPressed) jumpPressed = false;
+            }
+            else{
+                ProgressStepCycle(speed);
+            }
         }
 
 
