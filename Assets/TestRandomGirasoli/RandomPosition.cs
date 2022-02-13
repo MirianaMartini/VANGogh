@@ -40,7 +40,7 @@ public class RandomPosition : MonoBehaviour
             //posizione, rotazione e scalatura girasole
             int posx = Random.Range(terrainPosX, terrainPosX + terrainWidth);
             int posz = Random.Range(terrainPosZ, terrainPosZ + terrainWidth);
-            float posy = Terrain.activeTerrain.SampleHeight(new Vector3(posx, 0, posz));
+            float posy = Terrain.activeTerrain.SampleHeight(new Vector3(posx, 49, posz));
             int rotz = (int)Random.Range(0.0f + rotazioneGirasoli, 135.0f + rotazioneGirasoli);
             
             GameObject nuovoGirasole = (GameObject)Instantiate(girasoli[Random.Range(0, girasoli.Length)], new Vector3(posx, posy, posz), Quaternion.identity);
