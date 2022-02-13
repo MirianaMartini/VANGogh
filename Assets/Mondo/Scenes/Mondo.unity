@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.4519028, g: 0.46933794, b: 0.44859123, a: 1}
+  m_IndirectSpecularColor: {r: 0.45194668, g: 0.46943372, b: 0.4485669, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -27625,7 +27625,7 @@ Transform:
   m_GameObject: {fileID: 1186974489}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -6.73, y: 45, z: -26.6}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0.1860621, y: 0.1417616, z: 0.1417616}
   m_Children: []
   m_Father: {fileID: 191520707}
   m_RootOrder: 0
@@ -29613,8 +29613,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 45bb4bc20f9652d48b9f9b920a016896, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  numeroGirasoli: 1000
-  scalaGirasoli: 250
+  numeroGirasoli: 500
+  scalaGirasoli: 200
   rotazioneGirasoli: 0
   terrains:
   - {fileID: 1186974492}
