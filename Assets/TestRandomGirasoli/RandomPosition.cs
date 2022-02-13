@@ -26,7 +26,8 @@ public class RandomPosition : MonoBehaviour
         for (var i = 0; i < numeroGirasoli; i++)
         {
             //scelta terrain
-            Terrain terrain = (Terrain)Instantiate(terrains[Random.Range(0, terrains.Length)]);
+            int n = Random.Range(0, terrains.Length);
+            Terrain terrain = terrains[n];
             // terrain size x 
             terrainWidth = (int)terrain.terrainData.size.x;
             // terrain size z 
