@@ -201,6 +201,7 @@ MonoBehaviour:
   _showAlbum: {fileID: 0}
   _audioPickUp: {fileID: 8300000, guid: 5554e1b6ff0735444b939e8291fcff91, type: 3}
   _crossHair: {fileID: 0}
+  _pauseMenu: {fileID: 0}
 --- !u!114 &7657879415587263030
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -309,6 +310,8 @@ MonoBehaviour:
   m_LandSound: {fileID: 8300000, guid: 3b09d59f4499d45428baa7a21e954296, type: 3}
   _emptyPergamena: {fileID: 334673107308101783}
   _zainoInventory: {fileID: 0}
+  _Scala: {fileID: 0}
+  _pauseMenu: {fileID: 0}
 --- !u!54 &6455855179638515825
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -337,7 +340,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 0}
   m_PlayOnAwake: 1
-  m_Volume: 1
+  m_Volume: 0.3
   m_Pitch: 1
   Loop: 0
   Mute: 0
@@ -539,6 +542,7 @@ MonoBehaviour:
   fadingAnimation: {fileID: 0}
   cameraAudio: {fileID: 0}
   ZainoInventory: {fileID: 0}
+  _pauseMenu: {fileID: 0}
 --- !u!114 &4555230138158238023
 MonoBehaviour:
   m_ObjectHideFlags: 0
