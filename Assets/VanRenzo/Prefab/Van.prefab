@@ -265,8 +265,6 @@ MonoBehaviour:
   GuidaVanScript: {fileID: 3787900999227098707}
   Distanza: 0
   _crossHair: {fileID: 0}
-  minPitch: 0
-  pitchFromCar: 0
 --- !u!82 &4168437764627579401
 AudioSource:
   m_ObjectHideFlags: 0
@@ -277,7 +275,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 84ca04d4493ff8c48834f4446f48e692, type: 3}
+  m_audioClip: {fileID: 8300000, guid: de0068516bc6f1a46accbf2ec9fb7cf3, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1
