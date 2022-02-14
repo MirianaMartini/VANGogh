@@ -25,6 +25,9 @@ public class PhotoCapture : MonoBehaviour
     [Header("Zaino Inventory Check")]
     [SerializeField] private GameObject ZainoInventory;
 
+    [Header("Pause menu")]
+    [SerializeField] private GameObject _pauseMenu;
+
     private Texture2D screenCapture;
     private bool viewingPhoto;
     private Item polaroid;
@@ -58,32 +61,35 @@ public class PhotoCapture : MonoBehaviour
 
         if(init){
 
-            cameraUI.SetActive(false);
+            if(!_pauseMenu.activeSelf){
 
-            if (!ZainoInventory.activeSelf) { 
+                cameraUI.SetActive(false);
 
-                if (Input.GetMouseButton(0)) {
-                    cameraUI.SetActive(true);
-                }
+                if (!ZainoInventory.activeSelf) { 
 
-                if (Input.GetMouseButton(0) && Input.GetKeyDown(KeyCode.Return))
-                {
-                    //takeScreenshot
-                    if (!viewingPhoto)
-                    {
-                        StartCoroutine(CapturePhoto());
+                    if (Input.GetMouseButton(0)) {
+                        cameraUI.SetActive(true);
                     }
-                    else 
+
+                    if (Input.GetMouseButton(0) && Input.GetKeyDown(KeyCode.Return))
                     {
+                        //takeScreenshot
+                        if (!viewingPhoto)
+                        {
+                            StartCoroutine(CapturePhoto());
+                        }
+                        else 
+                        {
+                            RemovePhoto();
+                        }
+                    }
+
+                    if (Input.GetMouseButtonUp(0)) {
                         RemovePhoto();
+                        cameraUI.SetActive(false);
                     }
-                }
 
-                if (Input.GetMouseButtonUp(0)) {
-                    RemovePhoto();
-                    cameraUI.SetActive(false);
                 }
-
             }
         }
     }

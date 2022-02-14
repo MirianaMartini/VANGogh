@@ -75,7 +75,7 @@ namespace UnityStandardAssets.Characters.FirstPerson
         // Update is called once per frame
         private void Update()
         {
-            if (!(_emptyPergamena.transform.childCount > 0 || _zainoInventory.activeSelf || (_pauseMenu.active)))
+            if (!(_emptyPergamena.transform.childCount > 0 || _zainoInventory.activeSelf || _pauseMenu.activeSelf))
             {
                 RotateView();
                 Cursor.lockState = CursorLockMode.Locked;
