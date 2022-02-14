@@ -265,7 +265,8 @@ MonoBehaviour:
   GuidaVanScript: {fileID: 3787900999227098707}
   Distanza: 0
   _crossHair: {fileID: 0}
-  minPitch: 0.25
+  minPitch: 0
+  pitchFromCar: 0
 --- !u!82 &4168437764627579401
 AudioSource:
   m_ObjectHideFlags: 0

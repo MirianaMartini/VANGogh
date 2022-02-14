@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 4682465559802140469}
   - component: {fileID: 8598688952621127824}
   - component: {fileID: 5814245261104262234}
+  - component: {fileID: 555434879131010083}
   m_Layer: 0
   m_Name: Palazzo Lungo - Giallo
   m_TagString: Untagged
@@ -87,3 +88,16 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!65 &555434879131010083
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5454040785994485135}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 58.46941, y: 63.033363, z: 132.03755}
+  m_Center: {x: -0.83340436, y: 0.80810267, z: -61.54617}

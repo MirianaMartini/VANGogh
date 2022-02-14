@@ -13,8 +13,11 @@ public class VanEnterExitSystem : MonoBehaviour
     public GameObject _crossHair;
     //Audio
     AudioSource audioSource;
-    public float minPitch = 0.05f;
-    public float pitchFromCar;
+
+
+    private float pitchFromCar;
+    private float minPitch = 0.1f;
+    private bool flag = false;
 
 
     // Start is called before the first frame update
@@ -32,11 +35,25 @@ public class VanEnterExitSystem : MonoBehaviour
     void Update()
     {
         Distanza = Vector3.Distance(Van.transform.position, FPV.transform.position);
-        pitchFromCar = GuidaVan.cc.carSpeed * 1.0f ;
         if (Input.GetKeyDown(KeyCode.E) && Distanza < 3)
         {
             cambioCamera();
         }
+
+        ////////////////////////////////////////
+        if (flag){
+            if (GuidaVan.cc.carSpeed >= 0)
+                pitchFromCar = GuidaVan.cc.carSpeed * 0.04f;
+            else 
+                pitchFromCar = GuidaVan.cc.carSpeed * 0.008f;
+
+            if (pitchFromCar <= minPitch)
+                audioSource.pitch = minPitch;
+            else
+                audioSource.pitch = pitchFromCar;
+        }
+        /////////////////////////////////////////
+
     }
 
     //Funzione che cambia camera
@@ -45,21 +62,18 @@ public class VanEnterExitSystem : MonoBehaviour
         if (FPVCamera.gameObject.activeSelf) //Guida VAN
         {
             //imporre condizione che sia vicino a van o fare tramite raycasting 
+            flag = true;
             FPVCamera.SetActive(false);
             VanCamera.SetActive(true);
             _crossHair.SetActive(false);
             GuidaVanScript.enabled = true;
             //Metto controller sul Van
-            FPV.transform.SetParent(Van);
-
-            /*if (pitchFromCar < minPitch)
-                audioSource.pitch = minPitch;
-            else
-                audioSource.pitch = pitchFromCar;*/
-            audioSource.pitch = pitchFromCar/10 + 1.0f;
+            FPV.transform.SetParent(Van);           
+            audioSource.pitch = minPitch;
         }
         else if (VanCamera.gameObject.activeSelf) //Muove personaggio
         {
+            flag = false;
             FPVCamera.SetActive(true);
             VanCamera.SetActive(false);
             _crossHair.SetActive(true);
@@ -67,7 +81,6 @@ public class VanEnterExitSystem : MonoBehaviour
             GuidaVanScript.enabled = false;
             //Spawnare a sx del VAN
             FPV.transform.SetParent(null);
-
             audioSource.pitch = 0;
         }
     }
