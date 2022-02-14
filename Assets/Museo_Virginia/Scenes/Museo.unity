@@ -5988,6 +5988,10 @@ PrefabInstance:
       propertyPath: m_Mass
       value: 2000
       objectReference: {fileID: 0}
+    - target: {fileID: 4168437764627579401, guid: 9287e59834e073b4598cd528d9594469, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5786628974648634325, guid: 9287e59834e073b4598cd528d9594469, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
