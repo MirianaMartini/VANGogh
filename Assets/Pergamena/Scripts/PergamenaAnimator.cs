@@ -16,10 +16,21 @@ public class PergamenaAnimator : Interactable
     }
 
     public override void Interact(GameObject caller) {
-        if (_open == false)
-            Open();
+        if (DialogueBoxUI == null)
+        {
+            if (_open == false)
+                Open_N();
+            else
+                Close_N();
+        }
+
         else
-            Close();
+        {
+            if (_open == false)
+                Open();
+            else
+                Close();
+        }
     }
 
     public void Open()
@@ -44,6 +55,26 @@ public class PergamenaAnimator : Interactable
             DialogueBoxUI.SetActive(true);
             _canvas = false;
         }
+
+        if (_animator == null)
+            return;
+
+        _open = false;
+        _animator.SetBool("open", _open);
+    }
+
+    public void Open_N()
+    {
+       
+        if (_animator == null)
+            return;
+
+        _open = true;
+        _animator.SetBool("open", _open);
+    }
+
+    public void Close_N()
+    {
 
         if (_animator == null)
             return;
