@@ -1379,10 +1379,10 @@ CapsuleCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  m_Radius: 0.14317007
-  m_Height: 2.8093243
+  m_Radius: 0.1431701
+  m_Height: 2.9437187
   m_Direction: 0
-  m_Center: {x: 0.0010423305, y: 0.2625763, z: -0.8094715}
+  m_Center: {x: 0.001047414, y: 0.2625763, z: -0.8094715}
 --- !u!1 &155724344 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 5214030624666883362, guid: fe1fac7d7214fc04e889266323db5c11, type: 3}
@@ -5057,8 +5057,8 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 728574567}
-  m_LocalRotation: {x: -0.006547141, y: -0.5896038, z: 0.004771761, w: -0.807652}
-  m_LocalPosition: {x: 138.07573, y: 41.776295, z: 97.84192}
+  m_LocalRotation: {x: 0.112016425, y: 0.88517237, z: 0.279644, w: -0.35457215}
+  m_LocalPosition: {x: 144.582, y: 40.08203, z: 96.66543}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -16186,6 +16186,14 @@ PrefabInstance:
     - target: {fileID: 7657879415587263030, guid: 451f6e7e0b29d2948a258d5d3a7bcb14, type: 3}
       propertyPath: m_GravityMultiplier
       value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7657879415587263030, guid: 451f6e7e0b29d2948a258d5d3a7bcb14, type: 3}
+      propertyPath: m_MouseLook.XSensitivity
+      value: 1.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 7657879415587263030, guid: 451f6e7e0b29d2948a258d5d3a7bcb14, type: 3}
+      propertyPath: m_MouseLook.YSensitivity
+      value: 1.5
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 451f6e7e0b29d2948a258d5d3a7bcb14, type: 3}
