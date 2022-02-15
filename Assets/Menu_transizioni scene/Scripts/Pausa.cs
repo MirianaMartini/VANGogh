@@ -40,8 +40,13 @@ public class Pausa : MonoBehaviour
 
     public void Home()
     {
-        SceneManager.LoadScene("Scena0_Menu");
+        
         //SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+        //Application.Quit();
+        SceneManager.LoadScene("Scena0_Menu");
+        //pausaMenuUI.SetActive(false);
+        Time.timeScale = 1f;
+        GiocoInPausa = false;
     }
 
 
