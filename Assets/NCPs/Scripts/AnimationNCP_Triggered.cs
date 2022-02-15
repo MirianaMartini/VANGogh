@@ -7,6 +7,7 @@ public class AnimationNCP_Triggered : MonoBehaviour
     [SerializeField] private GameObject DialogueBoxUI;
     [SerializeField] private GameObject BoxAiutoUI;
     [SerializeField] private GameObject BoxZainoPolaroids_AiutoUI;
+    [SerializeField] private GameObject PausaMenu;
 
     [SerializeField] private GameObject Init;
 
@@ -25,9 +26,11 @@ public class AnimationNCP_Triggered : MonoBehaviour
         if (other.gameObject.tag == "Personaggio")
         {
             _animator.SetBool("isEnter", true);
-            DialogueBoxUI.SetActive(true);
-            if (firstTime)
-                BoxAiutoUI.SetActive(true);
+            if(!PausaMenu.activeSelf){
+                DialogueBoxUI.SetActive(true);
+                if (firstTime)
+                    BoxAiutoUI.SetActive(true);
+            }
         }
 
     }
