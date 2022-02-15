@@ -41,12 +41,10 @@ public class Pausa : MonoBehaviour
     public void Home()
     {
         SceneManager.LoadScene("Scena0_Menu");
+        //SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
 
-    public void Comandi()
-    {
-        Debug.Log("Comm");
-    }
+
 
     private void Awake()
     {
