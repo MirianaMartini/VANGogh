@@ -14,17 +14,12 @@ public class CrossHairManager : MonoBehaviour
     private Interactable _pointingInteractable;
     private Grabbable _pointingGrabbable;
 
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
     // Update is called once per frame
     void Update()
     {
+        gameObject.SetActive(true);
         foreach(Image i in Images){
-                    i.color = Color.white;
+            i.color = Color.white;
         }
         
         _rayOrigin = _fpsCameraT.position + _fpsController.radius/4 * _fpsCameraT.forward;
@@ -34,7 +29,6 @@ public class CrossHairManager : MonoBehaviour
 
         if (Physics.Raycast(ray, out hit, _interactionDistance))
         {
-            
             _pointingInteractable = hit.transform.GetComponent<Interactable>();
             _pointingGrabbable = hit.transform.GetComponent<Grabbable>();
 
@@ -45,7 +39,7 @@ public class CrossHairManager : MonoBehaviour
                 }
             }           
             else if (_pointingGrabbable){
-                 foreach(Image i in Images){
+                foreach(Image i in Images){
                     i.color = Color.blue;
                 }
             }

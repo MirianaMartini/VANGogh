@@ -12,6 +12,7 @@ public class RandomPosition : MonoBehaviour
     private int terrainLength; // terrain size (z) 
     private int terrainPosX; // terrain position x 
     private int terrainPosZ; // terrain position z 
+    private int terrainPosY;
 
     public GameObject[] girasoli;
 
@@ -26,7 +27,8 @@ public class RandomPosition : MonoBehaviour
         for (var i = 0; i < numeroGirasoli; i++)
         {
             //scelta terrain
-            Terrain terrain = (Terrain)Instantiate(terrains[Random.Range(0, terrains.Length)]);
+            int n = Random.Range(0, terrains.Length);
+            Terrain terrain = terrains[n];
             // terrain size x 
             terrainWidth = (int)terrain.terrainData.size.x;
             // terrain size z 
@@ -35,15 +37,17 @@ public class RandomPosition : MonoBehaviour
             terrainPosX = (int)terrain.transform.position.x;
             // terrain z position 
             terrainPosZ = (int)terrain.transform.position.z;
+            terrainPosY = (int)terrain.transform.position.y;
 
             //posizione, rotazione e scalatura girasole
             int posx = Random.Range(terrainPosX, terrainPosX + terrainWidth);
             int posz = Random.Range(terrainPosZ, terrainPosZ + terrainWidth);
-            float posy = Terrain.activeTerrain.SampleHeight(new Vector3(posx, 0, posz));
+            //int posy = Terrain.activeTerrain.
+            //float posy = Terrain.activeTerrain.SampleHeight(new Vector3(posx, 49, posz));
             int rotz = (int)Random.Range(0.0f + rotazioneGirasoli, 135.0f + rotazioneGirasoli);
             
-            GameObject nuovoGirasole = (GameObject)Instantiate(girasoli[Random.Range(0, girasoli.Length)], new Vector3(posx, posy, posz), Quaternion.identity);
-            nuovoGirasole.transform.Rotate(-90.0f, 0.0f, rotz, Space.Self);
+            GameObject nuovoGirasole = (GameObject)Instantiate(girasoli[Random.Range(0, girasoli.Length)], new Vector3(posx, terrainPosY, posz), Quaternion.identity);
+            nuovoGirasole.transform.Rotate(-90.0f, 1f, rotz, Space.Self);
             nuovoGirasole.transform.localScale = new Vector3(scalaGirasoli, scalaGirasoli, scalaGirasoli);
             yield return null;
         }

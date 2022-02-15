@@ -32,6 +32,9 @@ namespace UnityStandardAssets.Characters.FirstPerson
         [Header("Custom Variables")]
         [SerializeField] private Transform _emptyPergamena;
 
+        [Header("Pause menu")]
+        [SerializeField] private GameObject _pauseMenu;
+
         private Camera m_Camera;
         private bool m_Jump;
         private float m_YRotation;
@@ -61,13 +64,14 @@ namespace UnityStandardAssets.Characters.FirstPerson
             m_AudioSource = GetComponent<AudioSource>();
 			m_MouseLook.Init(transform , m_Camera.transform);
             //m_LastPosition = new Vector3(0, transform.position.y, 0);
+            
         }
 
 
         // Update is called once per frame
         private void Update()
         {
-            if (!(_emptyPergamena.transform.childCount > 0))
+            if (!((_emptyPergamena.transform.childCount > 0) || (_pauseMenu.activeSelf)))
             {
                 RotateView();
                 Cursor.lockState = CursorLockMode.Locked;
@@ -153,7 +157,7 @@ namespace UnityStandardAssets.Characters.FirstPerson
             ProgressStepCycle(speed);
             UpdateCameraPosition(speed);
 
-            if (!(_emptyPergamena.transform.childCount > 0))
+            if (!((_emptyPergamena.transform.childCount > 0) || (_pauseMenu.activeSelf)))
             {
                 m_MouseLook.UpdateCursorLock();
                 Cursor.lockState = CursorLockMode.Locked;

@@ -25,6 +25,9 @@ public class PhotoCapture : MonoBehaviour
     [Header("Zaino Inventory Check")]
     [SerializeField] private GameObject ZainoInventory;
 
+    [Header("Pause menu")]
+    [SerializeField] private GameObject _pauseMenu;
+
     private Texture2D screenCapture;
     private bool viewingPhoto;
     private Item polaroid;
@@ -36,12 +39,17 @@ public class PhotoCapture : MonoBehaviour
     {
         screenCapture = new Texture2D(Screen.width, Screen.height, TextureFormat.RGB24, false);
 
-        //Cancello le foto della cartella
-        index = 0;
-        fileEntries = Directory.GetFiles("Polaroids/");
-        foreach(string file in fileEntries){
-            File.Delete(file);
-            ++index;
+        if (!Directory.Exists("Polaroids/")) {
+            Directory.CreateDirectory("Polaroids/");
+        }
+        else {
+            //Cancello le foto della cartella
+            index = 0;
+            fileEntries = Directory.GetFiles("Polaroids/");
+            foreach(string file in fileEntries){
+                File.Delete(file);
+                ++index;
+            }
         }
         index = 0;
     }
@@ -53,32 +61,35 @@ public class PhotoCapture : MonoBehaviour
 
         if(init){
 
-            cameraUI.SetActive(false);
+            if(!_pauseMenu.activeSelf){
 
-            if (!ZainoInventory.activeSelf) { 
+                cameraUI.SetActive(false);
 
-                if (Input.GetMouseButton(0)) {
-                    cameraUI.SetActive(true);
-                }
+                if (!ZainoInventory.activeSelf) { 
 
-                if (Input.GetMouseButton(0) && Input.GetKeyDown(KeyCode.Return))
-                {
-                    //takeScreenshot
-                    if (!viewingPhoto)
-                    {
-                        StartCoroutine(CapturePhoto());
+                    if (Input.GetMouseButton(0)) {
+                        cameraUI.SetActive(true);
                     }
-                    else 
+
+                    if (Input.GetMouseButton(0) && Input.GetKeyDown(KeyCode.Return))
                     {
+                        //takeScreenshot
+                        if (!viewingPhoto)
+                        {
+                            StartCoroutine(CapturePhoto());
+                        }
+                        else 
+                        {
+                            RemovePhoto();
+                        }
+                    }
+
+                    if (Input.GetMouseButtonUp(0)) {
                         RemovePhoto();
+                        cameraUI.SetActive(false);
                     }
-                }
 
-                if (Input.GetMouseButtonUp(0)) {
-                    RemovePhoto();
-                    cameraUI.SetActive(false);
                 }
-
             }
         }
     }
@@ -106,7 +117,8 @@ public class PhotoCapture : MonoBehaviour
 
     void ShowPhoto() 
     {
-        Sprite photoSprite = Sprite.Create(screenCapture, new Rect(0.0f, 0.0f, screenCapture.width, screenCapture.height), new Vector2(0.5f, 0.5f), 100.0f);
+        //Sprite photoSprite = Sprite.Create(screenCapture, new Rect(0.0f, 0.0f, screenCapture.width, screenCapture.height), new Vector2(0.5f, 0.5f), 100.0f);
+        Sprite photoSprite = Sprite.Create(screenCapture, new Rect(0.0f, 0.0f, screenCapture.width, screenCapture.height), new Vector2(1, 1), 100.0f);
         photoDisplayArea.sprite = photoSprite;
 
         photoFrame.SetActive(true);

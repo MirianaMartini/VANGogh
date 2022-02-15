@@ -10,6 +10,10 @@ public class VanTowardsPortal : MonoBehaviour
     public GameObject _vanCamera;
     public GameObject _mainCamera;
     public Animator _animatorVan;
+    public GameObject Van;
+    public GameObject FPV;
+    public float Distanza;
+    
    
     private void Start()
     {
@@ -22,9 +26,9 @@ public class VanTowardsPortal : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        Distanza = Vector3.Distance(Van.transform.position, FPV.transform.position);
         // rileva il tasto W e sposta in avanti
-        if (Input.GetKeyDown(KeyCode.V))
+        if (Input.GetKeyDown(KeyCode.E) && Distanza < 9)
         {
             cambioCamera();
             MoveVan();
@@ -58,6 +62,6 @@ public class VanTowardsPortal : MonoBehaviour
     {
         await Task.Delay(3000);
         SceneManager.LoadScene("Mondo");
-        //SceneManager.LoadScene("Città");
+        SceneManager.LoadScene("CittÃ ", LoadSceneMode.Additive);
     }
 }
