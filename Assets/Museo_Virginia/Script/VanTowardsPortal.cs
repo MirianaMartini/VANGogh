@@ -15,6 +15,7 @@ public class VanTowardsPortal : MonoBehaviour
     public float Distanza;
     public GameObject Mura;
     public bool flag = false;
+    public GameObject _crossHair;
 
     private Vector3 _rayOrigin;
     private Interactable _pointingInteractable;
@@ -44,8 +45,6 @@ public class VanTowardsPortal : MonoBehaviour
                     if (Input.GetKeyDown(KeyCode.E)){
                         flag = true;
                         cambioCamera();
-                        MoveVan();
-                        delayAsync();
                     }
                 }
             }
@@ -68,9 +67,10 @@ public class VanTowardsPortal : MonoBehaviour
     {
         if (_mainCamera.gameObject.active) //Guida VAN
         { 
+            _crossHair.SetActive(false);
             _mainCamera.gameObject.active = false;
             _vanCamera.gameObject.active = true;
-
+            StartCoroutine(Attesa());
         }
     }
 
@@ -83,14 +83,20 @@ public class VanTowardsPortal : MonoBehaviour
             c.enabled = false;
         }
         _animatorVan.SetBool("move", true);
-
     }
 
     public async Task delayAsync() //Ritardo la scomparsa dell'orecchio cos? l'utente pu? vedere cosa prende
                                    //poi scompare cos? non deve tenerlo in mano, "come se se lo mettesse"
     {
-        await Task.Delay(4000);
+        await Task.Delay(3000);
         SceneManager.LoadScene("Mondo");
         SceneManager.LoadScene("Città", LoadSceneMode.Additive);
+    }
+
+    IEnumerator Attesa()
+    {
+        yield return new WaitForSeconds(7);
+        MoveVan();
+        delayAsync();
     }
 }
