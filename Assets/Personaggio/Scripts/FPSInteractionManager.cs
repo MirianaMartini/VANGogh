@@ -6,6 +6,7 @@ public class FPSInteractionManager : MonoBehaviour
 {
     [Header("General")]
     [SerializeField] private Transform _fpsCameraT;
+    [SerializeField] private GameObject _fpsCameraG;
     [SerializeField] private bool _debugRay;
     [SerializeField] private float _interactionDistance;
     [SerializeField] private Transform _empty;
@@ -46,6 +47,8 @@ public class FPSInteractionManager : MonoBehaviour
     {
         _fpsController = GetComponent<CharacterController>();
         _audioSource = GetComponent<AudioSource>();
+        _fpsCameraG.SetActive(true);
+        //_fpsCameraT.SetParent(null);
     }
 
     void Update()

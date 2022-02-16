@@ -54,6 +54,7 @@ namespace UnityStandardAssets.Characters.FirstPerson
         private Vector3 m_LastPosition;
         private float speed;
         private bool jumpPressed = false;
+        private int counter = 0;
 
         // Use this for initialization
         private void Start()
@@ -75,6 +76,8 @@ namespace UnityStandardAssets.Characters.FirstPerson
         // Update is called once per frame
         private void Update()
         {
+            if(counter < 200) ++counter;
+            
             if (!(_emptyPergamena.transform.childCount > 0 || _zainoInventory.activeSelf || _pauseMenu.activeSelf))
             {
                 RotateView();
@@ -112,14 +115,21 @@ namespace UnityStandardAssets.Characters.FirstPerson
 
         private void PlayLandingSound()
         {
-            if(_Scala._ScalaEnter == true || jumpPressed) {
+            if(counter >= 200){
+                if(_Scala._ScalaEnter == true || jumpPressed) {
+                    m_AudioSource.clip = m_LandSound;
+                    m_AudioSource.Play();
+                    m_NextStep = m_StepCycle + .5f;
+                    if(jumpPressed) jumpPressed = false;
+                }
+                else{
+                    ProgressStepCycle(speed*10);
+                }
+            }
+            else {
                 m_AudioSource.clip = m_LandSound;
                 m_AudioSource.Play();
                 m_NextStep = m_StepCycle + .5f;
-                if(jumpPressed) jumpPressed = false;
-            }
-            else{
-                ProgressStepCycle(speed*10);
             }
         }
 

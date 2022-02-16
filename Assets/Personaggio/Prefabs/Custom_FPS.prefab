@@ -190,6 +190,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _fpsCameraT: {fileID: 6455855179641935667}
+  _fpsCameraG: {fileID: 6455855179641899795}
   _debugRay: 1
   _interactionDistance: 1
   _empty: {fileID: 4264459537129880376}
