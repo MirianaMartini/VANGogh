@@ -5573,8 +5573,8 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 728574567}
-  m_LocalRotation: {x: -0.02302195, y: 0.97428054, z: 0.19091101, w: 0.1174754}
-  m_LocalPosition: {x: 47.48101, y: -63.79586, z: 255.74637}
+  m_LocalRotation: {x: -0.059931464, y: 0.86011714, z: 0.103974916, w: 0.49577817}
+  m_LocalPosition: {x: 141.00734, y: 43.8698, z: 102.472725}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -11700,6 +11700,10 @@ PrefabInstance:
     - target: {fileID: 6468701475852432456, guid: 86676905de07eb84384486063af174df, type: 3}
       propertyPath: m_IsActive
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7285456585627430301, guid: 86676905de07eb84384486063af174df, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0.00012207031
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 86676905de07eb84384486063af174df, type: 3}
@@ -18121,6 +18125,14 @@ PrefabInstance:
       propertyPath: m_Enabled
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 1282991714355507846, guid: fe1fac7d7214fc04e889266323db5c11, type: 3}
+      propertyPath: audioOpen
+      value: 
+      objectReference: {fileID: 8300000, guid: bfbb2ed1fcf7574438b3b2ca19da9e47, type: 3}
+    - target: {fileID: 1282991714355507846, guid: fe1fac7d7214fc04e889266323db5c11, type: 3}
+      propertyPath: audioClose
+      value: 
+      objectReference: {fileID: 8300000, guid: 95afa1f607744d64c89575940194d181, type: 3}
     - target: {fileID: 1557869419075128098, guid: fe1fac7d7214fc04e889266323db5c11, type: 3}
       propertyPath: m_LocalRotation.w
       value: 1
