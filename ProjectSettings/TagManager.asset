@@ -9,6 +9,7 @@ TagManager:
   - Personaggio
   - Scala
   - Orecchio
+  - Van
   layers:
   - Default
   - TransparentFX

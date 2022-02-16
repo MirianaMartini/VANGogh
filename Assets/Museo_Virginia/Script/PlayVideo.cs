@@ -6,6 +6,8 @@ using UnityEngine.Video;
 public class PlayVideo : MonoBehaviour
 {
     private VideoPlayer videoPlayer;
+    public VanTowardsPortal scriptVanMove;
+
 
     // Start is called before the first frame update
     void Awake()
@@ -16,7 +18,7 @@ public class PlayVideo : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.E))
+        if (Input.GetKeyDown(KeyCode.E) && scriptVanMove.flag)
         {
             videoPlayer.Play();
         }

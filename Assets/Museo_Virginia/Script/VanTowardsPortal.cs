@@ -13,6 +13,13 @@ public class VanTowardsPortal : MonoBehaviour
     public GameObject Van;
     public GameObject FPV;
     public float Distanza;
+    public GameObject Mura;
+    public bool flag = false;
+
+    private Vector3 _rayOrigin;
+    private Interactable _pointingInteractable;
+    private CharacterController _fpsController;
+    private Collider[] _colliders;
     
    
     private void Start()
@@ -20,21 +27,40 @@ public class VanTowardsPortal : MonoBehaviour
         _mainCamera.gameObject.active = true;
         _vanCamera.gameObject.active = false;
         _animatorVan = GetComponent<Animator>();
-
+        _fpsController = FPV.GetComponent<CharacterController>();
+        _colliders = Mura.GetComponents<Collider>();
     }
 
     // Update is called once per frame
     void Update()
     {
-        Distanza = Vector3.Distance(Van.transform.position, FPV.transform.position);
+        _rayOrigin = _mainCamera.transform.position + _fpsController.radius/4 * _mainCamera.transform.forward;
+        Ray ray = new Ray(_rayOrigin, _mainCamera.transform.forward);
+        RaycastHit hit;
+        if (Physics.Raycast(ray, out hit, Distanza)){
+            _pointingInteractable = hit.transform.GetComponent<Interactable>();
+            if (_pointingInteractable){
+                if (_pointingInteractable.tag == "Van"){
+                    if (Input.GetKeyDown(KeyCode.E)){
+                        flag = true;
+                        cambioCamera();
+                        MoveVan();
+                        delayAsync();
+                    }
+                }
+            }
+        }
+        /*
+        //Distanza = Vector3.Distance(Van.transform.position, FPV.transform.position);
         // rileva il tasto W e sposta in avanti
-        if (Input.GetKeyDown(KeyCode.E) && Distanza < 9)
+        if (Input.GetKeyDown(KeyCode.E) && Distanza < 5)
         {
             cambioCamera();
             MoveVan();
             delayAsync();
             
         }
+        */
     }
 
     //Funzione che cambia camera
@@ -53,7 +79,10 @@ public class VanTowardsPortal : MonoBehaviour
         if (_animatorVan == null)
             return;
 
-      _animatorVan.SetBool("move", true);
+        foreach(Collider c in _colliders){
+            c.enabled = false;
+        }
+        _animatorVan.SetBool("move", true);
 
     }
 

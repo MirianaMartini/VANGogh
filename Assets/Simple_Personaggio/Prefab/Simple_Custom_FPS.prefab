@@ -118,6 +118,7 @@ MonoBehaviour:
   fadingAnimation: {fileID: 0}
   cameraAudio: {fileID: 0}
   ZainoInventory: {fileID: 0}
+  _pauseMenu: {fileID: 0}
 --- !u!1 &4901833137658835698
 GameObject:
   m_ObjectHideFlags: 0
@@ -413,7 +414,7 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 0
---- !u!114 &2496802878490685604
+--- !u!114 &1373473497575609692
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -422,7 +423,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 5135495135999641700}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8ae5d4f132f32194cacb90440e019099, type: 3}
+  m_Script: {fileID: 11500000, guid: 67f1c7bd8b37dcd43a11b8df03f007cd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   _fpsCameraT: {fileID: 4901833137658736336}
