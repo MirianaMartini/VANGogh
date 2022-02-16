@@ -11,10 +11,10 @@ public class VanEnterExitSystem : MonoBehaviour
     public MonoBehaviour GuidaVanScript;
     public float Distanza;
     public GameObject _crossHair;
+    public GameObject PausaMenu;
+
     //Audio
-    AudioSource audioSource;
-
-
+    private AudioSource audioSource;
     private float pitchFromCar;
     private float minPitch = 0.1f;
     private bool flag = false;
@@ -53,6 +53,16 @@ public class VanEnterExitSystem : MonoBehaviour
                 audioSource.pitch = pitchFromCar;
         }
         /////////////////////////////////////////
+        if (!PausaMenu.activeSelf)
+        {
+            Cursor.lockState = CursorLockMode.Locked;
+            Cursor.visible = false;
+        }
+        else
+        {
+            Cursor.lockState = CursorLockMode.None;
+            Cursor.visible = true;
+        }
 
     }
 

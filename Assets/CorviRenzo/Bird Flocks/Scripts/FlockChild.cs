@@ -40,8 +40,16 @@ public class FlockChild:MonoBehaviour{
     public Transform _thisT;                    //Reference to the transform component
 
 	public Vector3 _landingPosOffset;
+	
+	[Header("Audio")]
+	public AudioClip _AudioCorvo1;
+	public AudioClip _AudioCorvo2;
+    private AudioSource _audioSource;
+	private bool flag = true;
+	private int counter = 0;
 
     public void Start(){
+		_audioSource = GetComponent<AudioSource>();
     	FindRequiredComponents();			//Check if references to transform and model are set (These should be set in the prefab to avoid doind this once a bird is spawned, click "Fill" button in prefab)
     	Wander(0.0f);
     	SetRandomScale();
@@ -65,8 +73,13 @@ public class FlockChild:MonoBehaviour{
     		SoarTimeLimit();
     		CheckForDistanceToWaypoint();
     		RotationBasedOnWaypointOrAvoidance();
-    	    LimitRotationOfModel();
+    	    LimitRotationOfModel();	
     	}
+		if(counter%200==0){
+			PlaySound();
+			counter = 0;
+		}
+		++counter;
     }
     
     public void OnDisable() {
@@ -84,6 +97,19 @@ public class FlockChild:MonoBehaviour{
     		}		
     	}
     }
+
+	public void PlaySound(){
+		if(flag){
+			_audioSource.clip = _AudioCorvo1;
+			_audioSource.Play();
+			flag = false;
+
+		} else {
+			_audioSource.clip = _AudioCorvo2;
+			_audioSource.Play();
+			flag = true;
+		}
+	}
     
     public void FindRequiredComponents(){
     	if(_thisT == null)		_thisT = transform;	

@@ -7,7 +7,6 @@ public class AnimationNCP_Triggered : MonoBehaviour
     [SerializeField] private GameObject DialogueBoxUI;
     [SerializeField] private GameObject BoxAiutoUI;
     [SerializeField] private GameObject BoxZainoPolaroids_AiutoUI;
-
     [SerializeField] private GameObject Init;
 
     private Animator _animator;
@@ -39,11 +38,7 @@ public class AnimationNCP_Triggered : MonoBehaviour
             BoxAiutoUI.SetActive(false);
             firstTime = false;
         }
-
-
     }
-
-    
 
     private void OnTriggerExit(Collider other)
     {

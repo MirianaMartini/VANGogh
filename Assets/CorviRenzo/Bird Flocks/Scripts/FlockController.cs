@@ -9,7 +9,7 @@ using System.Collections.Generic;
 
 public class FlockController:MonoBehaviour{
     
-    public FlockChild _childPrefab;			// Assign prefab with FlockChild script attached
+	public FlockChild _childPrefab;			// Assign prefab with FlockChild script attached
     public int _childAmount = 250;				// Number of objects
     public bool _slowSpawn;					// Birds will not be instantiated all at once at start
     public float _spawnSphere = 3.0f;				// Range around the spawner waypoints will created

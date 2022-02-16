@@ -27,8 +27,8 @@ Material:
     - _Exposure: 1
     - _Rotation: 0
     - _ShiftHue: 0
-    - _ShiftSaturation: 1
-    - _ShiftValue: 1
+    - _ShiftSaturation: 1.55
+    - _ShiftValue: 1.3
     - _VOffset: 0.434
     - _VScale: 1
     m_Colors:
