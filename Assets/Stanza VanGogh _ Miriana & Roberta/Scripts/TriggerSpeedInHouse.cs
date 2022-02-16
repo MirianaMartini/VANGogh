@@ -12,9 +12,9 @@ public class TriggerSpeedInHouse : MonoBehaviour
     private void OnTriggerEnter(Collider other)
     {
         if (other.gameObject.tag == "Personaggio"){
-            _FPS_Controller.m_WalkSpeed = 1;
-            _FPS_Controller.m_JumpSpeed = 4;
-            _FPS_Controller.m_StepInterval = 1.5f;
+            _FPS_Controller.m_WalkSpeed = 1.5f;
+            _FPS_Controller.m_JumpSpeed = 5;
+            _FPS_Controller.m_StepInterval = 2;
         }
     }
 

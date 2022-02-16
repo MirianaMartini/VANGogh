@@ -12,12 +12,14 @@ public class VanEnterExitSystem : MonoBehaviour
     public float Distanza;
     public GameObject _crossHair;
     public GameObject PausaMenu;
+    public GameObject BoxInizio;
 
     //Audio
     private AudioSource audioSource;
     private float pitchFromCar;
     private float minPitch = 0.1f;
     private bool flag = false;
+    private bool firstTime = true;
 
 
     // Start is called before the first frame update
@@ -35,9 +37,17 @@ public class VanEnterExitSystem : MonoBehaviour
     void Update()
     {
         Distanza = Vector3.Distance(Van.transform.position, FPV.transform.position);
-        if (Input.GetKeyDown(KeyCode.E) && Distanza < 3)
-        {
+        if(firstTime){
             cambioCamera();
+            BoxInizio.SetActive(true);
+            firstTime = false;
+        }
+        else {
+            if (Input.GetKeyDown(KeyCode.E) && Distanza < 3)
+            {
+                if(BoxInizio.activeSelf) BoxInizio.SetActive(false);
+                cambioCamera();
+            }
         }
 
         ////////////////////////////////////////
