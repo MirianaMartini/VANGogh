@@ -16,7 +16,7 @@ public class PlayVideo : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.V))
+        if (Input.GetKeyDown(KeyCode.E))
         {
             videoPlayer.Play();
         }

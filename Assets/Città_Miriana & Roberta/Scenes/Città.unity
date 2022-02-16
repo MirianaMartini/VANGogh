@@ -1741,6 +1741,10 @@ PrefabInstance:
       propertyPath: m_Constraints
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3787900999227098707, guid: 9287e59834e073b4598cd528d9594469, type: 3}
+      propertyPath: maxSteeringAngle
+      value: 20
+      objectReference: {fileID: 0}
     - target: {fileID: 4168437764627579401, guid: 9287e59834e073b4598cd528d9594469, type: 3}
       propertyPath: m_Pitch
       value: 0

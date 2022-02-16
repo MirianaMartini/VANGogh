@@ -60,7 +60,7 @@ public class VanTowardsPortal : MonoBehaviour
     public async Task delayAsync() //Ritardo la scomparsa dell'orecchio cos? l'utente pu? vedere cosa prende
                                    //poi scompare cos? non deve tenerlo in mano, "come se se lo mettesse"
     {
-        await Task.Delay(3000);
+        await Task.Delay(4000);
         SceneManager.LoadScene("Mondo");
         SceneManager.LoadScene("Città", LoadSceneMode.Additive);
     }
