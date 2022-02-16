@@ -13,7 +13,6 @@ public class HelpGrabAndInsert_Triggered : MonoBehaviour
     private void OnTriggerEnter(Collider other)
     {
         if (other.gameObject.tag == "Personaggio" && firstTime) { 
-            StartCoroutine(Apparizione_Box());
             BoxGrabAndInsert.SetActive(true);
             StartCoroutine(Durata_Box());
         }
@@ -26,14 +25,9 @@ public class HelpGrabAndInsert_Triggered : MonoBehaviour
         
     }
 
-    IEnumerator Apparizione_Box()
-    {
-        yield return new WaitForSeconds(5);
-    }
-
     IEnumerator Durata_Box() 
     {
-        yield return new WaitForSeconds(15);
+        yield return new WaitForSeconds(7);
         BoxGrabAndInsert.SetActive(false);
     }
 }

@@ -58,7 +58,7 @@ public class AnimationNCP_Triggered : MonoBehaviour
 
     IEnumerator Apparizione_Comandi_ZainoPolaroids()
     {
-        yield return new WaitForSeconds(9);
+        yield return new WaitForSeconds(6);
         BoxZainoPolaroids_AiutoUI.SetActive(false);
     }
 }
