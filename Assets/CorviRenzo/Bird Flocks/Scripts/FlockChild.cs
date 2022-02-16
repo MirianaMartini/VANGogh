@@ -73,14 +73,13 @@ public class FlockChild:MonoBehaviour{
     		SoarTimeLimit();
     		CheckForDistanceToWaypoint();
     		RotationBasedOnWaypointOrAvoidance();
-    	    LimitRotationOfModel();
-			if(counter%220==0){
-				PlaySound();
-				counter = 0;
-			}
-			++counter;
-			
+    	    LimitRotationOfModel();	
     	}
+		if(counter%200==0){
+			PlaySound();
+			counter = 0;
+		}
+		++counter;
     }
     
     public void OnDisable() {
