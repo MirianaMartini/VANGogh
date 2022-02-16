@@ -49,8 +49,6 @@ public class Pausa : MonoBehaviour
         GiocoInPausa = false;
     }
 
-
-
     private void Awake()
     {
         DontDestroyOnLoad(pausaMenuUI);
