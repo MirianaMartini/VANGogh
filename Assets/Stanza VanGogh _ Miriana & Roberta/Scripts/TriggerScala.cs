@@ -14,6 +14,9 @@ public class TriggerScala : MonoBehaviour
     {
         if (other.gameObject.tag == "Personaggio"){
             _ScalaEnter = true;
+            _FPS_Controller.m_WalkSpeed = 0.6f;
+            _FPS_Controller.m_JumpSpeed = 3.5f;
+            _FPS_Controller.m_StepInterval = 1.1f;
         }
     }
 
@@ -21,6 +24,9 @@ public class TriggerScala : MonoBehaviour
     {
         if (other.gameObject.tag == "Personaggio"){
             _ScalaEnter = false;
+            _FPS_Controller.m_WalkSpeed = 1.5f;
+            _FPS_Controller.m_JumpSpeed = 5;
+            _FPS_Controller.m_StepInterval = 2;
         }
     }
 }

@@ -149,7 +149,7 @@ namespace UnityStandardAssets.Characters.FirstPerson
             m_MoveDir.z = desiredMove.z*speed;
 
             ///////////////////////////////////////////////////////////////////////////////////////////////Salire le Scale
-            if((transform.position.y - m_LastPosition.y > 0.12f) && !m_Jumping && !m_Jump){
+            if((transform.position.y - m_LastPosition.y > 0.1f) && !m_Jumping && !m_Jump){
                 if(_Scala._ScalaEnter == true) 
                     PlayJumpSound();
                 m_LastPosition = new Vector3(0, transform.position.y, 0);

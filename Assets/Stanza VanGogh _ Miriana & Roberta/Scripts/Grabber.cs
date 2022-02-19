@@ -13,6 +13,8 @@ public class Grabber : Grabbable
 
     public Material cieloGiorno = null;
     public Material cieloNotte = null;
+    public GameObject DirectionalLight1 = null;
+    public GameObject DirectionalLight2 = null;
 
     protected override void Start()
     {
@@ -28,6 +30,8 @@ public class Grabber : Grabbable
         if (gameObject.tag == "Orecchio")
         {
             RenderSettings.skybox = cieloNotte;
+            //DirectionalLight1.SetActive(false);
+            DirectionalLight2.SetActive(false);
         }
     }
 
@@ -38,6 +42,8 @@ public class Grabber : Grabbable
         if (gameObject.tag == "Orecchio")
         {
             RenderSettings.skybox = cieloGiorno;
+            //DirectionalLight1.SetActive(true);
+            DirectionalLight2.SetActive(true);
         }
     }
 
