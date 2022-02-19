@@ -7,8 +7,6 @@ public class TriggerSpeedInHouse : MonoBehaviour
 {
     [SerializeField] private FirstPersonControllerCustom _FPS_Controller;
 
-    // Start is called before the first frame update
-
     private void OnTriggerEnter(Collider other)
     {
         if (other.gameObject.tag == "Personaggio"){
