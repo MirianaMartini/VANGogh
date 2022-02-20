@@ -8,6 +8,7 @@ public class CrossHairManager : MonoBehaviour
     [SerializeField] private Transform _fpsCameraT;
     [SerializeField] CharacterController _fpsController;
     [SerializeField] private float _interactionDistance;
+    [SerializeField] private Transform _VanCamera = null;
 
     [Header("Objects")]
     [SerializeField] private GameObject _crossHairDefault;
@@ -30,6 +31,13 @@ public class CrossHairManager : MonoBehaviour
 
     void Update()
     {       
+        if(_VanCamera){
+            if(_VanCamera.gameObject.activeSelf){
+                _crossHairSelect.SetActive(false);
+                _crossHairDefault.SetActive(false);
+                return;
+            }
+        }
         _rayOrigin = _fpsCameraT.position + _fpsController.radius/4 * _fpsCameraT.forward;
 
         Ray ray = new Ray(_rayOrigin, _fpsCameraT.forward);

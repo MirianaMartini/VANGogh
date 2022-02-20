@@ -43,6 +43,7 @@ public class VanTowardsPortal : MonoBehaviour
             if (_pointingInteractable){
                 if (_pointingInteractable.tag == "Van"){
                     if (Input.GetKeyDown(KeyCode.E)){
+                        _crossHair.SetActive(false);
                         flag = true;
                         cambioCamera();
                     }
@@ -67,11 +68,25 @@ public class VanTowardsPortal : MonoBehaviour
     {
         if (_mainCamera.gameObject.active) //Guida VAN
         { 
-            _crossHair.SetActive(false);
             _mainCamera.gameObject.active = false;
             _vanCamera.gameObject.active = true;
             StartCoroutine(Attesa());
         }
+    }
+
+    IEnumerator Attesa()
+    {
+        yield return new WaitForSeconds(7);
+        MoveVan();
+        delayAsync();
+    }
+
+    public async Task delayAsync() //Ritardo la scomparsa dell'orecchio cos? l'utente pu? vedere cosa prende
+                                   //poi scompare cos? non deve tenerlo in mano, "come se se lo mettesse"
+    {
+        await Task.Delay(3000);
+        SceneManager.LoadScene("Mondo");
+        SceneManager.LoadScene("Città", LoadSceneMode.Additive);
     }
 
     public void MoveVan()
@@ -83,20 +98,5 @@ public class VanTowardsPortal : MonoBehaviour
             c.enabled = false;
         }
         _animatorVan.SetBool("move", true);
-    }
-
-    public async Task delayAsync() //Ritardo la scomparsa dell'orecchio cos? l'utente pu? vedere cosa prende
-                                   //poi scompare cos? non deve tenerlo in mano, "come se se lo mettesse"
-    {
-        await Task.Delay(3000);
-        SceneManager.LoadScene("Mondo");
-        SceneManager.LoadScene("Città", LoadSceneMode.Additive);
-    }
-
-    IEnumerator Attesa()
-    {
-        yield return new WaitForSeconds(7);
-        MoveVan();
-        delayAsync();
     }
 }
