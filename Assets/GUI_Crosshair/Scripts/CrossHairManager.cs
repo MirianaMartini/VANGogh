@@ -50,9 +50,10 @@ public class CrossHairManager : MonoBehaviour
                 }
             }           
             else if (_pointingGrabbable){
-                _crossHairSelect.SetActive(false);
-                _crossHairDefault.SetActive(true);
-                foreach(Image i in Images){
+                _crossHairDefault.SetActive(false);
+                _crossHairSelect.SetActive(true);
+                ImageSelect.color = Color.blue;
+                foreach(Image i in ImagesSelect){
                     i.color = Color.blue;
                 }
             }

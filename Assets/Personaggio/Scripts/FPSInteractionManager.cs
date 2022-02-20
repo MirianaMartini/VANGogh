@@ -79,7 +79,7 @@ public class FPSInteractionManager : MonoBehaviour
         if (_grabbedObject == null)
             CheckInteraction();
 
-        else if (_grabbedObject != null && Input.GetMouseButtonUp(1))
+        else if (_grabbedObject != null && Input.GetKeyDown(KeyCode.E))
             Drop();
 
         if(Input.GetKeyUp(KeyCode.E) && _grabbedObject != null) {
@@ -134,7 +134,7 @@ public class FPSInteractionManager : MonoBehaviour
             _pointingGrabbable = hit.transform.GetComponent<Grabbable>();
             if (_grabbedObject == null && _pointingGrabbable)
             {
-                if (Input.GetKeyDown(KeyCode.E) && Input.GetMouseButton(1))
+                if (Input.GetKeyDown(KeyCode.E) /*&& Input.GetMouseButton(1)*/)
                 {   
                     _pointingGrabbable.Grab(gameObject);
                     Grab(_pointingGrabbable);
@@ -143,7 +143,7 @@ public class FPSInteractionManager : MonoBehaviour
 
             //PickUp Objects
             _pointingPickUp = hit.transform.GetComponent<ItemPickUp>();
-            if(_pointingPickUp && Input.GetKeyDown(KeyCode.I)){
+            if(_pointingPickUp && Input.GetKeyDown(KeyCode.I) && init){
                 _pointingPickUp.PickUp();
                 _audioSource.clip = _audioPickUp;
                 _audioSource.Play();

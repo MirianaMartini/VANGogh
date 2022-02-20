@@ -41,14 +41,14 @@ public class AnimationManager : MonoBehaviour
         _animator.SetFloat("speed", _inputSpeed);
 
         //Idle <-> GrabMode
-        _animator.SetBool("grabMode", Input.GetMouseButton(1));
+        //_animator.SetBool("grabMode", Input.GetMouseButton(1));
 
         //grabMode <-> Grab
         if (_fpsCameraT.transform.childCount > 5) {
             //se i figli sono piu' di due vuol dire che e' stato grabbato un oggetto
             _animator.SetBool("grab", true);
         }
-        if (Input.GetMouseButtonUp(1)) _animator.SetBool("grab", false);
+        else _animator.SetBool("grab", false);
 
         //Idle <-> NoArms-Zaino
         if (Input.GetKeyUp(KeyCode.Tab) && !_animator.GetBool("grab") && init)
