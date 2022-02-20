@@ -6896,9 +6896,29 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 271951190235586024, guid: 78f18aba91125da458b6d82afcd84300, type: 3}
+      propertyPath: _VanCamera
+      value: 
+      objectReference: {fileID: 1972280319}
+    - target: {fileID: 271951190235586024, guid: 78f18aba91125da458b6d82afcd84300, type: 3}
+      propertyPath: _fpsCameraT
+      value: 
+      objectReference: {fileID: 1282917367}
+    - target: {fileID: 271951190235586024, guid: 78f18aba91125da458b6d82afcd84300, type: 3}
+      propertyPath: _fpsController
+      value: 
+      objectReference: {fileID: 417384660}
+    - target: {fileID: 271951190235586024, guid: 78f18aba91125da458b6d82afcd84300, type: 3}
+      propertyPath: _interactionDistance
+      value: 4
+      objectReference: {fileID: 0}
     - target: {fileID: 1607185377389266923, guid: 78f18aba91125da458b6d82afcd84300, type: 3}
       propertyPath: m_Name
       value: Canvas_Crosshair
+      objectReference: {fileID: 0}
+    - target: {fileID: 1607185377389266923, guid: 78f18aba91125da458b6d82afcd84300, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1607185377389266927, guid: 78f18aba91125da458b6d82afcd84300, type: 3}
       propertyPath: m_Pivot.x
@@ -6984,6 +7004,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4205052833281643448, guid: 78f18aba91125da458b6d82afcd84300, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7178073757666168085, guid: 78f18aba91125da458b6d82afcd84300, type: 3}
       propertyPath: _fpsCameraT
       value: 
@@ -6995,6 +7019,10 @@ PrefabInstance:
     - target: {fileID: 7178073757666168085, guid: 78f18aba91125da458b6d82afcd84300, type: 3}
       propertyPath: _interactionDistance
       value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 7326481086915710877, guid: 78f18aba91125da458b6d82afcd84300, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 78f18aba91125da458b6d82afcd84300, type: 3}
@@ -7936,11 +7964,6 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 59.76708, y: 33.999535, z: 2.500005}
   m_Center: {x: 0.0000064161864, y: -11.899288, z: -1.7240751e-20}
---- !u!1 &1209256919 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 4205052833281643448, guid: 78f18aba91125da458b6d82afcd84300, type: 3}
-  m_PrefabInstance: {fileID: 769173577}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1256674962
 GameObject:
   m_ObjectHideFlags: 0
@@ -8413,7 +8436,7 @@ PrefabInstance:
     - target: {fileID: -5733575744905056409, guid: 6801a5d40935cff43afac42211a1ee2b, type: 3}
       propertyPath: _crossHair
       value: 
-      objectReference: {fileID: 1209256919}
+      objectReference: {fileID: 769173578}
     - target: {fileID: -5733575744905056409, guid: 6801a5d40935cff43afac42211a1ee2b, type: 3}
       propertyPath: _pauseMenu
       value: 
