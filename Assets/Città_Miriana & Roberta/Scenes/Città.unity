@@ -1783,11 +1783,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 6575443914830292280, guid: 46a13e1c88c612e4ab011ace4b5370f3, type: 3}
   m_PrefabInstance: {fileID: 1947411287}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &195047076 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 4205052833281643448, guid: 78f18aba91125da458b6d82afcd84300, type: 3}
-  m_PrefabInstance: {fileID: 1607185376462815289}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &210391803
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5500,8 +5495,8 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 728574567}
-  m_LocalRotation: {x: 0.09365628, y: 0.046867736, z: 0.0044155032, w: -0.99449104}
-  m_LocalPosition: {x: 46.33162, y: 21.469467, z: 98.66333}
+  m_LocalRotation: {x: 0.17325868, y: 0.43390846, z: 0.085431084, w: -0.8800037}
+  m_LocalPosition: {x: 140.55344, y: 39.027317, z: 95.48302}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -7411,7 +7406,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _cameraMappa: {fileID: 1150983589}
   _cameraVan: {fileID: 1139669964}
-  _crossHair: {fileID: 195047076}
+  _crossHair: {fileID: 1707622468}
   _Localizzatore: {fileID: 235957841796510028}
   FPS_firstPersonControllerScript: {fileID: 235957841796510030}
   FPS_InteractionManagerScript: {fileID: 235957841796510031}
