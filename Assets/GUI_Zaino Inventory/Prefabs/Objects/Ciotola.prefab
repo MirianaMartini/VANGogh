@@ -119,6 +119,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cieloGiorno: {fileID: 0}
   cieloNotte: {fileID: 0}
+  colorGiorno: {fileID: 0}
+  colorNotte: {fileID: 0}
 --- !u!64 &7948147243971198013
 MeshCollider:
   m_ObjectHideFlags: 0
