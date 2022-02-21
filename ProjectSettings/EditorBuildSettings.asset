@@ -9,7 +9,7 @@ EditorBuildSettings:
     path: Assets/Menu_transizioni scene/Scena0_Menu.unity
     guid: 15ed1930f00748e4988d60ad71baf9dd
   - enabled: 1
-    path: Assets/Museo_Virginia/Scenes/museo.unity
+    path: Assets/Museo_Virginia/Scenes/Museo.unity
     guid: 0459e75412b4e4ca5b82ddf9ebea2ddf
   - enabled: 1
     path: Assets/Mondo/Scenes/Mondo.unity
@@ -17,4 +17,7 @@ EditorBuildSettings:
   - enabled: 1
     path: "Assets/Citt\xE0_Miriana & Roberta/Scenes/Citt\xE0.unity"
     guid: 1a2c7679d94f5df429ded8bef5e289fd
+  - enabled: 1
+    path: Assets/Museo_Virginia/Scenes/Museo_Ritorno.unity
+    guid: 59a5d20a92bc21849a762a1e47a2d04b
   m_configObjects: {}
