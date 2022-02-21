@@ -13,6 +13,7 @@ public class TransizioneMuseo : MonoBehaviour
     public GameObject Palazzo;
     private Collider _colliderPalazzo;
     private Collider[] _colliders;
+    [SerializeField] private GameObject text;
 
     private Animator _animator;
 
@@ -24,22 +25,37 @@ public class TransizioneMuseo : MonoBehaviour
         _colliders = VAN_Museo.GetComponents<Collider>();
     }
 
+    private void OnTriggerEnter(Collider other)
+    {
+        if(other.gameObject.tag == "Personaggio" || other.gameObject.tag == "Van")
+            text.SetActive(true);
+    }
 
     private void OnTriggerStay(Collider other)
     {
-        Debug.Log("OnTrigger");
-        if (Input.GetKeyDown(KeyCode.B))
+        if (other.gameObject.tag == "Van")
         {
-            Debug.Log("B pressed");
-            flag = true;
-            VAN.SetActive(false);
-            VAN_Museo.SetActive(true);
-            StartCoroutine(Attesa());
+            if (Input.GetKeyDown(KeyCode.B))
+            {
+                Debug.Log("B pressed");
+                flag = true;
+                VAN.SetActive(false);
+                VAN_Museo.SetActive(true);
+                StartCoroutine(Attesa());
+            }
         }
     }
 
+    private void OnTriggerExit(Collider other)
+    {
+        if (other.gameObject.tag == "Personaggio" || other.gameObject.tag == "Van")
+            text.SetActive(false);
+    }
+
+
     IEnumerator Attesa()
     {
+        text.SetActive(false);
         yield return new WaitForSeconds(7);
         MoveVan();
         delayAsync();
@@ -60,7 +76,6 @@ public class TransizioneMuseo : MonoBehaviour
         _animator.SetBool("move", true);
         
     }
-    
     
     public async Task delayAsync() 
     {
