@@ -487,7 +487,7 @@ AudioSource:
   Priority: 128
   DopplerLevel: 1
   MinDistance: 1
-  MaxDistance: 44.13163
+  MaxDistance: 30.957947
   Pan2D: 0
   rolloffMode: 2
   BypassEffects: 0
@@ -22582,7 +22582,7 @@ AudioSource:
   Priority: 128
   DopplerLevel: 1
   MinDistance: 1
-  MaxDistance: 34.409332
+  MaxDistance: 32.451828
   Pan2D: 0
   rolloffMode: 2
   BypassEffects: 0
@@ -33419,8 +33419,8 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1326789989}
-  m_LocalRotation: {x: -0.079392225, y: -0.02452043, z: 0.001949453, w: -0.99653995}
-  m_LocalPosition: {x: 81.44124, y: 96.4969, z: 82.122375}
+  m_LocalRotation: {x: -0, y: 0.62703824, z: -0, w: 0.7789885}
+  m_LocalPosition: {x: 86.47884, y: 45.205795, z: 85.74179}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1120073838}
@@ -46709,7 +46709,7 @@ AudioSource:
   Priority: 128
   DopplerLevel: 1
   MinDistance: 1
-  MaxDistance: 60.597176
+  MaxDistance: 35.524673
   Pan2D: 0
   rolloffMode: 2
   BypassEffects: 0
