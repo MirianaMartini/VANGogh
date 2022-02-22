@@ -10,7 +10,6 @@ public class PremiH : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.H))
         {
             gameObject.active = false;
-            Time.timeScale = 1f;
         }
         else{
             Time.timeScale = 0f;

@@ -23,7 +23,6 @@ public class Benvenuto : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        Debug.Log("ciaooooooooo");
         if (firstTime)
         {
            canvas.SetActive(true);
