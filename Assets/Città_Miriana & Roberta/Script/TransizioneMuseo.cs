@@ -14,6 +14,7 @@ public class TransizioneMuseo : MonoBehaviour
     private Collider _colliderPalazzo;
     private Collider[] _colliders;
     [SerializeField] private GameObject text;
+    [SerializeField] private GameObject BoxAiutoComandi;
 
     private Animator _animator;
 
@@ -35,6 +36,7 @@ public class TransizioneMuseo : MonoBehaviour
     {
         if (other.gameObject.tag == "Van")
         {
+            BoxAiutoComandi.SetActive(true);
             if (Input.GetKeyDown(KeyCode.B))
             {
                 Debug.Log("B pressed");
@@ -50,11 +52,15 @@ public class TransizioneMuseo : MonoBehaviour
     {
         if (other.gameObject.tag == "Personaggio" || other.gameObject.tag == "Van")
             text.SetActive(false);
+
+        if (other.gameObject.tag == "Van")
+            BoxAiutoComandi.SetActive(false);
     }
 
 
     IEnumerator Attesa()
     {
+        BoxAiutoComandi.SetActive(false);
         text.SetActive(false);
         yield return new WaitForSeconds(7);
         MoveVan();
