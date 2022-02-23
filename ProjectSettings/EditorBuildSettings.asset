@@ -15,7 +15,7 @@ EditorBuildSettings:
     path: Assets/Mondo/Scenes/Mondo.unity
     guid: ca2262393560d4c58a800fa951d93e7f
   - enabled: 1
-    path: "Assets/Citt\xE0_Miriana & Roberta/Materials/Citt\xE0.unity"
+    path: "Assets/Citt\xE0_Miriana & Roberta/Scenes/Citt\xE0.unity"
     guid: 1a2c7679d94f5df429ded8bef5e289fd
   - enabled: 1
     path: Assets/Museo_Virginia/Scenes/Museo_Ritorno.unity

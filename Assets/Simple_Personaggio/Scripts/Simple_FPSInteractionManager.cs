@@ -16,7 +16,7 @@ public class Simple_FPSInteractionManager : MonoBehaviour
     [SerializeField] private AudioClip _pergamenaCloseAudio;
 
     [Header("CrossHair")]
-    [SerializeField] private GameObject _crossHair;
+    [SerializeField] private GameObject _crossHair = null;
 
     [Header("Pause menu")]
     [SerializeField] private GameObject _pauseMenu;
@@ -76,10 +76,11 @@ public class Simple_FPSInteractionManager : MonoBehaviour
         }
 
         //Apparizione disapparizione CrossHair
-        if(_grabbedObject != null || _pergamenaShow != null || (_pauseMenu.activeSelf)) 
-            _crossHair.SetActive(false);
-        else _crossHair.SetActive(true);
-  
+        if(_crossHair != null){
+            if(_grabbedObject != null || _pergamenaShow != null || (_pauseMenu.activeSelf)) 
+                _crossHair.SetActive(false);
+            else _crossHair.SetActive(true);
+        }
         if (_debugRay)
             DebugRaycast();
     }

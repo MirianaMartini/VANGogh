@@ -1028,7 +1028,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 87, y: 21}
+  m_AnchoredPosition: {x: 38, y: 21}
   m_SizeDelta: {x: -160, y: 116.276}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &951255284
@@ -1604,6 +1604,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 66aa861c186789c4c9dc60ba3b1b84f9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  VanCamera: {fileID: 0}
 --- !u!4 &1820784571
 Transform:
   m_ObjectHideFlags: 0

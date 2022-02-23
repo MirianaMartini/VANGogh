@@ -26,7 +26,7 @@ public class Grabber : Grabbable
         _rigidbody = GetComponent<Rigidbody>();
 
         if (gameObject.tag == "Orecchio"){
-            _scene = SceneManager.GetActiveScene();
+            _scene = SceneManager.GetSceneByBuildIndex(3);
             objs = _scene.GetRootGameObjects();
             foreach(GameObject obj in objs){
                 if(obj.name == "PostProcessVolumeGiorno")

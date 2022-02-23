@@ -23,7 +23,7 @@ public class CrossHairManager : MonoBehaviour
 
     void Start(){
         _crossHairSelect.SetActive(false);
-        _crossHairDefault.SetActive(false);
+        _crossHairDefault.SetActive(true);
         foreach(Image i in Images){
             i.color = Color.white;
         }
@@ -67,7 +67,7 @@ public class CrossHairManager : MonoBehaviour
             }
             else {
                 _crossHairSelect.SetActive(false);
-                _crossHairDefault.SetActive(false);
+                _crossHairDefault.SetActive(true);
                 foreach(Image i in Images){
                     i.color = Color.white;
                 }
@@ -75,7 +75,7 @@ public class CrossHairManager : MonoBehaviour
         }
         else {
             _crossHairSelect.SetActive(false);
-            _crossHairDefault.SetActive(false);
+            _crossHairDefault.SetActive(true);
             foreach(Image i in Images){
                 i.color = Color.white;
             }
