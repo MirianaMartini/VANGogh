@@ -28,11 +28,15 @@ namespace UnityStandardAssets.Characters.FirstPerson
         [SerializeField] private AudioClip[] m_FootstepSounds;    // an array of footstep sounds that will be randomly selected from.
         [SerializeField] private AudioClip m_JumpSound;           // the sound played when character leaves the ground.
         [SerializeField] private AudioClip m_LandSound;           // the sound played when character touches back on ground.
+        [SerializeField] private AudioClip[] m_FootstepSoundsOnGrass;    // an array of footstep sounds that will be randomly selected from.
+        [SerializeField] private AudioClip m_JumpSoundOnGrass;           // the sound played when character leaves the ground.
+        [SerializeField] private AudioClip m_LandSoundOnGrass;           // the sound played when character touches back on ground.
         
         [Header("Custom Variables")]
         [SerializeField] private Transform _emptyPergamena;
         [SerializeField] private GameObject _zainoInventory;
         [SerializeField] private TriggerScala _Scala;
+        [SerializeField] private PassiAudio PassiSuonoScript;
 
         [Header("Pause menu")]
         [SerializeField] private GameObject _pauseMenu;
@@ -115,7 +119,11 @@ namespace UnityStandardAssets.Characters.FirstPerson
         {
             if(!firstTime){
                 if(_Scala._ScalaEnter == true || jumpPressed) {
-                    m_AudioSource.clip = m_LandSound;
+                    if(PassiSuonoScript.Passi == 1) // inCitta'
+                        m_AudioSource.clip = m_LandSound;
+                    else if(PassiSuonoScript.Passi == 2) // inMondo
+                        m_AudioSource.clip = m_LandSoundOnGrass;
+                    
                     m_AudioSource.Play();
                     m_NextStep = m_StepCycle + .5f;
                     if(jumpPressed) jumpPressed = false;
@@ -125,7 +133,11 @@ namespace UnityStandardAssets.Characters.FirstPerson
                 }
             }
             else {
-                m_AudioSource.clip = m_LandSound;
+                if(PassiSuonoScript.Passi == 1) // inCitta'
+                        m_AudioSource.clip = m_LandSound;
+                else if(PassiSuonoScript.Passi == 2) // inMondo
+                    m_AudioSource.clip = m_LandSoundOnGrass;
+
                 m_AudioSource.Play();
                 m_NextStep = m_StepCycle + .5f;
                 firstTime = false;
@@ -155,6 +167,11 @@ namespace UnityStandardAssets.Characters.FirstPerson
                 m_LastPosition = new Vector3(0, transform.position.y, 0);
             }
             else if(transform.position.y < m_LastPosition.y) m_LastPosition = new Vector3(0, transform.position.y, 0);
+
+            if(PassiSuonoScript.Passi == 1) // inCitta'
+                m_AudioSource.volume = 0.1f;
+            else if(PassiSuonoScript.Passi == 2) // inMondo
+                m_AudioSource.volume = 0.5f;
             //////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
             if (m_CharacterController.isGrounded)
@@ -194,7 +211,11 @@ namespace UnityStandardAssets.Characters.FirstPerson
 
         private void PlayJumpSound()
         {
-            m_AudioSource.clip = m_JumpSound;
+            if(PassiSuonoScript.Passi == 1) // inCitta'
+                m_AudioSource.clip = m_JumpSound;
+            else if(PassiSuonoScript.Passi == 2) // inMondo
+                m_AudioSource.clip = m_JumpSoundOnGrass;
+   
             m_AudioSource.Play();
         }
 
@@ -227,11 +248,23 @@ namespace UnityStandardAssets.Characters.FirstPerson
             // pick & play a random footstep sound from the array,
             // excluding sound at index 0
             int n = Random.Range(1, m_FootstepSounds.Length);
-            m_AudioSource.clip = m_FootstepSounds[n];
+            if(PassiSuonoScript.Passi == 1) // inCitta'
+                m_AudioSource.clip = m_FootstepSounds[n];
+            else if(PassiSuonoScript.Passi == 2) // inMondo
+                m_AudioSource.clip = m_FootstepSoundsOnGrass[n];
+        
             m_AudioSource.PlayOneShot(m_AudioSource.clip);
+
             // move picked sound to index 0 so it's not picked next time
-            m_FootstepSounds[n] = m_FootstepSounds[0];
-            m_FootstepSounds[0] = m_AudioSource.clip;
+            if(PassiSuonoScript.Passi == 1){ // inCitta'
+                m_FootstepSounds[n] = m_FootstepSounds[0];
+                m_FootstepSounds[0] = m_AudioSource.clip;
+            }
+            else if(PassiSuonoScript.Passi == 2){ // inMondo
+                m_FootstepSoundsOnGrass[n] = m_FootstepSoundsOnGrass[0];
+                m_FootstepSoundsOnGrass[0] = m_AudioSource.clip;
+            }
+           
         }
 
 
