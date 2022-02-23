@@ -17,6 +17,8 @@ public class ShowObjects : MonoBehaviour
         foreach(GameObject obj in Oggetti){
             if (Objs.Contains(obj.name))
                 obj.SetActive(true);
+            else
+                obj.SetActive(false);
         }
     }
 

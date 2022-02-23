@@ -9,6 +9,7 @@ public class ShowPolaroidsInMuseum : MonoBehaviour
 {
     public GameObject QuadroPolaroids;
     public MeshRenderer rend;
+    public GameObject NoPhotoText;
 
     private Texture2D tex = null;
     private byte[] fileData;
@@ -17,13 +18,20 @@ public class ShowPolaroidsInMuseum : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        NoPhotoText.SetActive(false);
         fileEntries = Directory.GetFiles("Polaroids/");
-        StartCoroutine(Show());
+        if (fileEntries.Length != 0){
+            StartCoroutine(Show());
+        }
+        else{
+            NoPhotoText.SetActive(true);
+        }
     }
 
     IEnumerator Show()
     {
         while(true){
+            
             foreach(string file in fileEntries){
                 //Lettura Immagine e creazione texture
                 fileData = File.ReadAllBytes(file);
