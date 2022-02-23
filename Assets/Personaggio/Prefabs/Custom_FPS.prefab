@@ -310,6 +310,11 @@ MonoBehaviour:
   - {fileID: 8300000, guid: 8bc94ec6ed537e743b481638bdcd503d, type: 3}
   m_JumpSound: {fileID: 8300000, guid: 5897aeed9b676024fbb8c694b421a861, type: 3}
   m_LandSound: {fileID: 8300000, guid: 3b09d59f4499d45428baa7a21e954296, type: 3}
+  m_FootstepSoundsOnGrass:
+  - {fileID: 8300000, guid: 180ed12654f0e314e9f6ba1a754621c1, type: 3}
+  - {fileID: 8300000, guid: a0420abae72a5bc469289b2b4fd8ec4b, type: 3}
+  m_JumpSoundOnGrass: {fileID: 8300000, guid: 17327c3bb047802439cc9303367575c3, type: 3}
+  m_LandSoundOnGrass: {fileID: 8300000, guid: 033abd051abbb664f8b544001b202f8c, type: 3}
   _emptyPergamena: {fileID: 334673107308101783}
   _zainoInventory: {fileID: 0}
   _Scala: {fileID: 0}
