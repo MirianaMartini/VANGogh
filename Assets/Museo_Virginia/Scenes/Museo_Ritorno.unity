@@ -913,8 +913,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -0.00098419, y: -33.143}
-  m_SizeDelta: {x: 543, y: 18.746}
+  m_AnchoredPosition: {x: -0.0009, y: -71.72233}
+  m_SizeDelta: {x: 526.4864, y: 16.9764}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &142168723
 MonoBehaviour:
@@ -925,7 +925,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 142168721}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
@@ -936,21 +936,16 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_FontData:
-    m_Font: {fileID: 12800000, guid: 87c316b602156405d92e616621658222, type: 3}
-    m_FontSize: 12
-    m_FontStyle: 1
-    m_BestFit: 0
-    m_MinSize: 1
-    m_MaxSize: 200
-    m_Alignment: 1
-    m_AlignByGeometry: 0
-    m_RichText: 1
-    m_HorizontalOverflow: 0
-    m_VerticalOverflow: 0
-    m_LineSpacing: 1
-  m_Text: "La tua esperienza \xE8 terminata, torna al menu iniziale (premendo H)
-    per ricominciare."
+  m_Sprite: {fileID: 21300000, guid: c7c251915fdb7774dbe6cb58ed02d68b, type: 3}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
 --- !u!222 &142168724
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1452,7 +1447,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 209926826}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
@@ -1463,20 +1458,16 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_FontData:
-    m_Font: {fileID: 12800000, guid: 87c316b602156405d92e616621658222, type: 3}
-    m_FontSize: 16
-    m_FontStyle: 1
-    m_BestFit: 0
-    m_MinSize: 1
-    m_MaxSize: 200
-    m_Alignment: 1
-    m_AlignByGeometry: 0
-    m_RichText: 1
-    m_HorizontalOverflow: 0
-    m_VerticalOverflow: 0
-    m_LineSpacing: 1
-  m_Text: "Mi dispiace, non hai trovato nessun oggetto! La teca \xE8 rimasta vuota!"
+  m_Sprite: {fileID: 21300000, guid: ac13127ee16452c4599ec5380708dd0a, type: 3}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
 --- !u!222 &209926828
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1494,15 +1485,15 @@ RectTransform:
   m_GameObject: {fileID: 209926826}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 4.877204, y: 3.5359242, z: 3.5359242}
+  m_LocalScale: {x: 3.4207246, y: 2.4799912, z: 2.4799912}
   m_Children: []
   m_Father: {fileID: 1523498375}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -3.4953, y: 6}
-  m_SizeDelta: {x: 511.6937, y: 68.7626}
+  m_AnchoredPosition: {x: -5.2887, y: 70.43274}
+  m_SizeDelta: {x: 544.1949, y: 56.8008}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1001 &251209156
 PrefabInstance:
@@ -8481,8 +8472,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 0}
-  m_AnchoredPosition: {x: -0.0017089844, y: 1013.7}
-  m_SizeDelta: {x: 728.3101, y: 132.57}
+  m_AnchoredPosition: {x: -0.0017089844, y: 961.56537}
+  m_SizeDelta: {x: 728.3101, y: 236.8393}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &1114870332
 GameObject:
@@ -8496,7 +8487,7 @@ GameObject:
   - component: {fileID: 1114870335}
   - component: {fileID: 1114870334}
   m_Layer: 5
-  m_Name: Text_Cambiare (1)
+  m_Name: Text_ESC
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -8518,8 +8509,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 768.8231, y: -101.546394}
-  m_SizeDelta: {x: 229.5327, y: 24.4293}
+  m_AnchoredPosition: {x: 770.05, y: -126.2474}
+  m_SizeDelta: {x: 212.29, y: 20.7526}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1114870334
 MonoBehaviour:
@@ -8530,7 +8521,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1114870332}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
@@ -8541,20 +8532,16 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_FontData:
-    m_Font: {fileID: 12800000, guid: 87c316b602156405d92e616621658222, type: 3}
-    m_FontSize: 16
-    m_FontStyle: 1
-    m_BestFit: 0
-    m_MinSize: 1
-    m_MaxSize: 200
-    m_Alignment: 1
-    m_AlignByGeometry: 0
-    m_RichText: 1
-    m_HorizontalOverflow: 0
-    m_VerticalOverflow: 0
-    m_LineSpacing: 1
-  m_Text: Premi ESC per continuare
+  m_Sprite: {fileID: 21300000, guid: f81161fee68cbc4439ce97f40675f7d5, type: 3}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
 --- !u!222 &1114870335
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -9322,15 +9309,15 @@ RectTransform:
   m_GameObject: {fileID: 1409932486}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 4.877204, y: 3.5359242, z: 3.5359242}
+  m_LocalScale: {x: 3.4207246, y: 2.4799912, z: 2.4799912}
   m_Children: []
   m_Father: {fileID: 1523498375}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -3.4953, y: 6}
-  m_SizeDelta: {x: 511.6937, y: 68.7626}
+  m_AnchoredPosition: {x: -3.4953, y: 69.900635}
+  m_SizeDelta: {x: 511.6937, y: 67.7142}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1409932488
 MonoBehaviour:
@@ -9341,7 +9328,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1409932486}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
@@ -9352,20 +9339,16 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_FontData:
-    m_Font: {fileID: 12800000, guid: 87c316b602156405d92e616621658222, type: 3}
-    m_FontSize: 16
-    m_FontStyle: 1
-    m_BestFit: 0
-    m_MinSize: 1
-    m_MaxSize: 200
-    m_Alignment: 1
-    m_AlignByGeometry: 0
-    m_RichText: 1
-    m_HorizontalOverflow: 0
-    m_VerticalOverflow: 0
-    m_LineSpacing: 1
-  m_Text: Complimenti, hai trovato quasi tutti gli oggetti per riempire la teca!
+  m_Sprite: {fileID: 21300000, guid: 89d2aac78b5813f4c9ebcea7d0d49725, type: 3}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
 --- !u!222 &1409932489
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -9675,15 +9658,15 @@ RectTransform:
   m_GameObject: {fileID: 1492595390}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 4.877204, y: 3.5359242, z: 3.5359242}
+  m_LocalScale: {x: 3.4207246, y: 2.4799912, z: 2.4799912}
   m_Children: []
   m_Father: {fileID: 1523498375}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -3.4953, y: 6}
-  m_SizeDelta: {x: 511.6937, y: 68.7626}
+  m_AnchoredPosition: {x: 53, y: 63.40039}
+  m_SizeDelta: {x: 401.6084, y: 79.2469}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1492595392
 MonoBehaviour:
@@ -9694,7 +9677,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1492595390}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
@@ -9705,20 +9688,16 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_FontData:
-    m_Font: {fileID: 12800000, guid: 87c316b602156405d92e616621658222, type: 3}
-    m_FontSize: 16
-    m_FontStyle: 1
-    m_BestFit: 0
-    m_MinSize: 1
-    m_MaxSize: 200
-    m_Alignment: 1
-    m_AlignByGeometry: 0
-    m_RichText: 1
-    m_HorizontalOverflow: 0
-    m_VerticalOverflow: 0
-    m_LineSpacing: 1
-  m_Text: Complimenti, hai trovato tutti gli oggetti per riempire la teca!
+  m_Sprite: {fileID: 21300000, guid: f001f534ef06a894a9b471310361eddb, type: 3}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
 --- !u!222 &1492595393
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -10175,8 +10154,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 0}
-  m_AnchoredPosition: {x: -0.0017089844, y: 514.5123}
-  m_SizeDelta: {x: 728.31, y: 324.3402}
+  m_AnchoredPosition: {x: -0.0017089844, y: 537.9132}
+  m_SizeDelta: {x: 728.3101, y: 371.142}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1523498376
 MonoBehaviour:
