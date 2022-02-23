@@ -1314,6 +1314,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6468701475099499359, guid: 86676905de07eb84384486063af174df, type: 3}
+      propertyPath: m_SortingOrder
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 6468701475099499362, guid: 86676905de07eb84384486063af174df, type: 3}
       propertyPath: m_Name
       value: CanvasPausa
@@ -12018,6 +12022,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 66aa861c186789c4c9dc60ba3b1b84f9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  VanCamera: {fileID: 1972280316}
 --- !u!4 &1909510830
 Transform:
   m_ObjectHideFlags: 0
@@ -12366,7 +12371,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!81 &1972280317
 AudioListener:
   m_ObjectHideFlags: 0

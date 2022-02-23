@@ -8,7 +8,14 @@ public class Pausa : MonoBehaviour
     public bool GiocoInPausa = false;
     public GameObject pausaMenuUI;
 
-    // Update is called once per frame
+    private bool flag = false;
+    private bool firstTime = true;
+
+    void Start(){
+        if(SceneManager.GetActiveScene().name == "Museo_Ritorno") firstTime = false;
+        if(SceneManager.GetActiveScene().name == "Museo") firstTime = true;
+    }
+
     void Update()
     {
         if (Input.GetKeyDown(KeyCode.H))
@@ -19,6 +26,11 @@ public class Pausa : MonoBehaviour
             }
             else
             {
+                if(Time.timeScale == 0f && !firstTime) flag = true;
+                else {
+                    flag = false;
+                    firstTime = false;
+                }
                 MettiInPausa();
             }
         }
@@ -27,7 +39,7 @@ public class Pausa : MonoBehaviour
     public void Riprendi()
     {
         pausaMenuUI.SetActive(false);
-        Time.timeScale = 1f;
+        if(!flag) Time.timeScale = 1f;
         GiocoInPausa = false;
     }
 
