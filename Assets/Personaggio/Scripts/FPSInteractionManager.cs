@@ -21,6 +21,7 @@ public class FPSInteractionManager : MonoBehaviour
     [SerializeField] private GameObject _zainoObj;
     [SerializeField] private ShowAlbum _showAlbum;
     [SerializeField] private AudioClip _audioPickUp;
+    [SerializeField] private AudioClip _audioOpenZaino;
 
     [Header("CrossHair")]
     [SerializeField] private GameObject _crossHair;
@@ -70,6 +71,7 @@ public class FPSInteractionManager : MonoBehaviour
 
         //Apertura Zaino Inventory
         if ((_grabbedObject == null) && Input.GetKeyUp(KeyCode.Tab) && init){
+            PlayZainoAudio();
             _zainoInventory.SetActive(!_zainoInventory.activeSelf);
             _zainoObj.SetActive(!_zainoObj.activeSelf);
             InventoryManager.Instance.ListItems();
@@ -209,5 +211,10 @@ public class FPSInteractionManager : MonoBehaviour
         
         _pergamenaShow.transform.parent = _originalParentPergamena; //riporto il parent
         _pergamenaShow.transform.localScale = new Vector3(1, 1, 1);
+    }
+
+    private void PlayZainoAudio(){
+        _audioSource.clip = _audioOpenZaino;
+        _audioSource.Play();
     }
 }

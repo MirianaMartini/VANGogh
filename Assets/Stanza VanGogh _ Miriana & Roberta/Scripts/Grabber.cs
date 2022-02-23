@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 
 [RequireComponent(typeof(Rigidbody))]
@@ -8,19 +9,32 @@ using UnityEngine;
 
 public class Grabber : Grabbable
 {
-    private Rigidbody _rigidbody;
-    private Collider _collider;
-
     public Material cieloGiorno = null;
     public Material cieloNotte = null;
-    public GameObject colorGiorno = null;
-    public GameObject colorNotte = null;
-
+    
+    private Rigidbody _rigidbody;
+    private Collider _collider;
+    private Scene _scene;
+    private GameObject[] objs;
+    private GameObject colorGiorno = null;
+    private GameObject colorNotte = null;
+    
     protected override void Start()
     {
         base.Start();
         _collider = GetComponent<Collider>();
         _rigidbody = GetComponent<Rigidbody>();
+
+        if (gameObject.tag == "Orecchio"){
+            _scene = SceneManager.GetActiveScene();
+            objs = _scene.GetRootGameObjects();
+            foreach(GameObject obj in objs){
+                if(obj.name == "PostProcessVolumeGiorno")
+                    colorGiorno = obj;
+                if(obj.name == "PostProcessVolumeNotte")
+                    colorNotte = obj;
+            }
+        }
     }
 
     public override void Grab(GameObject grabebr)
@@ -46,5 +60,4 @@ public class Grabber : Grabbable
             colorNotte.SetActive(false);
         }
     }
-
 }

@@ -9121,7 +9121,7 @@ MonoBehaviour:
   m_Text: 'Quando il cursore diventa Blu, puoi:
 
 
-    PRENDERE GLI OGGETTI
+    PRENDERE E RILASCIARE GLI OGGETTI
 
     premendo
     E
@@ -20811,6 +20811,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1849896675}
     - target: {fileID: 5167611678338886854, guid: 451f6e7e0b29d2948a258d5d3a7bcb14, type: 3}
+      propertyPath: _audioOpenZaino
+      value: 
+      objectReference: {fileID: 8300000, guid: 911b8736189f43f45ab6a7a5369dd85d, type: 3}
+    - target: {fileID: 5167611678338886854, guid: 451f6e7e0b29d2948a258d5d3a7bcb14, type: 3}
       propertyPath: _zainoInventory
       value: 
       objectReference: {fileID: 101057758}
@@ -21494,7 +21498,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7326481086915710877, guid: 78f18aba91125da458b6d82afcd84300, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 78f18aba91125da458b6d82afcd84300, type: 3}
