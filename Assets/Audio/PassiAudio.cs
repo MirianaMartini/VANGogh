@@ -5,6 +5,7 @@ using UnityEngine;
 public class PassiAudio : MonoBehaviour
 {
     public int Passi = 1; //1 = passi_citta' , 2 = passi_mondo
+    public GameObject _VanCamera = null;
 
     private Collider[] colliders;
 
@@ -16,7 +17,7 @@ public class PassiAudio : MonoBehaviour
 
     private void OnTriggerStay(Collider other)
     {
-        if (other.gameObject.tag == "Personaggio")
+        if (other.gameObject.tag == "Personaggio" || (other.gameObject.tag == "Van" && _VanCamera.activeSelf))
         {
             Passi = 1; //Passi_citta'
         }
@@ -24,9 +25,11 @@ public class PassiAudio : MonoBehaviour
 
     private void OnTriggerExit(Collider other)
     {
-        if (other.gameObject.tag == "Personaggio")
+        if (other.gameObject.tag == "Personaggio" || (other.gameObject.tag == "Van" && _VanCamera.activeSelf))
         {
             Passi = 2; //Passi_Mondo
         }
     }
+
+
 }

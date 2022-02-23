@@ -18836,6 +18836,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Passi: 1
+  _VanCamera: {fileID: 1139669964}
 --- !u!1001 &2032184030
 PrefabInstance:
   m_ObjectHideFlags: 0
