@@ -167,6 +167,11 @@ namespace UnityStandardAssets.Characters.FirstPerson
                 m_LastPosition = new Vector3(0, transform.position.y, 0);
             }
             else if(transform.position.y < m_LastPosition.y) m_LastPosition = new Vector3(0, transform.position.y, 0);
+
+            if(PassiSuonoScript.Passi == 1) // inCitta'
+                m_AudioSource.volume = 0.1f;
+            else if(PassiSuonoScript.Passi == 2) // inMondo
+                m_AudioSource.volume = 0.5f;
             //////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
             if (m_CharacterController.isGrounded)
