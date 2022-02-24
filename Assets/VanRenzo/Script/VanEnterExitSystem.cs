@@ -13,6 +13,7 @@ public class VanEnterExitSystem : MonoBehaviour
     public GameObject _crossHair;
     public GameObject PausaMenu;
     public GameObject BoxInizio;
+    public GameObject _cameraMappa;
 
     //Audio
     private AudioSource audioSource;
@@ -36,44 +37,45 @@ public class VanEnterExitSystem : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        Distanza = Vector3.Distance(Van.transform.position, FPV.transform.position);
-        if(firstTime){
-            cambioCamera();
-            BoxInizio.SetActive(true);
-            firstTime = false;
-        }
-        else {
-            if (Input.GetKeyDown(KeyCode.E) && Distanza < 3)
-            {
-                if(BoxInizio.activeSelf) BoxInizio.SetActive(false);
+        if(!_cameraMappa.activeSelf){
+            Distanza = Vector3.Distance(Van.transform.position, FPV.transform.position);
+            if(firstTime){
                 cambioCamera();
+                BoxInizio.SetActive(true);
+                firstTime = false;
+            }
+            else {
+                if (Input.GetKeyDown(KeyCode.E) && Distanza < 3)
+                {
+                    if(BoxInizio.activeSelf) BoxInizio.SetActive(false);
+                    cambioCamera();
+                }
+            }
+
+            ////////////////////////////////////////
+            if (flag){
+                if (GuidaVan.cc.carSpeed >= 0)
+                    pitchFromCar = GuidaVan.cc.carSpeed * 0.04f;
+                else 
+                    pitchFromCar = GuidaVan.cc.carSpeed * 0.008f;
+
+                if (pitchFromCar <= minPitch)
+                    audioSource.pitch = minPitch;
+                else
+                    audioSource.pitch = pitchFromCar;
+            }
+            /////////////////////////////////////////
+            if (!PausaMenu.activeSelf)
+            {
+                Cursor.lockState = CursorLockMode.Locked;
+                Cursor.visible = false;
+            }
+            else
+            {
+                Cursor.lockState = CursorLockMode.None;
+                Cursor.visible = true;
             }
         }
-
-        ////////////////////////////////////////
-        if (flag){
-            if (GuidaVan.cc.carSpeed >= 0)
-                pitchFromCar = GuidaVan.cc.carSpeed * 0.04f;
-            else 
-                pitchFromCar = GuidaVan.cc.carSpeed * 0.008f;
-
-            if (pitchFromCar <= minPitch)
-                audioSource.pitch = minPitch;
-            else
-                audioSource.pitch = pitchFromCar;
-        }
-        /////////////////////////////////////////
-        if (!PausaMenu.activeSelf)
-        {
-            Cursor.lockState = CursorLockMode.Locked;
-            Cursor.visible = false;
-        }
-        else
-        {
-            Cursor.lockState = CursorLockMode.None;
-            Cursor.visible = true;
-        }
-
     }
 
     //Funzione che cambia camera

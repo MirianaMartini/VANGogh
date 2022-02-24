@@ -9,15 +9,14 @@ public class TriggerBoxMappa : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-    
         if (other.gameObject.tag == "Personaggio" && firstTime) {
+            firstTime = false;
             BoxMappa.SetActive(true);
         }
     }
 
     private void OnTriggerExit(Collider other) {
         if (other.gameObject.tag == "Personaggio") {
-            firstTime = false;
             BoxMappa.SetActive(false);
         }
     }
@@ -26,7 +25,6 @@ public class TriggerBoxMappa : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.M))
         {
-            firstTime = false;
             BoxMappa.SetActive(false);
         }
     }

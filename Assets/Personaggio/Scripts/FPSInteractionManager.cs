@@ -28,6 +28,7 @@ public class FPSInteractionManager : MonoBehaviour
 
     [Header("Pause menu")]
     [SerializeField] private GameObject _pauseMenu;
+    [SerializeField] private GameObject _cameraMappa;
     
 
     private Interactable _pointingInteractable;
@@ -53,55 +54,57 @@ public class FPSInteractionManager : MonoBehaviour
 
     void Update()
     {
-        _rayOrigin = _fpsCameraT.position + _fpsController.radius/4 * _fpsCameraT.forward;
-        //_rayOrigin = _fpsCameraT.position;
+        if(!_cameraMappa.activeSelf){
+            _rayOrigin = _fpsCameraT.position + _fpsController.radius/4 * _fpsCameraT.forward;
+            //_rayOrigin = _fpsCameraT.position;
 
-        //Pergamena
-        if(_pergamenaShow != null){
-            if(Input.GetKeyDown(KeyCode.E)){
-                //Faccio ritornare la pergamena nella posizione originale;
-                _pointingInteractable.Interact(gameObject);
-                _audioSource.clip = _pergamenaCloseAudio;
-                _audioSource.Play();
-                RestorePergamena();
-                _pergamenaShow = null;
+            //Pergamena
+            if(_pergamenaShow != null){
+                if(Input.GetKeyDown(KeyCode.E)){
+                    //Faccio ritornare la pergamena nella posizione originale;
+                    _pointingInteractable.Interact(gameObject);
+                    _audioSource.clip = _pergamenaCloseAudio;
+                    _audioSource.Play();
+                    RestorePergamena();
+                    _pergamenaShow = null;
+                }
+                else return;
             }
-            else return;
+
+            //Apertura Zaino Inventory
+            if ((_grabbedObject == null) && Input.GetKeyUp(KeyCode.Tab) && init){
+                PlayZainoAudio();
+                _zainoInventory.SetActive(!_zainoInventory.activeSelf);
+                _zainoObj.SetActive(!_zainoObj.activeSelf);
+                InventoryManager.Instance.ListItems();
+                _showAlbum.ListPolaroids();
+            }
+
+            if (_grabbedObject == null)
+                CheckInteraction();
+
+            else if (_grabbedObject != null && Input.GetKeyDown(KeyCode.E))
+                Drop();
+
+            if(Input.GetKeyUp(KeyCode.E) && _grabbedObject != null) {
+                Vector3 newObjectPosition;
+                
+                Quaternion newObjectOrientation;
+                newObjectPosition = _empty.position;
+                newObjectOrientation = _empty.rotation;
+
+                _grabbedObject.transform.position = newObjectPosition;
+                _grabbedObject.transform.rotation = newObjectOrientation;
+            }
+
+            //Apparizione disapparizione CrossHair
+            if(_grabbedObject != null || (Input.GetMouseButton(0) && init) || _pergamenaShow != null || _zainoInventory.activeSelf || _pauseMenu.activeSelf) 
+                _crossHair.SetActive(false);
+            else _crossHair.SetActive(true);
+    
+            if (_debugRay)
+                DebugRaycast();
         }
-
-        //Apertura Zaino Inventory
-        if ((_grabbedObject == null) && Input.GetKeyUp(KeyCode.Tab) && init){
-            PlayZainoAudio();
-            _zainoInventory.SetActive(!_zainoInventory.activeSelf);
-            _zainoObj.SetActive(!_zainoObj.activeSelf);
-            InventoryManager.Instance.ListItems();
-            _showAlbum.ListPolaroids();
-        }
-
-        if (_grabbedObject == null)
-            CheckInteraction();
-
-        else if (_grabbedObject != null && Input.GetKeyDown(KeyCode.E))
-            Drop();
-
-        if(Input.GetKeyUp(KeyCode.E) && _grabbedObject != null) {
-            Vector3 newObjectPosition;
-            
-            Quaternion newObjectOrientation;
-            newObjectPosition = _empty.position;
-            newObjectOrientation = _empty.rotation;
-
-            _grabbedObject.transform.position = newObjectPosition;
-            _grabbedObject.transform.rotation = newObjectOrientation;
-        }
-
-        //Apparizione disapparizione CrossHair
-        if(_grabbedObject != null || (Input.GetMouseButton(0) && init) || _pergamenaShow != null || _zainoInventory.activeSelf || _pauseMenu.activeSelf) 
-            _crossHair.SetActive(false);
-        else _crossHair.SetActive(true);
-  
-        if (_debugRay)
-            DebugRaycast();
     }
 
     private void CheckInteraction()

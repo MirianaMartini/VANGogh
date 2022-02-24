@@ -31,15 +31,19 @@ public class ActivateMappa : MonoBehaviour
                 if(_cameraMappa.activeSelf){
                     _Localizzatore.SetActive(true);
                     _crossHair.SetActive(false);
+                    /*
                     FPS_firstPersonControllerScript.enabled = false;
                     FPS_InteractionManagerScript.enabled = false;
                     VanEnterExitSystemScript.enabled = false;
+                    */
                 } else {
                     _Localizzatore.SetActive(false);
                     _crossHair.SetActive(true);
+                    /*
                     FPS_firstPersonControllerScript.enabled = true;
                     FPS_InteractionManagerScript.enabled = true;
                     VanEnterExitSystemScript.enabled = true;
+                    */
                 }
             }
         }
